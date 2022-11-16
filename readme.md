@@ -1,12 +1,12 @@
 ```
-# Grupo 5
-## Temática del sitio web:  P E N D I N G
-## Público Objetivo: P E N D I N G
+Grupo 5
+Temática del sitio web:  P E N D I N G
+Público Objetivo: P E N D I N G
 
-## Referencias:
+Referencias:
 
 ```
-# ---- Integrantes ----
+## ---- Integrantes ----
 - **Edgar Josafat Monroy Ruiz**, 26 años, Ing Sistemas Computacionales, Actualmente laboro en una consultora de Sfw --> grupo 5
 - **Luciano Gabriel Verchelli** --> grupo 5
 - **Martin Schweiger** --> grupo 5
