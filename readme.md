@@ -10,6 +10,7 @@ Referencias:
 - https://www.ikea.com/us/en/cat/working-from-home-700291/ 
 - https://www.knoll.com/shop/work-from-home 
 - https://nymag.com/strategist/article/best-work-from-home-essentials.html
+- https://www.mercadolibre.com.mx/
 
 ```
 ## ---- Integrantes ----
