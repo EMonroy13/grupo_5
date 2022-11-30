@@ -2,6 +2,7 @@
 Grupo 5
 Temática del sitio web:  Muebles para Home Office
 Público Objetivo: Personas trabajando desde casa, Ing de sfw, Psicólogos, Licenciados etc.
+Trello: https://trello.com/b/09qPXErS/grupo5mueblesho
 
 Referencias:
 - https://store.hermanmiller.com/ 
