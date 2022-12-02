@@ -1,0 +1,26 @@
+{
+  "name": "grupo_5",
+  "version": "1.0.0",
+  "description": "``` Grupo 5 Temática del sitio web:  Muebles para Home Office Público Objetivo: Personas trabajando desde casa, Ing de sfw, Psicólogos, Licenciados etc. Trello: https://trello.com/b/09qPXErS/grupo5mueblesho",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EMonroy13/grupo_5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EMonroy13/grupo_5/issues"
+  },
+  "homepage": "https://github.com/EMonroy13/grupo_5#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
