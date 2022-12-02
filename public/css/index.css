@@ -1,0 +1,55 @@
+@import url(/css/normalize.css);
+:root{
+    --gris-claro:rgb(63, 59, 59) ;
+}
+header{
+    background-color: var(--gris-claro);
+    width: 100vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contenedor__logo img{
+    width: 40%;
+    
+}
+.contenedor__logo{
+    display: flex;
+    justify-content: center;
+}
+.header__nav-superior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+}
+.header__nav-superior i{
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+.contenedor__buscador{
+    position: relative;
+    padding: 12px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+.contenedor__buscador input{
+    padding: 8px;
+    border-radius: 7px;
+    border: none;
+    width: 95%;
+}
+.contenedor__buscador input::placeholder{
+    padding-left: 29px;
+    font-size: 17px;
+    color: rgb(94, 94, 94);
+}
+.contenedor__buscador i{
+    background-color: rgb(255, 255, 255);
+    color: rgb(94, 94, 94);
+    font-size: 17px;
+    font-weight: bold;
+    padding: 9px;
+    border-radius: 7px;
+    position: absolute;
+}
