@@ -2,10 +2,13 @@
 :root{
     --gris-claro:rgb(63, 59, 59) ;
 }
+/* -------------------------------------HEADER--------------------------------------------------- */
+body{
+    font-family: 'Noto Sans', sans-serif; 
+}
 header{
     background-color: var(--gris-claro);
     width: 100vw;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .contenedor__logo img{
     width: 40%;
@@ -34,10 +37,11 @@ header{
     margin: auto;
 }
 .contenedor__buscador input{
-    padding: 8px;
+    padding: 12px;
     border-radius: 7px;
     border: none;
     width: 95%;
+    line-height: 0;
 }
 .contenedor__buscador input::placeholder{
     padding-left: 29px;
@@ -52,4 +56,59 @@ header{
     padding: 9px;
     border-radius: 7px;
     position: absolute;
+    top: 16px;
+}
+/* -------------------------------------MAIN--------------------------------------------------- */
+
+.banner-ofertas{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 25px;
+}
+.banner__descuento{
+    color: white;
+    font-size: 40px;
+    margin:9px 16px;
+    
+}
+.banner__descripcion{
+    color: white;
+    font-size: 18px;
+    margin-left:16px;
+}
+.banner__boton{
+    
+    color: white;
+    background-color: black;
+    padding: 12px;
+    border: solid white 2px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 20px auto;
+}
+.banner__img{
+    width: 100%;
+    height: 200px;
+}
+.banner-ofertas img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main__categorias{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main__categorias div{
+    height: 150px;
+    width: 50%;
+    border: black solid 2px;   
+}
+.main__categorias div p{
+    text-align: center;
+    padding-top: 67px;
+    font-size: 20px;
 }
