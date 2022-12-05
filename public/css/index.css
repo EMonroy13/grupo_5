@@ -38,7 +38,7 @@ header{
 }
 .contenedor__buscador input{
     padding: 12px;
-    border-radius: 7px;
+    border-radius: 20px;
     border: none;
     width: 95%;
     line-height: 0;
@@ -54,7 +54,7 @@ header{
     font-size: 17px;
     font-weight: bold;
     padding: 9px;
-    border-radius: 7px;
+    border-radius: 20px;
     position: absolute;
     top: 16px;
 }
@@ -66,7 +66,7 @@ header{
     justify-content: flex-start;
     height: 100%;
     background-color: rgb(0, 0, 0);
-    padding-bottom: 25px;
+    padding-bottom: 60px;
 }
 .banner__descuento{
     color: white;
@@ -105,10 +105,40 @@ header{
 .main__categorias div{
     height: 150px;
     width: 50%;
-    border: black solid 2px;   
+    border: black solid 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   
 }
 .main__categorias div p{
     text-align: center;
     padding-top: 67px;
-    font-size: 20px;
+    font-size: 23px;
+    font-weight:500;
+    text-shadow: 0px 0px 6px silver;
+    
+}
+.categorias__1{
+    background-image: url(/img/oficina.jpg);
+    
+}
+.categorias__5{
+    background-image: url(/img/gaming.jpg);
+    
+}
+.categorias__2{
+    background-image: url(/img/living.jpg);
+    
+}
+.categorias__4{
+    background-image: url(/img/vision.jpg);
+    
+}
+.categorias__6{
+    background-image: url(/img/dormitorio.avif);
+    
+}
+.categorias__3{
+    background-image: url(/img/cocina.jpg);
+    
 }
