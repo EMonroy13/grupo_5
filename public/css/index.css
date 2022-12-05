@@ -5,6 +5,7 @@
 /* -------------------------------------HEADER--------------------------------------------------- */
 body{
     font-family: 'Noto Sans', sans-serif; 
+    background-color: #bebebebe;
 }
 header{
     background-color: var(--gris-claro);
@@ -66,7 +67,9 @@ header{
     justify-content: flex-start;
     height: 100%;
     background-color: rgb(0, 0, 0);
-    padding-bottom: 60px;
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 10px 0px black;
 }
 .banner__descuento{
     color: white;
@@ -80,7 +83,6 @@ header{
     margin-left:16px;
 }
 .banner__boton{
-    
     color: white;
     background-color: black;
     padding: 12px;
@@ -88,6 +90,7 @@ header{
     border-radius: 5px;
     width: 50%;
     margin: 20px auto;
+    border-radius: 25px;
 }
 .banner__img{
     width: 100%;
@@ -99,13 +102,17 @@ header{
     object-fit: cover;
 }
 .main__categorias{
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .main__categorias div{
+    margin: 10px 0;
     height: 150px;
-    width: 50%;
-    border: black solid 2px;
+    width: 46%;
+    border-radius: 15px 0;
+    box-shadow: 4px 2px 9px 0px black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;   
