@@ -1,0 +1,92 @@
+@import url(normalize.css);
+
+
+body {
+    margin:0;
+    padding: 0;
+   background-color: #847770;
+   font-family: sans-serif;
+
+}
+.login-box .logo {
+    border: #fff solid 1px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: -50px;
+}
+
+.login-box {
+    
+    margin:20px;
+    border:solid #fff 1px;
+    display: flex;
+    width: 350px;
+    height: 500px;
+    background-color: black;
+    color:#fff;
+    left: 31%;
+    top: 3%;
+
+    padding: 50px 30px;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+     position: absolute;
+   
+}
+.login-box h1 {
+    margin: 0;
+    padding: 0 0 35px;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.login-box label {
+    margin:0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+.login-box input {
+    width: 100%;
+    margin-bottom: 30px;
+   
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+}
+
+.password {
+    border:none;
+    border-bottom: 1px solid #fff;
+    
+    outline: none;
+    height: 40px;
+    font-size: 1rem;
+
+}
+.email{
+    border:none;
+    border-bottom: 1px solid #fff;
+}
+.enviar {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+}
+.login-box a:hover {
+    color: #fff;
+}
