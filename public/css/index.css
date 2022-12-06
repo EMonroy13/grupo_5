@@ -8,8 +8,10 @@ body{
     background-color: #bebebebe;
 }
 header{
-    background-color: var(--gris-claro);
+    background-color: rgb(0 0 0);
     width: 100vw;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 7px 0px black;
 }
 .contenedor__logo img{
     width: 40%;
@@ -118,13 +120,16 @@ header{
     background-position: center;   
 }
 .main__categorias div p{
-    text-align: center;
-    padding-top: 67px;
+    text-align: end;
+    padding-top: 113px;
+    padding-right: 15px;
     font-size: 23px;
-    font-weight:500;
-    text-shadow: 0px 0px 6px silver;
-    
+    font-weight: 550;
+    text-shadow: 3px 2px 4px black;
+    color: silver;
 }
+    
+
 .categorias__1{
     background-image: url(/img/oficina.jpg);
     
@@ -148,4 +153,18 @@ header{
 .categorias__3{
     background-image: url(/img/cocina.jpg);
     
+}
+.main__ultimos-ingresos{
+    width: 96%;
+    height: 96vw;
+    background-color: white;
+    box-shadow: 0px 2px 11px 1px black;
+    margin: 10px auto
+}
+.ultimos-ingresos__articulo{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding: 50px;
+    border: solid 1px silver;
 }
