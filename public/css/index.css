@@ -1,11 +1,16 @@
 @import url(/css/normalize.css);
 :root{
-    --gris-claro:rgb(63, 59, 59) ;
+    --beige-claro:#edebd3;
+    --beige-oscuro:#a19e7f;
+    --violeta-oscuro:#524080;
+    --violeta-claro:#dad3ed;
+    --blanco:#fffffc;
+    
 }
 /* -------------------------------------HEADER--------------------------------------------------- */
 body{
     font-family: 'Noto Sans', sans-serif; 
-    background-color: #edebd3;
+    background-color: var(--beige-claro);
 }
 header{
     background-color: rgb(0 0 0);
@@ -14,8 +19,10 @@ header{
     box-shadow: 0px 4px 7px 0px black;
 }
 .contenedor__logo img{
-    width: 40%;
-    
+    width: 200px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
 }
 .contenedor__logo{
     display: flex;
@@ -28,14 +35,14 @@ header{
     padding: 6px;
 }
 .header__nav-superior i{
-    color: white;
+    color: var(--beige-claro);
     font-size: 30px;
     padding: 10px;
 }
 .contenedor__buscador{
     position: relative;
-    padding: 12px;
-    width: 90%;
+    padding: 8px;
+    width: 96%;
     text-align: center;
     margin: auto;
 }
@@ -59,7 +66,29 @@ header{
     padding: 9px;
     border-radius: 20px;
     position: absolute;
-    top: 16px;
+    top: 12px;
+}
+.header__nav-inferior{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+.header__nav-inferior ul{
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.header__nav-inferior ul li{
+    padding: 4px;
+    color: var(--beige-oscuro);
+    list-style: none;
+}
+.header__nav-inferior ul li a{
+    color: var(--beige-oscuro);
+    text-decoration: none;
 }
 /* -------------------------------------MAIN--------------------------------------------------- */
 
@@ -92,6 +121,11 @@ header{
     width: 50%;
     margin: 20px auto;
     border-radius: 25px;
+    transition: all 0.2s;
+}
+.banner__boton:hover{
+    border: solid #524080 3px;
+    color: #524080;
 }
 .banner__img{
     width: 100%;
@@ -156,9 +190,10 @@ header{
 .main__ultimos-ingresos{
     width: 96%;
     height: 96vw;
-    background-color: white;
+    background-color: var(--blanco);
     box-shadow: 0px 2px 11px 1px black;
-    margin: 10px auto
+    margin: 10px auto;
+    position: relative;
 }
 .ultimos-ingresos__articulo{
     width: 80%;
@@ -166,4 +201,9 @@ header{
     margin: auto;
     padding: 50px;
     border: solid 1px silver;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
