@@ -207,3 +207,9 @@ header{
     left: 0;
     right: 0;
 }
+.main__ultimos-ingresos h4{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px;
+    color: #a19e7f;
+}
