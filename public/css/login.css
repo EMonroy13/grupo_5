@@ -14,7 +14,10 @@ body {
     width: 150px;
     height: 150px;
     position: relative;
-    top: -50px;
+
+    top:-15px;
+    left: 3px;
+    background: #000;
 }
 
 .login-box {
@@ -34,6 +37,8 @@ body {
     flex-wrap: nowrap;
     flex-direction: column;
      position: absolute;
+     
+justify-content: center
    
 }
 .login-box h1 {
@@ -51,9 +56,9 @@ body {
     display: block;
 }
 .login-box input {
-    width: 100%;
+    width: 300px;
     margin-bottom: 30px;
-   
+  
     outline: none;
     height: 40px;
     font-size: 16px;
@@ -76,17 +81,25 @@ body {
     border: none;
     outline: none;
     height: 40px;
-    background: #b80f22;
+    background: transparent;
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
+    border: solid 1px #fff
 }
 .login-box a {
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
     color: darkgray;
+   
 }
 .login-box a:hover {
     color: #fff;
 }
+.enviar:hover {
+    border: solid #524080 3px;
+    color: #524080;
+    transition-duration: 450ms;
+}
+
