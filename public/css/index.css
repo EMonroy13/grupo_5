@@ -69,8 +69,7 @@ header{
     top: 12px;
 }
 .header__nav-inferior{
-    
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
@@ -188,28 +187,53 @@ header{
     
 }
 .main__ultimos-ingresos{
-    width: 96%;
-    height: 96vw;
+    width: 90%;
+    height: 90vw;
     background-color: var(--blanco);
     box-shadow: 0px 2px 11px 1px black;
     margin: 10px auto;
     position: relative;
 }
 .ultimos-ingresos__articulo{
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 85%;
     margin: auto;
-    padding: 50px;
-    border: solid 1px silver;
+    padding: 10px;
+    box-shadow: 1px 1px 8px grey;
     position: absolute;
-    top: 0;
+    top: 20px;
     bottom: 0;
     left: 0;
     right: 0;
 }
+
 .main__ultimos-ingresos h4{
     font-size: 18px;
     font-weight: 700;
     padding: 8px;
     color: #a19e7f;
 }
+.ultimos-ingresos__precio{
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.ultimos-ingresos__precio p{
+    font-size: 20px;
+    color: var(--beige-oscuro);
+    font-weight: 600;
+}
+.ultimos-ingresos__precio h5{
+    font-size: 18px;
+    color: grey;
+}
+
+/* #######################################tablet################################################ */
+ @media (min-width: 685px) {
+    .header__nav-inferior{
+        display: flex;
+    }
+ }
