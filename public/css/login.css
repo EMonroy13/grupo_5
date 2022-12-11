@@ -1,12 +1,9 @@
-@import url(normalize.css);
-
+@import url(/css/index.css);
 
 body {
     margin:0;
     padding: 0;
-   background-color: #847770;
-   font-family: sans-serif;
-
+  
 }
 .login-box .logo {
     border: #fff solid 1px;
@@ -21,22 +18,18 @@ body {
 }
 
 .login-box {
-    
-    margin:20px;
+    margin: auto;
     border:solid #fff 1px;
     display: flex;
     width: 350px;
     height: 500px;
     background-color: black;
     color:#fff;
-    left: 31%;
-    top: 3%;
-
     padding: 50px 30px;
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
-     position: absolute;
+    position: relative;
      
 justify-content: center
    

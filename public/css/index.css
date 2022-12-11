@@ -230,10 +230,65 @@ header{
     font-size: 18px;
     color: grey;
 }
-
+/* ------------------------------------------FOOTER--------------------------------------------------- */
+footer{
+    background-color: #000;
+    width: 100vw;   
+    padding: 15px; 
+    height: 100%;
+}
+.section__contato{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column
+}
+.section__contato h4{
+    color: var(--beige-claro);
+    padding-bottom: 10px;
+}
+.section__contato a{
+    text-decoration: none;
+    padding: 5px;
+    color: var(--violeta-oscuro);
+}
+.section__redes{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+.section__redes h4{
+    color: var(--beige-claro);
+    padding: 15px;
+}
+.section__redes a{
+    color: var(--violeta-oscuro);
+    padding: 7px 8px;
+    margin: 7px 8px;
+}
+.footer__copiright{
+    font-size: 12px;
+    border-top: 1px solid var(--beige-oscuro);
+    color: var(--violeta-claro);
+    text-align: center;
+    padding-top: 15px;
+}
 /* #######################################tablet################################################ */
  @media (min-width: 685px) {
     .header__nav-inferior{
         display: flex;
+    }
+    .section__contato{
+        flex-direction: row;
+        font-size: 20px;
+    }
+    .section__contato h4{
+        padding-bottom: 0px;
+        padding: 5px;
+    }
+    .section__redes{
+        justify-content: center;
     }
  }
