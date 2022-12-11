@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/register.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <enlace rel="preconectar" href="https://fonts.googleapis.com">
+        <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+        <enlace href="https: //fonts.googleapis.com/css2? family= Noto+Sans:wght@200 & display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e073821f55.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1>TESTING REGISTER</h1>
+    <header>
+        <nav class="header__nav-superior">
+            <i class="fa-sharp fa-solid fa-bars menu-burger"></i>
+            <div class="contenedor__logo">
+                <img src="/img/logo.png" alt="logo ejemplo">
+            </div>
+            <a href="/productCart"><i class="fa-sharp fa-solid fa-cart-plus carrito"></i></a>  
+        </nav>
+        <div class="contenedor__buscador">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Estoy buscando..">
+        </div>
+        <nav class="header__nav-inferior">
+            <ul class="bar-inferior__izq">
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Categorias</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+            <ul class="bar-inferior__der">  
+                <li><a href="/login">Registrate </a><i class="fas fa-address-card"></i></li>
+                <li><a href="/register">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="">Mis compras </a><i class="fas fa-shopping-basket"></i></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>
