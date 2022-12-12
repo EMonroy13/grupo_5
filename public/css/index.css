@@ -195,18 +195,12 @@ header{
     position: relative;
 }
 .ultimos-ingresos__articulo{
+    margin: 0 16%;
     width: 70%;
     height: 85%;
-    margin: auto;
     padding: 10px;
     box-shadow: 1px 1px 8px grey;
-    position: absolute;
-    top: 20px;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
-
 .main__ultimos-ingresos h4{
     font-size: 18px;
     font-weight: 700;
@@ -229,6 +223,75 @@ header{
 .ultimos-ingresos__precio h5{
     font-size: 18px;
     color: grey;
+}
+.ultimos-ingresos__contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: flex-start;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    overflow: scroll;
+    width: 98%;
+    height: 100%;
+}
+.main__mas-vendido{
+    width: 90%;
+    height: 100%;
+    background-color: var(--blanco);
+    box-shadow: 0px 2px 11px 1px black;
+    margin: 10px auto;
+    
+}
+.mas-vendido__contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start
+}
+.main__mas-vendido h4{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px;
+    color: #a19e7f;
+}
+.mas-vendido__precio{
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mas-vendido__precio p {
+font-size: 20px;
+    color: var(--beige-oscuro);
+    font-weight: 600;
+}
+.mas-vendido__precio h5{
+    font-size: 18px;
+    color: grey;
+}
+.main__mas-vendido article{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px auto;
+    border-bottom: solid 0.5px grey
+}
+.main__mas-vendido img{
+    width: 60%;
+    height: 100%;
+}
+.mas-vendido__ver-mas{
+    padding: 10px;
+    text-align: end;
+}
+.mas-vendido__ver-mas a{
+ text-decoration: none;
+ color: var(--violeta-oscuro);
 }
 /* ------------------------------------------FOOTER--------------------------------------------------- */
 footer{
@@ -290,5 +353,13 @@ footer{
     }
     .section__redes{
         justify-content: center;
+    }
+    .ultimos-ingresos__articulo{
+        width: 36%;
+        height: 43%;
+        margin: 40px;
+    }
+    .ultimos-ingresos__contenedor{
+        flex-direction: row;
     }
  }
