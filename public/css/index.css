@@ -187,11 +187,11 @@ header{
     
 }
 .main__ultimos-ingresos{
-    width: 90%;
+    width: 95%;
     height: 90vw;
     background-color: var(--blanco);
     box-shadow: 0px 2px 11px 1px black;
-    margin: 10px auto;
+    margin: 30px auto;
     position: relative;
 }
 .ultimos-ingresos__articulo{
@@ -233,16 +233,16 @@ header{
     top: 0;
     bottom: 0;
     position: absolute;
-    overflow: scroll;
+    overflow: auto;
     width: 98%;
     height: 100%;
 }
 .main__mas-vendido{
-    width: 90%;
+    width: 95%;
     height: 100%;
     background-color: var(--blanco);
     box-shadow: 0px 2px 11px 1px black;
-    margin: 10px auto;
+    margin: 30px auto;
     
 }
 .mas-vendido__contenedor{
