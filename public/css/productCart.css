@@ -1,5 +1,28 @@
 @import url(/css/index.css);
-
+.header__titulo{
+    font-size: 25px;
+    color: var(--blanco);
+    padding: 15px 33px;
+}
+.contenedor__logo{
+    text-align: end;
+}
+.header__nav-superior{
+    flex-wrap: wrap;
+}
+.contenedor__logo {
+    width: 100px;
+    height: 60px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    
+}
+.contenedor__logo img {
+    max-width: none;
+    width: 200px;
+    height: 200px;
+}
 .main__carro-vacio{
     margin: 60px auto;
     padding: 20px;
