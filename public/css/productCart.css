@@ -53,3 +53,14 @@
     margin: 60px 0;
     text-align: center;
 }
+
+/* #######################################tablet################################################ */
+
+@media (min-width: 685px) {
+    .header__nav-superior i{
+        display: none;
+    }
+    .header__nav-superior{
+        justify-content: center;
+    }
+    }

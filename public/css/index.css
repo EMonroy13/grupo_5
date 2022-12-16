@@ -147,7 +147,7 @@ header{
 .main__categorias div{
     margin: 10px 0;
     height: 150px;
-    width: 46%;
+    width: 100%;
     border-radius: 15px 0;
     box-shadow: 4px 2px 9px 0px black;
     background-repeat: no-repeat;
@@ -163,8 +163,12 @@ header{
     text-shadow: 3px 2px 4px black;
     color: silver;
 }
-    
-
+.main__categorias a{
+    text-decoration: none;
+    width: 46%;
+    height: 150px;
+    margin: 10px 0;
+}
 .categorias__1{
     background-image: url(/img/oficina.jpg);
     
@@ -233,9 +237,6 @@ header{
     justify-content: space-around;
     flex-direction: column;
     align-content: flex-start;
-    top: 0;
-    bottom: 0;
-    position: absolute;
     overflow: auto;
     width: 98%;
     height: 100%;
@@ -303,6 +304,8 @@ font-size: 20px;
 .mas-vendido__ver-mas a{
  text-decoration: none;
  color: var(--violeta-oscuro);
+ display: flex;
+ justify-content: space-between;
 }
 /* ------------------------------------------FOOTER--------------------------------------------------- */
 footer{
@@ -365,6 +368,29 @@ footer{
     .section__redes{
         justify-content: center;
     }
+    .main__categorias {
+        justify-content: space-evenly;
+    }
+    .main__categorias a{
+        height: 110px;
+        width: 110px;
+        border-radius: 60px;
+        margin: 10px 0;
+    }
+    .main__categorias div {
+        height: 110px;
+        width: 110px;
+        border-radius: 60px;
+    }
+    .main__categorias div p {
+    text-align: center;
+    padding-top: 113px;
+    padding-right: 0px;
+    font-size: 19px;
+    }
+    .main__ultimos-ingresos {
+        height: 100%;
+    }
     .ultimos-ingresos__articulo{
         width: 36%;
         height: 43%;
@@ -397,5 +423,20 @@ footer{
 
 /* #######################################desktop################################################ */
 @media (min-width: 920px) {
-
+    .main__categorias a{
+        width: 15%;
+        height: 300px;
+        border-radius: 30px 0;
+    }
+    .main__categorias div {
+        height: 300px;
+        width: 100%;
+        border-radius: 30px 0;
+    }
+    .main__categorias div p {
+        text-align: end;
+        padding-top: 250px;
+        padding-right: 8px;
+        font-size: 24px;
+    }
 }
