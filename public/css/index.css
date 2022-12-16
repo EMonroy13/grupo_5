@@ -139,7 +139,7 @@ header{
     object-fit: cover;
 }
 .main__categorias{
-    margin-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -198,7 +198,7 @@ header{
     height: 100%;
     background-color: var(--blanco);
     box-shadow: 0px 2px 11px 1px black;
-    margin: 30px auto;
+    margin: 10px auto;
 }
 .ultimos-ingresos__articulo {
     margin: 10px 10px;
@@ -207,11 +207,11 @@ header{
     padding: 10px;
     box-shadow: 1px 1px 8px grey;
 }
-.main__ultimos-ingresos h4{
-    font-size: 18px;
-    font-weight: 700;
-    padding: 8px;
-    color: #a19e7f;
+main h4{
+    font-size: 26px;
+    padding: 40px 15px;
+    padding-bottom: 10px;
+    color: var(--violeta-oscuro);
 }
 .ultimos-ingresos__precio{
     margin: 5px 0;
@@ -246,24 +246,18 @@ header{
     justify-content: space-between;
     padding: 10px;
 }
-.main__mas-vendido{
+.main__mas-vendido {
     width: 95%;
     height: 100%;
     background-color: var(--blanco);
     box-shadow: 0px 2px 11px 1px black;
-    margin: 30px auto;
-    
+    margin: 0px auto;
+    margin-bottom: 40px;
 }
 .mas-vendido__contenedor{
     display: flex;
     flex-direction: column;
     justify-content: flex-start
-}
-.main__mas-vendido h4{
-    font-size: 18px;
-    font-weight: 700;
-    padding: 8px;
-    color: #a19e7f;
 }
 .mas-vendido__precio{
     margin: 5px 0;
