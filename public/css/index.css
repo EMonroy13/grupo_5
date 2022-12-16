@@ -193,18 +193,17 @@ header{
     background-image: url(/img/cocina.jpg);
     
 }
-.main__ultimos-ingresos{
+.main__ultimos-ingresos {
     width: 95%;
-    height: 90vw;
+    height: 100%;
     background-color: var(--blanco);
     box-shadow: 0px 2px 11px 1px black;
     margin: 30px auto;
-    position: relative;
 }
-.ultimos-ingresos__articulo{
-    margin: 0 16%;
-    width: 70%;
-    height: 85%;
+.ultimos-ingresos__articulo {
+    margin: 10px 10px;
+    width: 40%;
+    height: 53%;
     padding: 10px;
     box-shadow: 1px 1px 8px grey;
 }
@@ -231,15 +230,21 @@ header{
     font-size: 18px;
     color: grey;
 }
-.ultimos-ingresos__contenedor{
+.ultimos-ingresos__contenedor {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: column;
-    align-content: flex-start;
-    overflow: auto;
+    justify-content: space-evenly;
+    flex-direction: row;
     width: 98%;
     height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.ultimos-ingresos__ver-mas a{
+    text-decoration: none;
+    color: var(--violeta-oscuro);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 }
 .main__mas-vendido{
     width: 95%;
@@ -438,5 +443,20 @@ footer{
         padding-top: 250px;
         padding-right: 8px;
         font-size: 24px;
+    }
+    .ultimos-ingresos__contenedor {
+        display: flex;
+        justify-content: center;
+        width: 98%;
+        height: 600px;
+        align-content: flex-start;
+        overflow: auto;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .ultimos-ingresos__articulo {
+        width: 36%;
+        height: 71%;
+        margin: 40px;
     }
 }
