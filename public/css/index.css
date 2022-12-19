@@ -99,10 +99,10 @@ header{
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(to bottom, black, var(--violeta-oscuro));
     padding-bottom: 30px;
     margin-bottom: 15px;
-    box-shadow: 0px 4px 10px 0px black;
+    box-shadow: 0px 4px 7px 0px var(--violeta-oscuro);
 }
 .banner__descuento{
     color: #524080;
@@ -126,7 +126,7 @@ header{
     transition: all 0.2s;
 }
 .banner__boton:hover{
-    border: solid #524080 3px;
+    border: solid #524080 2px;
     color: #524080;
 }
 .banner__img{
@@ -192,6 +192,40 @@ header{
 .categorias__3{
     background-image: url(/img/cocina.jpg);
     
+}
+.main__ultimo-ingresado{
+    display: flex;
+    margin: 10px auto;
+    width: 95vw;
+    height: 95vw;
+    background-color: var(--blanco);
+    box-shadow: 0px 2px 11px 1px black;
+}
+.ultimo-ingresado__articulo{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    border: solid grey 0.5px;
+}
+.ultimo-ingresado__articulo img{
+    width: 100%;
+}
+.ultimo-ingresado__precio {
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.ultimo-ingresado__precio p{
+    font-size: 20px;
+    color: var(--beige-oscuro);
+    font-weight: 600;
+}
+.ultimo-ingresado__precio h5{
+    font-size: 18px;
+    color: grey;
 }
 .main__ultimos-ingresos {
     width: 95%;
@@ -265,7 +299,7 @@ main h4{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 80%;
 }
 .mas-vendido__precio p {
@@ -305,6 +339,56 @@ font-size: 20px;
  color: var(--violeta-oscuro);
  display: flex;
  justify-content: space-between;
+}
+.main__ofertas{
+    display: flex;
+    margin: auto;
+    background-color: var(--blanco);
+    width: 95vw;
+    box-shadow: 0px 2px 11px 1px black;
+    height: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.main__ofertas article{
+    padding: 11px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px auto;
+    border-bottom: solid 0.5px grey;
+}
+.ofertas__imagen{
+    width: 30%;
+    border-right: solid 1px grey;
+    padding: 0 10px;
+    object-position: center;
+}
+.ofertas__imagen img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+.ofertas__precio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 15px;
+}
+.ofertas__precio h5{
+    font-size: 22px;
+    color: grey;
+}
+.precio__efectivo{
+    font-size: 24px;
+    color: var(--beige-oscuro);
+    font-weight: 600;
+}
+.precio__descuento{
+    color: var(--violeta-oscuro);
+    font-weight: 700;
+    font-size: 20px;
 }
 /* ------------------------------------------FOOTER--------------------------------------------------- */
 footer{
@@ -417,6 +501,10 @@ footer{
     .mas-vendido__imagen {
         border-right: none;
        }
+    .main__ofertas article {
+        width: 43%;
+        border: solid 0.5px grey;
+    }
  }
 
 
