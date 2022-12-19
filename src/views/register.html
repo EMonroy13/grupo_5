@@ -38,7 +38,43 @@
         </nav>
     </header>
     <main>
-        <!-- Main here -->
+        <div class="register-box">
+            <h1>Crea una cuenta</h1>
+            <a href="#">
+                    <i class="fa-solid fa-id-card-clip"></i>
+            </a>
+            <div class="desc-cuenta">
+                <h2>Disfruta de los beneficios de la cuenta.</h2>
+                <ul>
+                    <li>Ofertas especiales</li>
+                    <li>Preventas exlusivas</li>
+                    <li>Envíos sin costo</li>
+                </ul>
+            </div>
+            <form class="datos-cliente">
+                <!-- Nombre (s) de cliente -->
+                <label for="nombre"> Nombre (s) </label>
+                <input class="nombre" type="text" placeholder=" Ingresa tu nombre (s) " required>
+                <!-- Apellidos del cliente -->
+                <label for="apellidos"> Apellidos </label>
+                <input class="apellidos" type="text" placeholder=" Ingresa tus apellidos " required>
+                <!-- Correo del cliente -->
+                <label for="correo"> Correo </label>
+                <input class="correo" type="email" placeholder=" Ingresa tu correo " required>
+                <!-- Contraseña del cliente -->
+                <label for="password"> Contraseña </label>
+                <input class="password" type="password" placeholder="Ingresa tu contraseña" required>
+                <!-- Reingresa contraseña -->
+                <label for="password"> Confirmar Contraseña </label>
+                <input class="password" type="password" placeholder="Confirma tu contraseña" required>
+                <!-- Botón crear cuenta -->
+                <div class="buttons">
+                    <div class="create-button">
+                        <button type="submit">Crear cuenta</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </main>
     <footer>
         <section class="section__contato">
