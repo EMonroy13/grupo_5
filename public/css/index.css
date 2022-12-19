@@ -58,6 +58,9 @@ header{
     font-size: 17px;
     color: rgb(94, 94, 94);
 }
+.contenedor__buscador input:focus{
+    outline: none;
+}
 .contenedor__buscador i{
     background-color: rgb(255, 255, 255);
     color: rgb(94, 94, 94);
@@ -96,10 +99,10 @@ header{
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(to bottom, black, var(--violeta-oscuro));
     padding-bottom: 30px;
     margin-bottom: 15px;
-    box-shadow: 0px 4px 10px 0px black;
+    box-shadow: 0px 4px 7px 0px var(--violeta-oscuro);
 }
 .banner__descuento{
     color: #524080;
@@ -123,7 +126,7 @@ header{
     transition: all 0.2s;
 }
 .banner__boton:hover{
-    border: solid #524080 3px;
+    border: solid #524080 2px;
     color: #524080;
 }
 .banner__img{
@@ -136,7 +139,7 @@ header{
     object-fit: cover;
 }
 .main__categorias{
-    margin-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -144,7 +147,7 @@ header{
 .main__categorias div{
     margin: 10px 0;
     height: 150px;
-    width: 46%;
+    width: 100%;
     border-radius: 15px 0;
     box-shadow: 4px 2px 9px 0px black;
     background-repeat: no-repeat;
@@ -160,8 +163,12 @@ header{
     text-shadow: 3px 2px 4px black;
     color: silver;
 }
-    
-
+.main__categorias a{
+    text-decoration: none;
+    width: 46%;
+    height: 150px;
+    margin: 10px 0;
+}
 .categorias__1{
     background-image: url(/img/oficina.jpg);
     
@@ -186,26 +193,59 @@ header{
     background-image: url(/img/cocina.jpg);
     
 }
-.main__ultimos-ingresos{
-    width: 95%;
-    height: 90vw;
+.main__ultimo-ingresado{
+    display: flex;
+    margin: 10px auto;
+    width: 95vw;
+    height: 95vw;
     background-color: var(--blanco);
     box-shadow: 0px 2px 11px 1px black;
-    margin: 30px auto;
-    position: relative;
 }
-.ultimos-ingresos__articulo{
-    margin: 0 16%;
-    width: 70%;
-    height: 85%;
+.ultimo-ingresado__articulo{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    border: solid grey 0.5px;
+}
+.ultimo-ingresado__articulo img{
+    width: 100%;
+}
+.ultimo-ingresado__precio {
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.ultimo-ingresado__precio p{
+    font-size: 20px;
+    color: var(--beige-oscuro);
+    font-weight: 600;
+}
+.ultimo-ingresado__precio h5{
+    font-size: 18px;
+    color: grey;
+}
+.main__ultimos-ingresos {
+    width: 95%;
+    height: 100%;
+    background-color: var(--blanco);
+    box-shadow: 0px 2px 11px 1px black;
+    margin: 10px auto;
+}
+.ultimos-ingresos__articulo {
+    margin: 10px 10px;
+    width: 40%;
+    height: 53%;
     padding: 10px;
     box-shadow: 1px 1px 8px grey;
 }
-.main__ultimos-ingresos h4{
-    font-size: 18px;
-    font-weight: 700;
-    padding: 8px;
-    color: #a19e7f;
+main h4{
+    font-size: 26px;
+    padding: 40px 15px;
+    padding-bottom: 10px;
+    color: var(--violeta-oscuro);
 }
 .ultimos-ingresos__precio{
     margin: 5px 0;
@@ -224,37 +264,34 @@ header{
     font-size: 18px;
     color: grey;
 }
-.ultimos-ingresos__contenedor{
+.ultimos-ingresos__contenedor {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: column;
-    align-content: flex-start;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    overflow: auto;
+    justify-content: space-evenly;
+    flex-direction: row;
     width: 98%;
     height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
 }
-.main__mas-vendido{
+.ultimos-ingresos__ver-mas a{
+    text-decoration: none;
+    color: var(--violeta-oscuro);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.main__mas-vendido {
     width: 95%;
     height: 100%;
     background-color: var(--blanco);
     box-shadow: 0px 2px 11px 1px black;
-    margin: 30px auto;
-    
+    margin: 0px auto;
+    margin-bottom: 40px;
 }
 .mas-vendido__contenedor{
     display: flex;
     flex-direction: column;
     justify-content: flex-start
-}
-.main__mas-vendido h4{
-    font-size: 18px;
-    font-weight: 700;
-    padding: 8px;
-    color: #a19e7f;
 }
 .mas-vendido__precio{
     margin: 5px 0;
@@ -262,7 +299,8 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    width: 80%;
 }
 .mas-vendido__precio p {
 font-size: 20px;
@@ -277,12 +315,19 @@ font-size: 20px;
     width: 100%;
     height: 200px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     margin: 5px auto;
-    border-bottom: solid 0.5px grey
+    border-bottom: solid 0.5px grey;
+}
+.mas-vendido__imagen{
+    max-width: 300px;
+    padding: 10px 20px;
+    width: 100%;
+    border-right: solid grey 0.5px;
+    height: 90%;
 }
 .main__mas-vendido img{
-    width: 60%;
+    width: 100%;
     height: 100%;
 }
 .mas-vendido__ver-mas{
@@ -292,6 +337,58 @@ font-size: 20px;
 .mas-vendido__ver-mas a{
  text-decoration: none;
  color: var(--violeta-oscuro);
+ display: flex;
+ justify-content: space-between;
+}
+.main__ofertas{
+    display: flex;
+    margin: auto;
+    background-color: var(--blanco);
+    width: 95vw;
+    box-shadow: 0px 2px 11px 1px black;
+    height: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.main__ofertas article{
+    padding: 11px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px auto;
+    border-bottom: solid 0.5px grey;
+}
+.ofertas__imagen{
+    width: 30%;
+    border-right: solid 1px grey;
+    padding: 0 10px;
+    object-position: center;
+}
+.ofertas__imagen img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+.ofertas__precio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 15px;
+}
+.ofertas__precio h5{
+    font-size: 22px;
+    color: grey;
+}
+.precio__efectivo{
+    font-size: 24px;
+    color: var(--beige-oscuro);
+    font-weight: 600;
+}
+.precio__descuento{
+    color: var(--violeta-oscuro);
+    font-weight: 700;
+    font-size: 20px;
 }
 /* ------------------------------------------FOOTER--------------------------------------------------- */
 footer{
@@ -354,6 +451,29 @@ footer{
     .section__redes{
         justify-content: center;
     }
+    .main__categorias {
+        justify-content: space-evenly;
+    }
+    .main__categorias a{
+        height: 110px;
+        width: 110px;
+        border-radius: 60px;
+        margin: 10px 0;
+    }
+    .main__categorias div {
+        height: 110px;
+        width: 110px;
+        border-radius: 60px;
+    }
+    .main__categorias div p {
+    text-align: center;
+    padding-top: 113px;
+    padding-right: 0px;
+    font-size: 19px;
+    }
+    .main__ultimos-ingresos {
+        height: 100%;
+    }
     .ultimos-ingresos__articulo{
         width: 36%;
         height: 43%;
@@ -362,4 +482,63 @@ footer{
     .ultimos-ingresos__contenedor{
         flex-direction: row;
     }
+    .mas-vendido__contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .main__mas-vendido article {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        margin: 5px auto;
+        border: solid 0.5px grey;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .mas-vendido__imagen {
+        border-right: none;
+       }
+    .main__ofertas article {
+        width: 43%;
+        border: solid 0.5px grey;
+    }
  }
+
+
+/* #######################################desktop################################################ */
+@media (min-width: 920px) {
+    .main__categorias a{
+        width: 15%;
+        height: 300px;
+        border-radius: 30px 0;
+    }
+    .main__categorias div {
+        height: 300px;
+        width: 100%;
+        border-radius: 30px 0;
+    }
+    .main__categorias div p {
+        text-align: end;
+        padding-top: 250px;
+        padding-right: 8px;
+        font-size: 24px;
+    }
+    .ultimos-ingresos__contenedor {
+        display: flex;
+        justify-content: center;
+        width: 98%;
+        height: 600px;
+        align-content: flex-start;
+        overflow: auto;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .ultimos-ingresos__articulo {
+        width: 36%;
+        height: 71%;
+        margin: 40px;
+    }
+}
