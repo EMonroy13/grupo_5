@@ -88,20 +88,32 @@ li {
     border-radius: 10%;
 }
 
-.create-button button{
-    background: #dad3ed;
-    color: #524080;
-    width: 300px;
-    height: 50px;
-    border-radius: 10%;
-}
-
-.create-button:hover button {
-    background-color: #edebd3;
-    color: #524080;
+.create-button {
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
     cursor: pointer;
-    transition-duration: 400ms;
-}
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.6rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .create-button:hover {
+    background-color: #dad3ed;
+    color: #fff;
+  }
 
 @media (min-width: 768px) {
     .datos-cliente label input{
@@ -110,4 +122,9 @@ li {
         height: 5%;
         justify-content: center;
     }
+
+    .create-button {
+        font-size: 1.125rem;
+        padding: 1rem 2rem;
+      }
 }
