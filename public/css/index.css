@@ -130,8 +130,10 @@ header{
     color: #524080;
 }
 .banner__img{
-    width: 100%;
+    width: 97%;
     height: 200px;
+    box-shadow: 0px 3px 20px black;
+    margin: auto;
 }
 .banner-ofertas img{
     width: 100%;
