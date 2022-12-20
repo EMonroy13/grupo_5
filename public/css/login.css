@@ -9,16 +9,7 @@ main {
   width: 100%;
   padding-bottom: 20px;
 }
-/* .login-box .logo {
-  border: #fff solid 1px;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  position: relative;
-  top: -15px;
-  left: 3px;
-  background: #000;
-} */
+
 
 .login-box {
   margin: auto;
@@ -50,7 +41,7 @@ main {
   display: block;
 }
 .login-box input {
-  width: 300px;
+  width: 80vw;
   margin-bottom: 30px;
   border-radius: 5px;
   outline: none;
