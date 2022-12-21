@@ -1,5 +1,5 @@
 @import url(/css/index.css);
-@import url(/css/productCart);
+@import url(/css/productCart.css);
 body {
    height: 100%;
    margin: 0;
@@ -103,7 +103,7 @@ li {
     transition-duration: 400ms;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 685px) {
     .datos-cliente label input{
         display: block;
         width: 80%;
