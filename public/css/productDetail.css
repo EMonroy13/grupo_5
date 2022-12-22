@@ -1,1 +1,78 @@
 @import url(/css/index.css);
+.titulo-puntuacion__contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 10px;
+    align-items: center;
+}
+.titulo-puntuacion__contenedor h2{
+    padding: 15px 5px;
+    font-size: 23px;
+    color: #000;
+}
+.titulo-puntuacion__contenedor a{
+    text-decoration: none;
+    font-size: 23px;
+    color: var(--violeta-oscuro);
+    padding: 5px;
+}
+.contenedor__img-producto{
+    width: 90%;
+    margin: auto;
+    background-color: var(--blanco);
+    padding: 20px;
+    box-shadow: 1px 1px 11px #000;
+}
+.contenedor__img-producto img{
+    object-fit: cover;
+    width: 100%;
+}
+.contenedor-precio{
+    padding: 10px;
+}
+.contenedor-precio h3{
+    font-size: 35px;
+}
+.contenedor-precio p{
+    font-size: 20px;
+    padding-left: 5px;
+    color: var(--beige-oscuro);
+}
+.contenedor-botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenedor-botones button{
+    font-size: 20px;
+    height: 45px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: #000;
+    color: var(--blanco);
+    border: solid 1px var(--blanco);
+    box-shadow: 1px 1px 12px grey;
+}
+.boton-comprar{
+    width: 88%;
+    height: 45px;
+}
+.boton-carrito{
+    width: 45%;
+}
+.boton-favoritos{
+    display: flex;
+    text-decoration: none;
+    color: var(--violeta-oscuro);
+    align-items: center;
+    height: 45px;
+    width: 37%
+}
+.boton-favoritos i{
+    font-size: 42px;
+}
+.boton-favoritos p{
+    padding: 10px;
+    font-size: 16px;
+}
