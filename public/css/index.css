@@ -201,7 +201,7 @@ header{
     width: 95vw;
     height: 95vw;
     background-color: var(--blanco);
-    box-shadow: 0px 2px 11px 1px black;
+    box-shadow: 0px 2px 11px 1px #666;
 }
 .ultimo-ingresado__articulo{
     width: 80%;
@@ -233,7 +233,7 @@ header{
     width: 95%;
     height: 100%;
     background-color: var(--blanco);
-    box-shadow: 0px 2px 11px 1px black;
+    box-shadow: 0px 2px 11px 1px #666;
     margin: 10px auto;
 }
 .ultimos-ingresos__articulo {
@@ -243,11 +243,20 @@ header{
     padding: 10px;
     box-shadow: 1px 1px 8px grey;
 }
+.main__titulo-cat{
+    display: none;
+}
 main h4{
-    font-size: 26px;
-    padding: 40px 15px;
+    font-size: 24px;
+    padding: 11px 10px;
     padding-bottom: 10px;
     color: var(--violeta-oscuro);
+    background-color: var(--blanco);
+    width: 95%;
+    margin: auto;
+    margin-bottom: -6px;
+    margin-top: 20px;
+    box-shadow:  0px -2px 11px 0px #666;
 }
 .ultimos-ingresos__precio{
     margin: 5px 0;
@@ -286,8 +295,8 @@ main h4{
     width: 95%;
     height: 100%;
     background-color: var(--blanco);
-    box-shadow: 0px 2px 11px 1px black;
-    margin: 0px auto;
+    box-shadow: 0px 2px 11px 1px #666;
+    margin: 10px auto;
     margin-bottom: 40px;
 }
 .mas-vendido__contenedor{
@@ -344,10 +353,10 @@ font-size: 20px;
 }
 .main__ofertas{
     display: flex;
-    margin: auto;
+    margin: 10px auto;
     background-color: var(--blanco);
     width: 95vw;
-    box-shadow: 0px 2px 11px 1px black;
+    box-shadow: 0px 2px 11px 1px #666;
     height: 100%;
     flex-wrap: wrap;
     margin-bottom: 40px;
@@ -452,6 +461,21 @@ footer{
     }
     .section__redes{
         justify-content: center;
+    }
+    .main__titulo-cat{
+        display: block;
+    }
+    main h4{
+    font-size: 26px;
+    padding: 30px 20px;
+    padding-bottom: 10px;
+    color: var(--violeta-oscuro);
+    background-color: transparent;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    box-shadow: none;
     }
     .main__categorias {
         justify-content: space-evenly;
