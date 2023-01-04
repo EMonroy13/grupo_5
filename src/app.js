@@ -6,6 +6,7 @@ const loginRoute = require ("./routes/loginRoute");
 const productCartRoute = require ("./routes/productCartRoute");
 const productDetailRoute = require ("./routes/productDetailRoute");
 const registerRoute = require ("./routes/registerRoute");
+const productEditRoute = require ("./routes/productEditRoute")
 
 app.use(express.static(path.join(__dirname, "../public"))); /* arreglando static */
 app.set("view engine", "ejs");
@@ -17,6 +18,7 @@ app.use(loginRoute);
 app.use(productCartRoute);
 app.use(productDetailRoute);
 app.use(registerRoute);
+app.use(productEditRoute);
 
 /* Necesitamos agregar app.listen method para probar en local */
 app.listen(3000, () => console.log('Server is running in http://localhost:3000'));
