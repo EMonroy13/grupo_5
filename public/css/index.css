@@ -246,7 +246,7 @@ header{
 .main__titulo-cat{
     display: none;
 }
-main h4{
+.main-home h4{
     font-size: 24px;
     padding: 11px 10px;
     padding-bottom: 10px;
@@ -465,7 +465,7 @@ footer{
     .main__titulo-cat{
         display: block;
     }
-    main h4{
+    .main-home h4{
     font-size: 26px;
     padding: 30px 20px;
     padding-bottom: 10px;

@@ -1,4 +1,7 @@
 @import url(/css/index.css);
+.carrito{
+    display: none;
+}
 .header__titulo{
     font-size: 25px;
     color: var(--blanco);

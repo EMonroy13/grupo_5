@@ -1,13 +1,8 @@
 @import url(/css/index.css);
 @import url(/css/productCart.css);
-body {
-   height: 100%;
-   margin: 0;
-   display: flex;
-   flex-direction: column;
-}
 
-li {
+
+.desc-cuenta li {
     text-decoration: none;
     list-style: none;
 }
@@ -39,8 +34,8 @@ li {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 70vw;
-    height: 40vh;
+    width: 70%;
+    height: 40%;
     padding: 40px 20px;
 }
 
