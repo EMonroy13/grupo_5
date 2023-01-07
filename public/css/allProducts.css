@@ -1,0 +1,17 @@
+@import url(/css/normalize.css);
+@import url(/css/index.css);
+
+:root {
+  --beige-claro: #edebd3;
+  --beige-oscuro: #a19e7f;
+  --violeta-oscuro: #524080;
+  --violeta-claro: #dad3ed;
+  --blanco: #fffffc;
+}
+.Filtro-allProducts {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  justify-content: flex-end;
+}
+
