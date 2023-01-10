@@ -15,7 +15,7 @@
     flex-direction: column;
     position: relative;     
     justify-content: center;
-    background-color: #524080;
+    background: linear-gradient(to bottom, black, var(--violeta-oscuro));
     color: #fff;
     margin-bottom: auto;
 }
@@ -50,9 +50,8 @@
 .datos-cliente {
     margin: auto;
     display: flex;
-    width: 90vw;
-    height: 90vh;
-    background-color: #524080;
+    width: 90%;
+    height: 90%;
     color:#fff;
     padding: 50px 30px;
     align-items: left;
@@ -75,6 +74,8 @@
     outline: none;
     height: 5%;
     font-size: 16px;
+    padding: 10px;
+    border-radius: 5Px;
 }
 
 .buttons {
