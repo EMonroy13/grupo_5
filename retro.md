@@ -11,3 +11,15 @@ https://app.mural.co/t/digitalgroup5ho9453/m/digitalgroup5ho9453/1670893223461/0
 - **Mantener Ritmo** Mantener ritmo de historias terminadas
 - **Honestidad** Ser Honesto con el avance de las historias y levantar la mano a tiempo
 ``` 
+
+```
+Grupo 5 Retro Sprint 2
+
+Referencias:
+../retros/retro_sprint2.pdf
+
+```
+## ---- Action Items Sprint 2 ----
+- **Proporcionar estatus de las actividades una semana antes del cierre del sprint
+- **Continuar con las dos sesiones semanales 
+``` 
