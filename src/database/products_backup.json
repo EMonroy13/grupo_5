@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "productName": "",
+        "description": "",
+        "image": "",
+        "category": "oficina",
+        "colors": "",
+        "price": 402
+    },
+    {
+        "id": 2,
+        "productName": "",
+        "description": "",
+        "image": "",
+        "category": "sala",
+        "colors": "",
+        "price": 402
+    },
+    {
+        "id": 3,
+        "productName": "",
+        "description": "",
+        "image": "",
+        "category": "cocina",
+        "colors": "",
+        "price": 402
+    },
+    {
+        "id": 4,
+        "productName": "",
+        "description": "",
+        "image": "",
+        "category": "mueblesTv",
+        "colors": "",
+        "price": 402
+    },
+    {
+        "id": 5,
+        "productName": "",
+        "description": "",
+        "image": "",
+        "category": "videojuegos",
+        "colors": "",
+        "price": 402
+    },
+    {
+        "id": 6,
+        "productName": "",
+        "description": "",
+        "image": "",
+        "category": "dormitorios",
+        "colors": "",
+        "price": 402
+    }
+]
