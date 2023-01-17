@@ -1,56 +1,79 @@
 [
     {
         "id": 1,
-        "productName": "",
+        "productName": "Escritorio",
         "description": "",
-        "image": "",
+        "image": "default-placeholder.png",
         "category": "oficina",
+        "isTopSeller": true,
+        "offer": true,
         "colors": "",
-        "price": 402
+        "price": 50000
     },
     {
         "id": 2,
-        "productName": "",
+        "productName": "Sillon",
         "description": "",
-        "image": "",
+        "image": "default-placeholder.png",
         "category": "sala",
+        "isTopSeller": true,
+        "offer": false,
         "colors": "",
         "price": 402
     },
     {
         "id": 3,
-        "productName": "",
+        "productName": "Alacena",
         "description": "",
-        "image": "",
+        "image": "default-placeholder.png",
         "category": "cocina",
+        "isTopSeller": false,
+        "offer": true,
         "colors": "",
         "price": 402
     },
     {
         "id": 4,
-        "productName": "",
+        "productName": "Aparador TV",
         "description": "",
-        "image": "",
+        "image": "aparador-estrecho-nordico-pino.jpg",
         "category": "mueblesTv",
+        "isTopSeller": true,
+        "offer": true,
         "colors": "",
         "price": 402
     },
     {
         "id": 5,
-        "productName": "",
+        "productName": "Silla gamer",
         "description": "",
-        "image": "",
+        "image": "silla-gamer.jpg",
         "category": "videojuegos",
+        "isTopSeller": false,
+        "offer": true,
         "colors": "",
-        "price": 402
+        "price": 80000
     },
     {
         "id": 6,
-        "productName": "",
+        "productName": "Cama Matrimonial",
         "description": "",
-        "image": "",
+        "image": "default-placeholder.png",
         "category": "dormitorios",
+        "isTopSeller": true,
+        "offer": false,
         "colors": "",
-        "price": 402
+        "price": 40200
+    },
+    {
+        "id": 7,
+        "productName": "Cama individual",
+        "description": "",
+        "image": "default-placeholder.png",
+        "category": "dormitorios",
+        "isTopSeller": false,
+        "offer": false,
+        "colors": "",
+        "price": 20100
     }
 ]

@@ -22,47 +22,28 @@
             <a href=""><div class="categorias__5"><p>Gaming</p></div></a>
             <a href=""><div class="categorias__6"><p>Dormitorios</p></div></a>
         </section>
-        <h4>Último producto ingresado</h4>
+        <h4>Agregado recientemente</h4>
         <section class="main__ultimo-ingresado">
             <article class="ultimo-ingresado__articulo">
-                <img src="img/juego-cama.webp" alt="articulo">
+                <img src="img/<%= ultimoAgregado.image %>" alt="articulo">
                 <div class="ultimo-ingresado__precio">
-                <p>$300000</p>
-                <h5>Cama Matrimoñal clasica</h5>
+                <p><%= ultimoAgregado.price %></p>
+                <h5><%= ultimoAgregado.productName %></h5>
                 </div>
             </article>
         </section>
-        <h4>Últimos ingresos</h4>
+        <h4>Últimos productos agregados</h4>
         <section class="main__ultimos-ingresos">
             <div class="ultimos-ingresos__contenedor">
-            <article class="ultimos-ingresos__articulo">
-                <a href="/productDetail"><img src="img/silla-gamer.jpg" alt="articulo1"></a>
+                <% ultimosAgregados.forEach((producto)=>{ %>
+                <article class="ultimos-ingresos__articulo">
+                <a href="/productDetail"><img src="img/<%= producto.image %>" alt="articulo1"></a>
                 <div class="ultimos-ingresos__precio">
-                <p>$20000</p>
-                <h5>Silla gamer</h5>
+                <p>$ <%= producto.price %></p>
+                <h5><%= producto.productName %></h5>
                 </div>
             </article>
-            <article class="ultimos-ingresos__articulo">
-                <img src="img/silla-gamer.jpg" alt="articulo1">
-                <div class="ultimos-ingresos__precio">
-                <p>$20000</p>
-                <h5>Silla gamer</h5>
-                </div>
-            </article>
-            <article class="ultimos-ingresos__articulo">
-                <img src="img/silla-gamer.jpg" alt="articulo1">
-                <div class="ultimos-ingresos__precio">
-                <p>$20000</p>
-                <h5>Silla gamer</h5>
-                </div>
-            </article>
-            <article class="ultimos-ingresos__articulo">
-                <img src="img/silla-gamer.jpg" alt="articulo1">
-                <div class="ultimos-ingresos__precio">
-                <p>$20000</p>
-                <h5>Silla gamer</h5>
-                </div>
-            </article>
+            <% }) %>
             </div>
             <div class="ultimos-ingresos__ver-mas">
                 <a href=""><p>Ver mas</p ><p> > </p> </a>
@@ -71,60 +52,17 @@
         <h4>Lo mas vendido</h4>
         <section class="main__mas-vendido">
             <div class="mas-vendido__contenedor">
+                <% loMasVendido.forEach((producto)=>{ %>
                 <article>
                     <div class="mas-vendido__imagen">
-                    <img src="img/aparador-estrecho-nordico-pino.jpg" alt="articulo2">
+                    <img src="img/<%= producto.image %>" alt="articulo2">
                     </div>
                     <div class="mas-vendido__precio">
-                    <p>$50000</p>
-                    <h5>Aparador nordico</h5>
+                    <p>$ <%= producto.price %></p>
+                    <h5><%= producto.productName %></h5>
                     </div>
                 </article>
-                <article>
-                    <div class="mas-vendido__imagen">
-                        <img src="img/aparador-estrecho-nordico-pino.jpg" alt="articulo2">
-                    </div>
-                    <div class="mas-vendido__precio">
-                        <p>$50000</p>
-                        <h5>Aparador nordico</h5>
-                    </div>
-                </article>
-                <article>
-                    <div class="mas-vendido__imagen">
-                    <img src="img/aparador-estrecho-nordico-pino.jpg" alt="articulo2">
-                    </div>
-                    <div class="mas-vendido__precio">
-                    <p>$50000</p>
-                    <h5>Aparador nordico</h5>
-                    </div>
-                </article>
-                <article>
-                    <div class="mas-vendido__imagen">
-                    <img src="img/aparador-estrecho-nordico-pino.jpg" alt="articulo2">
-                    </div>
-                    <div class="mas-vendido__precio">
-                    <p>$50000</p>
-                    <h5>Aparador nordico</h5>
-                    </div>
-                </article>
-                <article>
-                    <div class="mas-vendido__imagen">
-                    <img src="img/aparador-estrecho-nordico-pino.jpg" alt="articulo2">
-                    </div>
-                    <div class="mas-vendido__precio">
-                    <p>$50000</p>
-                    <h5>Aparador nordico</h5>
-                    </div>
-                </article>
-                <article>
-                    <div class="mas-vendido__imagen">
-                    <img src="img/aparador-estrecho-nordico-pino.jpg" alt="articulo2">
-                    </div>
-                    <div class="mas-vendido__precio">
-                    <p>$50000</p>
-                    <h5>Aparador nordico</h5>
-                    </div>
-                </article>
+                <% }) %>
             </div>
                 <div class="mas-vendido__ver-mas">
                     <a href=""><p>Ver mas</p ><p> > </p> </a>
@@ -132,60 +70,17 @@
          </section>
          <h4>Algunas de nuestras ofertas</h4>
          <section class="main__ofertas">
+            <% algunasOfertas.forEach((producto)=>{ %>
             <article>
                 <div class="ofertas__imagen">
-                <img src="img/alacena.jpg" alt="articulo5">
+                <img src="img/<%= producto.image %>" alt="articulo5">
                 </div>
                 <div class="ofertas__precio">
-                    <h5>Alacena clasica</h5>
-                    <p class="precio__efectivo">$70000</p><p class="precio__descuento">20% off</p>
+                    <h5><%= producto.productName %></h5>
+                    <p class="precio__efectivo">$ <%= producto.price %></p><p class="precio__descuento">20% off</p>
                 </div>
             </article>
-            <article>
-                <div class="ofertas__imagen">
-                <img src="img/alacena.jpg" alt="articulo5">
-                </div>
-                <div class="ofertas__precio">
-                    <h5>Alacena clasica</h5>
-                    <p class="precio__efectivo">$70000</p><p class="precio__descuento">20% off</p>
-                </div>
-            </article>
-            <article>
-                <div class="ofertas__imagen">
-                <img src="img/alacena.jpg" alt="articulo5">
-                </div>
-                <div class="ofertas__precio">
-                    <h5>Alacena clasica</h5>
-                    <p class="precio__efectivo">$70000</p><p class="precio__descuento">20% off</p>
-                </div>
-            </article>
-            <article>
-                <div class="ofertas__imagen">
-                <img src="img/alacena.jpg" alt="articulo5">
-                </div>
-                <div class="ofertas__precio">
-                    <h5>Alacena clasica</h5>
-                    <p class="precio__efectivo">$70000</p><p class="precio__descuento">20% off</p>
-                </div>
-            </article>
-            <article>
-                <div class="ofertas__imagen">
-                <img src="img/alacena.jpg" alt="articulo5">
-                </div>
-                <div class="ofertas__precio">
-                    <h5>Alacena clasica</h5>
-                    <p class="precio__efectivo">$70000</p><p class="precio__descuento">20% off</p>
-                </div>
-            </article>
-            <article>
-                <div class="ofertas__imagen">
-                <img src="img/alacena.jpg" alt="articulo5">
-                </div>
-                <div class="ofertas__precio">
-                    <h5>Alacena clasica</h5>
-                    <p class="precio__efectivo">$70000</p><p class="precio__descuento">20% off</p>
-                </div>
-            </article>
+            <% }) %>
         </section>
     </main>
     <%- include("./partials/footer") %>
