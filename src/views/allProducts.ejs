@@ -19,135 +19,28 @@
   </div>
   <body>
     <section class="main__ofertas">
-      <article>
+      <% productos.forEach((product)=>{ %>
+
+       
+      <article> 
+        
         <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
+        
+          <img src="img/<%= product.image %>" alt="articulo5" />
         </div>
         <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
+          <h5> <%= product.productName %></h5>
+          <p class="precio__efectivo">$<%= product.price %></p>
+          <p class="precio__descuento">% <%= product.discount %></p>
         </div>
       </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
-      <article>
-        <div class="ofertas__imagen">
-          <img src="img/alacena.jpg" alt="articulo5" />
-        </div>
-        <div class="ofertas__precio">
-          <h5>Alacena clasica</h5>
-          <p class="precio__efectivo">$70000</p>
-          <p class="precio__descuento">20% off</p>
-        </div>
-      </article>
+   <% }) %> 
     </section>
+    
     <ul class="bar-nav-productos">
-      <li><a href="">1</a></li>
-      <li><a href="">2</a></li>
-      <li><a href="">3</a></li>
-      <li><a href="">4</a></li>
-      <li><a href="">6</a></li>
-      <li><a href="">7</a></li>
-      <li><a href="">8</a></li>
+      <% for (let i = 1; i < 9; i++){ %>
+      <li><a href=""><%=i%></a></li>
+      <% }%>
   </ul>
   </body>
   <%- include("./partials/footer") %>

@@ -75,5 +75,16 @@
         "offer": false,
         "colors": "",
         "price": 20100
+    },
+    {
+        "id": 8,
+        "productName": "Aparador TV",
+        "description": "",
+        "image": "aparador-estrecho-nordico-pino.jpg",
+        "category": "mueblesTv",
+        "isTopSeller": true,
+        "offer": true,
+        "colors": "",
+        "price": 402
     }
 ]
