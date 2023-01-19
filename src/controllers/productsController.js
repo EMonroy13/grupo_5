@@ -23,7 +23,12 @@ const productsController = {
 		let productoFiltrado = products.find(producto => {
 			return producto.id == id
 		})
-        res.render(path.resolve(__dirname, "../views/productDetail"), {producto: productoFiltrado})
+        /* let productoRelacionado = products.filter(producto => {
+			return producto.category == productoFiltrado.category
+		}) */
+        res.render(path.resolve(__dirname, "../views/productDetail"), {
+            producto: productoFiltrado/* ,
+            productoRelacionado : productoRelacionado */})
     },
     
     

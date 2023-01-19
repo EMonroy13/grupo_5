@@ -10,7 +10,7 @@
     <main>
         <section>
             <div class="titulo-puntuacion__contenedor">
-            <h2> Silla de escritorio con apoyapiés gamer ergonómica</h2>
+            <h2> <%= producto.productName %></h2>
             <a href="">
                 <i class="fa-sharp fa-solid fa-star"></i>
                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -20,10 +20,10 @@
             </a>
             </div>
             <div class="contenedor__img-producto">
-                <img src="img/silla-gamer.jpg" alt="">
+                <img src="img/<%= producto.image %>" alt="">
             </div>
             <div class="contenedor-precio">
-                <h3>$00000.00</h3>
+                <h3>$ <%= producto.price %></h3>
                 <p>En hasta 12 cuotas</p>
             </div>
             <div class="contenedor-botones">
@@ -56,10 +56,10 @@
             <h5 class="info-adicional__ver-mas">Ver mas </h5>
         </section>
         <section>
-            <h4>Productos relacionados</h4>
+            <h4><%= productoRelacionado.productName %></h4> <!-- solucionar -->
             <article class="producto-relacionado">
                 <div class="contenedor__imagen-relacionados">
-                    <img src="img/silla-gamer-2.jpg" alt="">
+                    <img src="img/<%= productoRelacionado.image %>" alt=""> <!-- solucionar -->
                 </div>
             </article>
         </section>
