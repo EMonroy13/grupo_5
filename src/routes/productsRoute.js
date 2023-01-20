@@ -16,7 +16,7 @@ router.get("/productEdit", productsController.edit);
 
 
 //devolver el detalle del producto
-router.get("/productDetail/:id", productsController.productDetail);
+router.get("/:id", productsController.productDetail);
 
 // devolver carrito de compras
 router.get("/productCart", productsController.cart);

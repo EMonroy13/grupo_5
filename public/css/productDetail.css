@@ -8,7 +8,7 @@
 }
 .titulo-puntuacion__contenedor h2{
     padding: 15px 5px;
-    font-size: 23px;
+    font-size: 30px;
     color: #000;
 }
 .titulo-puntuacion__contenedor a{
@@ -103,6 +103,18 @@
     background-color: var(--blanco);
     width: 95%;
 }
+.productos-relacionados h4{
+    padding: 15px 5px;
+    font-size: 26px;
+    color: var(--violeta-oscuro);
+    font-weight: 600;
+}
+.producto-relacionado p{
+    padding: 15px 5px;
+    font-size: 30px;
+    color: #000;
+}
+
 .contenedor__imagen-relacionados{
     height: 250px;
     width: 250px;

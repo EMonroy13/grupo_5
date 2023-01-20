@@ -37,7 +37,7 @@
             <div class="ultimos-ingresos__contenedor">
                 <% ultimosAgregados.forEach((producto)=>{ %>
                 <article class="ultimos-ingresos__articulo">
-                <a href="/productDetail"><img src="img/<%= producto.image %>" alt="articulo1"></a>
+                <a href="/productDetail"><div class="ultimos-ingresos-img"><img src="img/<%= producto.image %>" alt="articulo1"></div></a>
                 <div class="ultimos-ingresos__precio">
                 <p>$ <%= producto.price %></p>
                 <h5><%= producto.productName %></h5>

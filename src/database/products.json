@@ -7,6 +7,7 @@
         "category": "oficina",
         "isTopSeller": true,
         "offer": true,
+        "discount":20,
         "colors": "",
         "price": 50000
     },
@@ -18,6 +19,7 @@
         "category": "sala",
         "isTopSeller": true,
         "offer": false,
+        "discount":0,
         "colors": "",
         "price": 402
     },
@@ -29,6 +31,7 @@
         "category": "cocina",
         "isTopSeller": false,
         "offer": true,
+        "discount":20,
         "colors": "",
         "price": 402
     },
@@ -40,6 +43,7 @@
         "category": "mueblesTv",
         "isTopSeller": true,
         "offer": true,
+        "discount":20,
         "colors": "",
         "price": 402
     },
@@ -51,6 +55,7 @@
         "category": "videojuegos",
         "isTopSeller": false,
         "offer": true,
+        "discount":20,
         "colors": "",
         "price": 80000
     },
@@ -62,6 +67,7 @@
         "category": "dormitorios",
         "isTopSeller": true,
         "offer": false,
+        "discount":0,
         "colors": "",
         "price": 40200
     },
@@ -73,6 +79,7 @@
         "category": "dormitorios",
         "isTopSeller": false,
         "offer": false,
+        "discount":0,
         "colors": "",
         "price": 20100
     },
@@ -84,6 +91,7 @@
         "category": "mueblesTv",
         "isTopSeller": true,
         "offer": true,
+        "discount":20,
         "colors": "",
         "price": 402
     }
