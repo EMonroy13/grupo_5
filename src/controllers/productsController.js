@@ -25,7 +25,7 @@ const productsController = {
 		})
         let productoRelacionado = products.filter(producto => {
 			return producto.category == productoFiltrado.category
-		})
+		}) 
         res.render(path.resolve(__dirname, "../views/productDetail"), {
             producto: productoFiltrado,
             productoRelacionado : productoRelacionado})
