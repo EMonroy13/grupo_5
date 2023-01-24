@@ -349,7 +349,7 @@ font-size: 20px;
     padding: 10px 20px;
     width: 100%;
     border-right: solid grey 0.5px;
-    height: 90%;
+    height: 200px;
 }
 .main__mas-vendido img{
     width: 100%;
@@ -383,8 +383,11 @@ font-size: 20px;
     margin: 5px auto;
     border-bottom: solid 0.5px grey;
 }
-.ofertas__imagen{
+.main__ofertas a{
     width: 30%;
+}
+.ofertas__imagen{
+    width: 100%;
     border-right: solid 1px grey;
     padding: 0 10px;
     object-position: center;

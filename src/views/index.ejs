@@ -25,11 +25,13 @@
         <h4>Agregado recientemente</h4>
         <section class="main__ultimo-ingresado">
             <article class="ultimo-ingresado__articulo">
+                <a href="/productDetail/<%=ultimoAgregado.id%>">
                 <img src="img/<%= ultimoAgregado.image %>" alt="articulo">
                 <div class="ultimo-ingresado__precio">
                 <p><%= ultimoAgregado.price %></p>
                 <h5><%= ultimoAgregado.productName %></h5>
                 </div>
+                </a>
             </article>
         </section>
         <h4>Últimos productos agregados</h4>
@@ -37,7 +39,7 @@
             <div class="ultimos-ingresos__contenedor">
                 <% ultimosAgregados.forEach((producto)=>{ %>
                 <article class="ultimos-ingresos__articulo">
-                <a href="/productDetail"><div class="ultimos-ingresos-img"><img src="img/<%= producto.image %>" alt="articulo1"></div></a>
+                <a href="/productDetail/<%=producto.id%>"><div class="ultimos-ingresos-img"><img src="img/<%= producto.image %>" alt="articulo1"></div></a>
                 <div class="ultimos-ingresos__precio">
                 <p>$ <%= producto.price %></p>
                 <h5><%= producto.productName %></h5>
@@ -54,9 +56,11 @@
             <div class="mas-vendido__contenedor">
                 <% loMasVendido.forEach((producto)=>{ %>
                 <article>
+                    <a href="/productDetail/<%=producto.id%>">
                     <div class="mas-vendido__imagen">
                     <img src="img/<%= producto.image %>" alt="articulo2">
                     </div>
+                    </a>
                     <div class="mas-vendido__precio">
                     <p>$ <%= producto.price %></p>
                     <h5><%= producto.productName %></h5>
@@ -72,9 +76,11 @@
          <section class="main__ofertas">
             <% algunasOfertas.forEach((producto)=>{ %>
             <article>
+                <a href="/productDetail/<%=producto.id%>">
                 <div class="ofertas__imagen">
                 <img src="img/<%= producto.image %>" alt="articulo5">
                 </div>
+                </a>
                 <div class="ofertas__precio">
                     <h5><%= producto.productName %></h5>
                     <p class="precio__efectivo">$ <%= producto.price %></p><p class="precio__descuento">20% off</p>

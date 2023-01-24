@@ -9,6 +9,7 @@ const productsRoute = require ("./routes/productsRoute");
 //middlewares
 app.use(express.static(path.resolve(__dirname, "../public"))); /* arreglando static */
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, '/views'));
 app.use(express.json());
 
 /* HOME */

@@ -10,7 +10,7 @@ const productsController = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 		
-        res.render(path.resolve(__dirname, "../views/allproducts"), {productos: products})
+        res.render("allproducts", {productos: products})
        
     },
    
@@ -19,30 +19,36 @@ const productsController = {
         
         let id = req.params.id;
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+        
 		let productoFiltrado = products.find(producto => {
 			return producto.id == id
 		})
         let productoRelacionado = products.filter(producto => {
-			return producto.category == productoFiltrado.category
-		}) 
-        res.render(path.resolve(__dirname, "../views/productDetail"), {
+            
+         return producto.category == productoFiltrado.category
+            
+		})
+        res.render("productDetail", {
             producto: productoFiltrado,
             productoRelacionado : productoRelacionado})
     },
     
     
     create: (req, res)=>{
-            res.render(path.resolve(__dirname, "../views/productUpdate"))
+            res.render("productUpdate")
+
         },
+    processCreate:(req,res)=>{
+
+     },
     
    
     edit:(req, res)=>{
-            res.render(path.resolve(__dirname, "../views/productEdit"))
+            res.render("productEdit")
         },
 
     cart: (req, res)=>{
-            res.render(path.resolve(__dirname, "../views/productCart"))
+            res.render("productCart")
         }
 }
 

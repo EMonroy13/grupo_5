@@ -14,7 +14,7 @@ const indexController = {
         const loMasVendido = productosLeidos.filter(producto=> producto.isTopSeller == true);
         const algunasOfertas = productosLeidos.filter(producto=> producto.offer == true);
         
-        res.render(path.resolve(__dirname, "../views/index"), {
+        res.render("index", {
             ultimoAgregado:ultimoAgregado,
             ultimosAgregados:ultimosAgregados,
             loMasVendido : loMasVendido,

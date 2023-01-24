@@ -8,6 +8,7 @@ router.get("/allProducts", productsController.allProducts);
 
 // crear productos
 router.get("/productCreate", productsController.create);
+router.post("/productCreate/:id", productsController.processCreate)
 
 // editar productos
 router.get("/productEdit", productsController.edit);
@@ -16,7 +17,8 @@ router.get("/productEdit", productsController.edit);
 
 
 //devolver el detalle del producto
-router.get("/:id", productsController.productDetail);
+router.get("/productDetail/:id/", productsController.productDetail);
+
 
 // devolver carrito de compras
 router.get("/productCart", productsController.cart);
