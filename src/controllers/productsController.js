@@ -116,7 +116,7 @@ destroy : (req, res) => {
 
     fs.writeFileSync(productsFilePath, JSON.stringify(productosFiltrados, null, " "));
 
-    res.redirect("/products/");
+    res.redirect("/products/allProducts");
 },
 
 

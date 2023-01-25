@@ -103,17 +103,5 @@
   "discount": "20",
   "colors": "#f5f5f5",
   "price": "80000"
- },
- {
-  "id": 13,
-  "productName": "Armario corredera",
-  "description": " ",
-  "image": "image-1674681760807.jpg",
-  "category": "cocina",
-  "isTopSeller": false,
-  "offer": "true",
-  "discount": "20",
-  "colors": "#fffafa",
-  "price": "120000"
  }
 ]
