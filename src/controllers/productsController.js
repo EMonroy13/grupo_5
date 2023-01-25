@@ -45,7 +45,7 @@ const productsController = {
             id : products[products.length - 1].id + 1,
             productName : req.body.productName,
             description : req.body.description,
-            image : req.file ? req.file.fileName : 'default-placeholder.png' ,
+            image : req.file ? req.file.filename : 'default-placeholder.png' ,
             category : req.body.category,
             /* isTopSeller : req.body.isTopSeller, */
             /* offer : req.body.offer, */
@@ -62,8 +62,44 @@ const productsController = {
     
    
     edit:(req, res)=>{
-            res.render("productEdit")
+        let id = req.params.id;
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let productoFiltrado = products.find(producto => producto.id == id)
+		res.render("productEdit",{productToEdit:productoFiltrado});
         },
+    processEdit:(req, res) => {
+		
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		let id = req.params.id;
+		let productoAnterior = products.find(producto => {
+			return producto.id == id
+		})
+
+		let productoEditado = {
+			/* dejar el id anterior */
+			id: productoAnterior.id,
+			productName: req.body.name,
+            description: req.body.description,
+            image:req.file ? req.file.filename : productoAnterior.image,
+            category: req.body.category,
+            colors:req.body.color,
+			price: req.body.price,			
+		}
+     
+		/* Modificar el array en la posición correspondiente */
+		
+		let indice = products.findIndex(product => {
+			return product.id == id
+		})
+
+		products[indice] = productoEditado;
+
+		/* Convertir a JSON */
+		/* Escribir sobre el archivo json */
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		res.redirect("/allProducts");
+	},
 
     cart: (req, res)=>{
             res.render("productCart")

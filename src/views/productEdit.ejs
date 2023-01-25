@@ -10,24 +10,18 @@
         <form class="form__upDate">
             <h2>Edicion de productos</h2>
             <p>
-            <input class="form__nombre-producto" type="text" placeholder="Nombre del producto a Editar" required>
-            </p>
-            <p>
-            <input class="form__nombre-producto" type="text" placeholder="Nuevo nombre del producto" required>
+            <input class="form__nombre-producto" value="<%= productToEdit.productName%>" type="text" placeholder="Nuevo nombre del producto" name="name" required>
             </p>
             <p class="form__img">
-            <label>Imagenes: </label>
-            <input type="file" accept="image/*">
-            <input type="file" accept="image/*">
-            <input type="file" accept="image/*">
-            <input type="file" accept="image/*">
+            <label for="image">Imagenes: </label>
+            <input type="file" name="image" accept="image/*">
             </p>
             <p class="form_descripcion">
             <label  for="descripcionProducto">Descripción del producto:</label>
-            <textarea id="descripcion" name="descripcionPoducto" rows="7" cols="40"> </textarea>
+            <textarea id="descripcion" value="<%= productToEdit.description%>"  name="description" rows="7" cols="40"> </textarea>
             <p>
             <label class="form_categorias" for="selectUpdate">Ingrese la categoria:</label>
-            <select  class="form__select-cat" name="selectUpdate">
+            <select  class="form__select-cat" name="category">
                 <option value="oficina">Oficina</option>
                 <option value="living">Living</option>
                 <option value="cocina">Cocina</option>
@@ -37,11 +31,11 @@
             </select>
             </p>
             <p>
-            <label class="form_color" for="colorProducto">Color:</label>
-            <input class="form__color-producto" type="color" name="colorProducto" required>
+            <label class="form_color" for="colorProducto" value="<%= productToEdit.colors%>">Color:</label>
+            <input class="form__color-producto" type="color" name="color" required>
             </p>
             <p>
-            <input type="number" class="form__precio-producto" placeholder="Indique el precio en ars $" required> 
+            <input type="number" name="price" class="form__precio-producto" value="<%= productToEdit.price%>" placeholder="Indique el precio en ars $" required> 
             </p>
             <p class="form__buttom">
             <button type="submit" class="form__enviar">Confirmar</button>
