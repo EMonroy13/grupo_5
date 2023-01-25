@@ -25,8 +25,8 @@
         <h4>Agregado recientemente</h4>
         <section class="main__ultimo-ingresado">
             <article class="ultimo-ingresado__articulo">
-                <a href="/productDetail/<%=ultimoAgregado.id%>">
-                <img src="img/<%= ultimoAgregado.image %>" alt="articulo">
+                <a href="/products/productDetail/<%=ultimoAgregado.id%>">
+                <img src="/img/<%= ultimoAgregado.image %>" alt="articulo">
                 <div class="ultimo-ingresado__precio">
                 <p><%= ultimoAgregado.price %></p>
                 <h5><%= ultimoAgregado.productName %></h5>
@@ -39,7 +39,7 @@
             <div class="ultimos-ingresos__contenedor">
                 <% ultimosAgregados.forEach((producto)=>{ %>
                 <article class="ultimos-ingresos__articulo">
-                <a href="/productDetail/<%=producto.id%>"><div class="ultimos-ingresos-img"><img src="img/<%= producto.image %>" alt="articulo1"></div></a>
+                <a href="/products/productDetail/<%=producto.id%>"><div class="ultimos-ingresos-img"><img src="/img/<%= producto.image %>" alt="articulo1"></div></a>
                 <div class="ultimos-ingresos__precio">
                 <p>$ <%= producto.price %></p>
                 <h5><%= producto.productName %></h5>
@@ -56,9 +56,9 @@
             <div class="mas-vendido__contenedor">
                 <% loMasVendido.forEach((producto)=>{ %>
                 <article>
-                    <a href="/productDetail/<%=producto.id%>">
+                    <a href="/products/productDetail/<%=producto.id%>">
                     <div class="mas-vendido__imagen">
-                    <img src="img/<%= producto.image %>" alt="articulo2">
+                    <img src="/img/<%= producto.image %>" alt="articulo2">
                     </div>
                     </a>
                     <div class="mas-vendido__precio">
@@ -76,9 +76,9 @@
          <section class="main__ofertas">
             <% algunasOfertas.forEach((producto)=>{ %>
             <article>
-                <a href="/productDetail/<%=producto.id%>">
+                <a href="/products/productDetail/<%=producto.id%>">
                 <div class="ofertas__imagen">
-                <img src="img/<%= producto.image %>" alt="articulo5">
+                <img src="/img/<%= producto.image %>" alt="articulo5">
                 </div>
                 </a>
                 <div class="ofertas__precio">

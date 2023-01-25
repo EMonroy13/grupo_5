@@ -20,7 +20,7 @@
             </a>
             </div>
             <div class="contenedor__img-producto">
-                <img src="img/producto/<%=producto.image %>" alt="imagen">
+                <img src="/img/<%=producto.image %>" alt="imagen">
             </div>
             <div class="contenedor-precio">
                 <h3>$ <%= producto.price %></h3>
@@ -60,7 +60,7 @@
             <article class="producto-relacionado">
                 <p><%= productoRelacionado[productoRelacionado.length - 1].productName %></p>
                 <div class="contenedor__imagen-relacionados">
-                    <img src="img/<%= productoRelacionado[productoRelacionado.length - 1].image %>" alt="imagen2"> <!-- solucionar -->
+                    <img src="/img/<%= productoRelacionado[productoRelacionado.length - 1].image %>" alt="imagen2"> <!-- solucionar -->
                 </div>
             </article>
         </section>

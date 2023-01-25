@@ -13,7 +13,6 @@ const productsController = {
         res.render("allproducts", {productos: products})
        
     },
-   
     
     productDetail: (req, res)=>{
         
@@ -33,14 +32,33 @@ const productsController = {
             productoRelacionado : productoRelacionado})
     },
     
-    
     create: (req, res)=>{
-            res.render("productUpdate")
+        res.render("productCreate");
+    },
 
-        },
     processCreate:(req,res)=>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-     },
+        /* crear validación para products.length si esta vacio */
+
+        let newProduct = {
+            id : products[products.length - 1].id + 1,
+            productName : req.body.productName,
+            description : req.body.description,
+            image : req.file ? req.file.fileName : 'default-placeholder.png' ,
+            category : req.body.category,
+            /* isTopSeller : req.body.isTopSeller, */
+            /* offer : req.body.offer, */
+            /* discount : req.body.discount, */
+            colors : req.body.colors,
+            price : req.body.price
+        };
+        console.log(req.body);
+        /* Necesitamos pushear el nuevo producto */
+        products.push(newProduct);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+        res.redirect('/');
+    },
     
    
     edit:(req, res)=>{

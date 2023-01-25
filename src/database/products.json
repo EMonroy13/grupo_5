@@ -1,98 +1,104 @@
 [
-    {
-        "id": 1,
-        "productName": "Escritorio",
-        "description": "",
-        "image": "oficina/escritorio_basico.jpg",
-        "category": "oficina",
-        "isTopSeller": true,
-        "offer": true,
-        "discount":20,
-        "colors": "",
-        "price": 50000
-    },
-    {
-        "id": 2,
-        "productName": "Sillon",
-        "description": "",
-        "image": "living/sofa-tripe.jpeg",
-        "category": "sala",
-        "isTopSeller": true,
-        "offer": false,
-        "discount":0,
-        "colors": "",
-        "price": 402
-    },
-    {
-        "id": 3,
-        "productName": "Alacena",
-        "description": "",
-        "image": "alacena.jpg",
-        "category": "cocina",
-        "isTopSeller": false,
-        "offer": true,
-        "discount":20,
-        "colors": "",
-        "price": 402
-    },
-    {
-        "id": 4,
-        "productName": "Aparador TV",
-        "description": "",
-        "image": "aparador-estrecho-nordico-pino.jpg",
-        "category": "mueblesTv",
-        "isTopSeller": true,
-        "offer": true,
-        "discount":20,
-        "colors": "",
-        "price": 402
-    },
-    {
-        "id": 5,
-        "productName": "Silla gamer",
-        "description": "",
-        "image": "silla-gamer.jpg",
-        "category": "videojuegos",
-        "isTopSeller": false,
-        "offer": true,
-        "discount":20,
-        "colors": "",
-        "price": 80000
-    },
-    {
-        "id": 6,
-        "productName": "Cama Matrimonial",
-        "description": "",
-        "image": "juego-cama.webp",
-        "category": "dormitorios",
-        "isTopSeller": true,
-        "offer": false,
-        "discount":0,
-        "colors": "",
-        "price": 40200
-    },
-    {
-        "id": 7,
-        "productName": "Cama individual",
-        "description": "",
-        "image": "dormitorio/literas.jpg",
-        "category": "dormitorios",
-        "isTopSeller": false,
-        "offer": false,
-        "discount":0,
-        "colors": "",
-        "price": 20100
-    },
-    {
-        "id": 8,
-        "productName": "Aparador TV",
-        "description": "",
-        "image": "aparador-estrecho-nordico-pino.jpg",
-        "category": "mueblesTv",
-        "isTopSeller": true,
-        "offer": true,
-        "discount":20,
-        "colors": "",
-        "price": 402
-    }
+ {
+  "id": 1,
+  "productName": "Escritorio",
+  "description": "",
+  "image": "oficina/escritorio_basico.jpg",
+  "category": "oficina",
+  "isTopSeller": true,
+  "offer": true,
+  "discount": 20,
+  "colors": "",
+  "price": 50000
+ },
+ {
+  "id": 2,
+  "productName": "Sillon",
+  "description": "",
+  "image": "living/sofa-tripe.jpeg",
+  "category": "sala",
+  "isTopSeller": true,
+  "offer": false,
+  "discount": 0,
+  "colors": "",
+  "price": 402
+ },
+ {
+  "id": 3,
+  "productName": "Alacena",
+  "description": "",
+  "image": "alacena.jpg",
+  "category": "cocina",
+  "isTopSeller": false,
+  "offer": true,
+  "discount": 20,
+  "colors": "",
+  "price": 402
+ },
+ {
+  "id": 4,
+  "productName": "Aparador TV",
+  "description": "",
+  "image": "aparador-estrecho-nordico-pino.jpg",
+  "category": "mueblesTv",
+  "isTopSeller": true,
+  "offer": true,
+  "discount": 20,
+  "colors": "",
+  "price": 402
+ },
+ {
+  "id": 5,
+  "productName": "Silla gamer",
+  "description": "",
+  "image": "silla-gamer.jpg",
+  "category": "videojuegos",
+  "isTopSeller": false,
+  "offer": true,
+  "discount": 20,
+  "colors": "",
+  "price": 80000
+ },
+ {
+  "id": 6,
+  "productName": "Cama Matrimonial",
+  "description": "",
+  "image": "juego-cama.webp",
+  "category": "dormitorios",
+  "isTopSeller": true,
+  "offer": false,
+  "discount": 0,
+  "colors": "",
+  "price": 40200
+ },
+ {
+  "id": 7,
+  "productName": "Cama individual",
+  "description": "",
+  "image": "dormitorio/literas.jpg",
+  "category": "dormitorios",
+  "isTopSeller": false,
+  "offer": false,
+  "discount": 0,
+  "colors": "",
+  "price": 20100
+ },
+ {
+  "id": 8,
+  "productName": "Aparador TV",
+  "description": "",
+  "image": "aparador-estrecho-nordico-pino.jpg",
+  "category": "mueblesTv",
+  "isTopSeller": true,
+  "offer": true,
+  "discount": 20,
+  "colors": "",
+  "price": 402
+ },
+ {
+  "id": 9
+ },
+ {
+  "id": 10
+ }
 ]

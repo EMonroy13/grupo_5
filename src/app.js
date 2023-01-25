@@ -13,11 +13,11 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.json());
 
 /* HOME */
-app.use(indexRoute);
+app.use('/',indexRoute);
 /* Login */
 app.use(usersRoute);
 /* Carrito de compras  */
-app.use(productsRoute);
+app.use('/products', productsRoute);
 
 
 /* Necesitamos agregar app.listen method para probar en local */
