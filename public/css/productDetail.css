@@ -54,6 +54,10 @@
     border: solid 1px var(--blanco);
     box-shadow: 1px 1px 12px grey;
 }
+.contenedor-botones-editar {
+    width: 91%;
+}
+
 .boton-comprar{
     width: 88%;
     height: 45px;
@@ -68,6 +72,10 @@
     align-items: center;
     height: 45px;
     width: 37%
+}
+.boton-editar {
+    width: 15%;
+
 }
 .boton-favoritos i{
     font-size: 42px;

@@ -7,7 +7,7 @@
 <body>
     <%- include("./partials/header") %>
     <main>
-        <form class="form__upDate">
+        <form class="form__upDate" action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
             <h2>Edicion de productos</h2>
             <p>
             <input class="form__nombre-producto" value="<%= productToEdit.productName%>" type="text" placeholder="Nuevo nombre del producto" name="name" required>

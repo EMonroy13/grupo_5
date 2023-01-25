@@ -101,6 +101,22 @@ const productsController = {
 		res.redirect("/allProducts");
 	},
 
+// (delete) Delete - Eliminar un producto de la DB
+destroy : (req, res) => {
+    // Do the magic
+    let id = req.params.id;
+    const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+    let productosFiltrados = products.filter(producto => {
+        return producto.id != id
+    })
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(productosFiltrados, null, " "));
+
+    res.redirect("/products");
+},
+
+
     cart: (req, res)=>{
             res.render("productCart")
         }

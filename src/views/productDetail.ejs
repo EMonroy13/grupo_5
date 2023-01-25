@@ -33,6 +33,21 @@
                     <i class="fa-regular fa-heart"></i>
                     <p>Agregar a favoritos</p>
                 </a>
+                <!--                      boton de editar                       -->
+                
+                    <div class="contenedor-botones-editar">
+                        <a href="/products/productEdit/<%= producto.id %>">
+                    <button type="button" class="boton-editar">editar</button>
+                    </a>
+                </div>
+                <!--                    boton de eliminar                          -->
+
+              <div class="boton-eliminar">
+                <form action="/product/delete/?_method=DELETE" method="POST" >
+                    <button type="submit" class="action-button delete">ELIMINAR</button>
+                </form>
+            </div>
+
             </div>
         </section>
         <section class="main__info-adicional">
