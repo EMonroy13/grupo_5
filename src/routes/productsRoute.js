@@ -23,7 +23,7 @@ router.post("/productCreate/", upload.single('image') ,productsController.proces
 
 // editar productos
 router.get("/productEdit/:id", productsController.edit);
-router.post("/productEdit/:id", upload.single('image') ,productsController.processEdit);
+router.put("/productEdit/:id", upload.single('image') ,productsController.processEdit);
 
 //eliminar un producto
 router.delete('/delete/:id', productsController.destroy);

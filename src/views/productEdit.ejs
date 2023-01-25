@@ -7,7 +7,7 @@
 <body>
     <%- include("./partials/header") %>
     <main>
-        <form class="form__upDate" action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+        <form class="form__upDate" action="/products/productEdit/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
             <h2>Edicion de productos</h2>
             <p>
             <input class="form__nombre-producto" value="<%= productToEdit.productName%>" type="text" placeholder="Nuevo nombre del producto" name="name" required>
@@ -29,7 +29,6 @@
                 <option value="gaming">Gaming</option>
                 <option value="dormitorios">Dormitorios</option>
             </select>
-            </p>
             <p>
             <label class="form_color" for="colorProducto" value="<%= productToEdit.colors%>">Color:</label>
             <input class="form__color-producto" type="color" name="color" required>
@@ -37,6 +36,15 @@
             <p>
             <input type="number" name="price" class="form__precio-producto" value="<%= productToEdit.price%>" placeholder="Indique el precio en ars $" required> 
             </p>
+            <div class="form__offer-contenedor">
+            <select   name="offer">
+                <option value="true" >Si</option>
+                <option value="false" >No</option>
+            </p>
+            <p>
+                <input type="number" name="discount" value="<%= productToEdit.discount%>" placeholder="Indique el descuento "> 
+            </p>
+            </div>
             <p class="form__buttom">
             <button type="submit" class="form__enviar">Confirmar</button>
             <button type="reset" class="form__borrar">Borrar</button>

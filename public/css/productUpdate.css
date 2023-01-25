@@ -1,12 +1,13 @@
 @import url(/css/index.css);
 .form__upDate{
-    width: 90vw;
+    width: 96vw;
     height: 90%;
     display: flex;
     margin: 20px auto;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: column;
+    background: linear-gradient(to bottom, black, var(--violeta-oscuro)); 
 }
 .form__upDate h2{
     font-size: 28px;
@@ -24,12 +25,10 @@
     width: 100%;
     padding: 8px;
     border: none;
-    box-shadow: inset 0px -4px 0px var(--violeta-oscuro);
-    background-color: var(--beige-claro);
 }
 .form__nombre-producto:focus{
    outline: none;
-   box-shadow: inset 0px -9px 4px -3px var(--violeta-oscuro)
+   box-shadow: inset 0px -9px 8px -2px var(--violeta-oscuro)
 }
 .form__img label{
     display: block;
@@ -37,6 +36,7 @@
 .form__img input{
     margin: 10px auto;
     width: 90%;
+    color: #fff;
 }
 .form__img input:focus{
     outline:solid 2px var(--violeta-oscuro);
@@ -51,12 +51,10 @@
     height: 300px;
     padding: 8px;
     border: none;
-    box-shadow: inset 0px -4px 0px var(--violeta-oscuro);
-    background-color: var(--beige-claro);
 }
 .form_descripcion textarea:focus{
     outline: none;
-    box-shadow: inset 0px -9px 8px -2px var(--violeta-oscuro)
+    box-shadow: inset 0px -9px 8px -2px var(--violeta-oscuro);
  }
     
 .form__select-cat{
@@ -78,13 +76,39 @@
     width: 100%;
     padding: 8px;
     border: none;
-    box-shadow: inset 0px -4px 0px var(--violeta-oscuro);
-    background-color: var(--beige-claro);
 }
 .form__precio-producto:focus{
     outline: none;
-    box-shadow: inset 0px -9px 4px -3px var(--violeta-oscuro)
+    box-shadow: inset 0px -9px 8px -2px var(--violeta-oscuro);
  }
+ .form__offer-contenedor{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 46px;
+ }
+ .form__offer-contenedor select{
+    padding: 5px;
+    margin: 0px 10px;
+    border: none;
+    border-radius: 20px;
+ }
+ .form__offer-contenedor select:focus{
+    outline:solid 2px var(--violeta-oscuro);
+}
+ .form__offer-contenedor input{
+    width: 60%;
+    padding: 8px;
+    border: none;
+ }
+ .form__offer-contenedor input:focus{
+    outline: none;
+    box-shadow: inset 0px -9px 8px -2px var(--violeta-oscuro)
+ }
+.form__buttom{
+    display: flex;
+    justify-content: space-around;
+}
 .form__buttom{
     display: flex;
     justify-content: space-around;

@@ -55,7 +55,13 @@
     box-shadow: 1px 1px 12px grey;
 }
 .contenedor-botones-editar {
-    width: 91%;
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.contenedor-botones-editar button{
+    width: 200px;
 }
 
 .boton-comprar{

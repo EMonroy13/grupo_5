@@ -47,9 +47,9 @@ const productsController = {
             description : req.body.description,
             image : req.file ? req.file.filename : 'default-placeholder.png' ,
             category : req.body.category,
-            /* isTopSeller : req.body.isTopSeller, */
-            /* offer : req.body.offer, */
-            /* discount : req.body.discount, */
+            isTopSeller : false,
+            offer : req.body.offer,
+            discount : req.body.discount,
             colors : req.body.colors,
             price : req.body.price
         };
@@ -83,6 +83,9 @@ const productsController = {
             description: req.body.description,
             image:req.file ? req.file.filename : productoAnterior.image,
             category: req.body.category,
+            isTopSeller : false, 
+            offer : req.body.offer, 
+            discount : req.body.discount,
             colors:req.body.color,
 			price: req.body.price,			
 		}
@@ -98,7 +101,7 @@ const productsController = {
 		/* Convertir a JSON */
 		/* Escribir sobre el archivo json */
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/allProducts");
+		res.redirect("/products/allProducts");
 	},
 
 // (delete) Delete - Eliminar un producto de la DB
@@ -113,7 +116,7 @@ destroy : (req, res) => {
 
     fs.writeFileSync(productsFilePath, JSON.stringify(productosFiltrados, null, " "));
 
-    res.redirect("/products");
+    res.redirect("/products/");
 },
 
 

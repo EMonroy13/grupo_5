@@ -35,18 +35,16 @@
                 </a>
                 <!--                      boton de editar                       -->
                 
-                    <div class="contenedor-botones-editar">
+                <div class="contenedor-botones-editar">
                         <a href="/products/productEdit/<%= producto.id %>">
-                    <button type="button" class="boton-editar">editar</button>
+                    <button type="button" class="boton-editar">Editar</button>
                     </a>
-                </div>
+                
                 <!--                    boton de eliminar                          -->
-
-              <div class="boton-eliminar">
-                <form action="/product/delete/?_method=DELETE" method="POST" >
-                    <button type="submit" class="action-button delete">ELIMINAR</button>
-                </form>
-            </div>
+                    <form action="/product/delete/?_method=DELETE" method="POST" >
+                    <button type="submit" class="action-button delete">Eliminar</button>
+                    </form>
+                </div>
 
             </div>
         </section>
