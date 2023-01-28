@@ -70,12 +70,16 @@
         </section>
         <section class="productos-relacionados">
             <h4>Productos relacionados</h4> 
-            <article class="producto-relacionado">
-                <p><%= productoRelacionado[productoRelacionado.length - 1].productName %></p>
+            <div class="contenedor__producto-relacionado">
+            <% productoRelacionado.forEach(producto=>{ %>
+                <article class="producto-relacionado">
+                <p><%= producto.productName %></p>
                 <div class="contenedor__imagen-relacionados">
-                    <img src="/img/<%= productoRelacionado[productoRelacionado.length - 1].image %>" alt="imagen2"> <!-- solucionar -->
+                    <img src="/img/<%= producto.image %>" alt="imagen2"> <!-- solucionar -->
                 </div>
-            </article>
+                </article>
+                   <% }) %>
+            </div>
         </section>
     </main>
     <%- include("./partials/footer") %>

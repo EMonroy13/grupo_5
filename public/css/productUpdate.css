@@ -114,10 +114,10 @@
     justify-content: space-around;
 }
 .form__buttom button{
-    padding: 5px;
+    padding: 8px;
     width: 48%;
-    background-color: var(--beige-oscuro);
-    border: none;
+    background-color: transparent;
+    border: 1px solid #fff;
     border-radius: 20px;
     font-size: 18px;
     color: #fff;
