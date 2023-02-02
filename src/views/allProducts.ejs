@@ -21,14 +21,17 @@
     <section class="main__ofertas">
       <% productos.forEach((product)=>{ %>
          <article> 
+          <a href="/products/productDetail/<%= product.id %>">
           <div class="ofertas__imagen">
             <img src="/img/<%= product.image %>" alt="articulo5" />
           </div>
+          </a>
           <div class="ofertas__precio">
             <h5> <%= product.productName %></h5>
             <p class="precio__efectivo">$<%= product.price %></p>
             <p class="precio__descuento">% <%= product.discount %></p>
           </div>
+          
         </article>
       <% }) %> 
     </section>

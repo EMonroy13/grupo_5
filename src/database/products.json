@@ -69,39 +69,27 @@
   "price": 40200
  },
  {
-  "id": 7,
-  "productName": "Cama individual",
-  "description": "",
-  "image": "dormitorio/literas.jpg",
-  "category": "dormitorios",
-  "isTopSeller": false,
-  "offer": false,
-  "discount": 0,
-  "colors": "",
-  "price": 20100
- },
- {
-  "id": 8,
-  "productName": "Aparador TV",
-  "description": "",
-  "image": "aparador-estrecho-nordico-pino.jpg",
-  "category": "mueblesTv",
-  "isTopSeller": true,
-  "offer": true,
-  "discount": 20,
-  "colors": "",
-  "price": 402
- },
- {
   "id": 12,
-  "productName": "Cama individual",
+  "productName": "Cama individual editada",
   "description": " ",
   "image": "image-1674612184083.jpg",
-  "category": "oficina",
+  "category": "dormitorios",
   "isTopSeller": false,
   "offer": "true",
   "discount": "20",
-  "colors": "#f5f5f5",
+  "colors": "#000000",
   "price": "80000"
+ },
+ {
+  "id": 13,
+  "productName": "Libreria de madera",
+  "description": " dsadsa",
+  "image": "image-1675301348178.jpg",
+  "category": "living",
+  "isTopSeller": false,
+  "offer": "true",
+  "discount": "20",
+  "colors": "#62340e",
+  "price": "220000"
  }
 ]

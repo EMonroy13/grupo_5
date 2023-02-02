@@ -12,7 +12,7 @@ const indexController = {
         const ultimoAgregado = productosLeidos[productosLeidos.length - 1];
         const ultimosAgregados = productosLeidos.slice(productosLeidos.length -4);
         const loMasVendido = productosLeidos.filter(producto=> producto.isTopSeller == true);
-        const algunasOfertas = productosLeidos.filter(producto=> producto.offer == true);
+        const algunasOfertas = productosLeidos.filter(producto=> producto.offer == true || producto.offer == "true" );
         
         res.render("index", {
             ultimoAgregado:ultimoAgregado,

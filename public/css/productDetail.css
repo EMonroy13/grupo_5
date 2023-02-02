@@ -42,7 +42,7 @@
 .contenedor-botones{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .contenedor-botones button{
     font-size: 20px;
@@ -55,13 +55,19 @@
     box-shadow: 1px 1px 12px grey;
 }
 .contenedor-botones-editar {
-    width: 90%;
+    width: 88%;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+.contenedor-botones-editar a{
+    width: 45%;
+}
+.contenedor-botones-editar form{
+    width: 45%;
 }
 .contenedor-botones-editar button{
-    width: 200px;
+    width: 100%;
 }
 
 .boton-comprar{
