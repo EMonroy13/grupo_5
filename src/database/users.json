@@ -1,74 +1,74 @@
 [
-    {
-        "id": 1,
-        "firstName": "Gonzalo",
-        "lastName": "Mravicich",
-        "email": "gonzalomravicich@gmail.com",
-        "password": "admin123",
-        "category": "admin",
-        "imageProfile": ""
-    },
-    {
-        "id": 2,
-        "firstName": "Luciano",
-        "lastName": "Verchelli",
-        "email": "lucianogverchelli@gmail.com",
-        "password": "admin123",
-        "category": "admin",
-        "imageProfile": ""
-    },
-    {
-        "id": 3,
-        "firstName": "Ivo",
-        "lastName": "Benitez",
-        "email": "estudiosivo@gmail.com",
-        "password": "admin123",
-        "category": "admin",
-        "imageProfile": ""
-    },
-    {
-        "id": 4,
-        "firstName": "Edgar",
-        "lastName": "Monroy",
-        "email": "the.montech.13@gmail.com",
-        "password": "admin123",
-        "category": "admin",
-        "imageProfile": ""
-    },
-    {
-        "id": 5,
-        "firstName": "Guido",
-        "lastName": "",
-        "email": "",
-        "password": "admin123",
-        "category": "admin",
-        "imageProfile": ""
-    },
-    {
-        "id": 6,
-        "firstName": "Emi",
-        "lastName": "",
-        "email": "",
-        "password": "admin123",
-        "category": "admin",
-        "imageProfile": ""
-    },
-    {
-        "id": 7,
-        "firstName": "Juan",
-        "lastName": "Perez",
-        "email": "",
-        "password": "user123",
-        "category": "user",
-        "imageProfile": ""
-    },
-    {
-        "id": 8,
-        "firstName": "Rafael",
-        "lastName": "Dominguez",
-        "email": "",
-        "password": "user123",
-        "category": "user",
-        "imageProfile": ""
-    }
+ {
+  "id": 1,
+  "firstName": "Gonzalo",
+  "lastName": "Mravicich",
+  "email": "gonzalomravicich@gmail.com",
+  "password": "admin123",
+  "category": "admin",
+  "imageProfile": ""
+ },
+ {
+  "id": 2,
+  "firstName": "Luciano",
+  "lastName": "Verchelli",
+  "email": "lucianogverchelli@gmail.com",
+  "password": "admin123",
+  "category": "admin",
+  "imageProfile": ""
+ },
+ {
+  "id": 3,
+  "firstName": "Ivo",
+  "lastName": "Benitez",
+  "email": "estudiosivo@gmail.com",
+  "password": "admin123",
+  "category": "admin",
+  "imageProfile": ""
+ },
+ {
+  "id": 4,
+  "firstName": "Edgar",
+  "lastName": "Monroy",
+  "email": "the.montech.13@gmail.com",
+  "password": "admin123",
+  "category": "admin",
+  "imageProfile": ""
+ },
+ {
+  "id": 5,
+  "firstName": "Guido",
+  "lastName": "",
+  "email": "",
+  "password": "admin123",
+  "category": "admin",
+  "imageProfile": ""
+ },
+ {
+  "id": 6,
+  "firstName": "Emi",
+  "lastName": "",
+  "email": "",
+  "password": "admin123",
+  "category": "admin",
+  "imageProfile": ""
+ },
+ {
+  "id": 7,
+  "firstName": "Juan",
+  "lastName": "Perez",
+  "email": "",
+  "password": "user123",
+  "category": "user",
+  "imageProfile": ""
+ },
+ {
+  "id": 8,
+  "firstName": "Rafael",
+  "lastName": "Dominguez",
+  "email": "",
+  "password": "user123",
+  "category": "user",
+  "imageProfile": ""
+ }
 ]

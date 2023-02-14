@@ -53,7 +53,6 @@ const productsController = {
             colors : req.body.colors,
             price : req.body.price
         };
-        console.log(req.body);
         /* Necesitamos pushear el nuevo producto */
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
