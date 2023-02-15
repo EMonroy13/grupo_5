@@ -13,7 +13,7 @@ const usersController = {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
         /* crear validación para products.length si esta vacio */
-
+  console.log(req.body)
         let newUser = {
             id : users[users.length - 1].id + 1,
             firstName: req.body.nombre,

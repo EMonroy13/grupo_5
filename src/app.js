@@ -11,9 +11,10 @@ const productsRoute = require ("./routes/productsRoute");
 app.use(express.static(path.resolve(__dirname, "../public"))); /* arreglando static */
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, '/views')); // para los archivos estaticos en la carpeta public 
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // para capturar el body 
 app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
-app.use(express.urlencoded({ extended: true }));
+
 
 /* HOME */
 app.use('/',indexRoute);

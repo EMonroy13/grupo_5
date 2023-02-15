@@ -12,10 +12,10 @@ const storage = multer.diskStorage({
         cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname));
     }
 });
-    
+const upload = multer ({storage: storage});
 // rutas de usuarios
 router.get("/register", usersController.register);
-router.post("/register", usersController.registerProcess);
+router.post("/register",upload.single('imagenPerfil'), usersController.registerProcess);
 
 
 router.get("/login", usersController.login);

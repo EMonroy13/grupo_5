@@ -70,5 +70,27 @@
   "password": "user123",
   "category": "user",
   "imageProfile": ""
+ },
+ {
+  "id": 9,
+  "category": "admin",
+  "imageProfile": "defaultImageProfile.png"
+ },
+ {
+  "id": 10,
+  "category": "admin",
+  "imageProfile": "defaultImageProfile.png"
+ },
+ {
+  "id": 11,
+  "firstName": "pedro",
+  "lastName": "vilari",
+  "email": "coni123@gmail.com",
+  "password": [
+   "dadsad",
+   "dasdasda"
+  ],
+  "category": "admin",
+  "imageProfile": "imagenPerfil-1676425725530.jpg"
  }
 ]
