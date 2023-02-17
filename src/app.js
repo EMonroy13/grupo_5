@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
+const session = require("express-session");
+
 const indexRoute = require ("./routes/indexRoute");
 const usersRoute = require ("./routes/usersRoute");
 const productsRoute = require ("./routes/productsRoute"); 
@@ -15,6 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // para capturar el body 
 app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
 
+app.use(session({ // Para utilizar session
+    secret: 'Grupo 5',
+    resave: false,
+    saveUninitialized: true,
+  }));
 
 /* HOME */
 app.use('/',indexRoute);

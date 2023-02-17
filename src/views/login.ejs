@@ -9,22 +9,22 @@
 <main>
    <div class="login-box"> 
 
-<form> 
+<form method="POST" action="/user/login"> 
     <!-- <------Nombre de usuario------> 
 <label for="email">e-mail</label>
-<input class="email" type="email" placeholder="email" required>
+<input class="email" name="email" type="email" placeholder="email" required>
 
    <!-- <------contraseña ------> 
-    <label for="password">Contraseña</label>
+    <label for="password" >Contraseña</label>
 
     <div>
-    <input class="password" type="password" placeholder="Contraseña" required>
+    <input class="password" type="password" name="password" placeholder="Contraseña" required>
     <div>
     <input class="enviar" type="submit" value="Iniciar Sesion">
 </div>
 
     <a href="#">¿Perdiste tu contraseña?</a><br>
-    <a href="#">¿No tienes Cuenta?</a>
+    <a href="/user/register">¿No tienes Cuenta?</a>
 </form>
    </div>
 </main>

@@ -92,5 +92,23 @@
   ],
   "category": "admin",
   "imageProfile": "imagenPerfil-1676425725530.jpg"
+ },
+ {
+  "id": 12,
+  "firstName": "pedro",
+  "lastName": "verchelli",
+  "email": "dasdasdas@gmail",
+  "password": "1234",
+  "category": "admin",
+  "imageProfile": "defaultImageProfile.png"
+ },
+ {
+  "id": 13,
+  "firstName": "luciano",
+  "lastName": "verchelli",
+  "email": "dasdasdas@gmail",
+  "password": "$2a$10$c1yLGq2kqKYxkHA4jPiMAuauE4wuRkEjWhkRUDfZWhaFQ2Zfm0vWu",
+  "category": "admin",
+  "imageProfile": "defaultImageProfile.png"
  }
 ]
