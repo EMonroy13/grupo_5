@@ -20,6 +20,7 @@ const indexController = {
             loMasVendido : loMasVendido,
             algunasOfertas : algunasOfertas
         })
+        console.log(req.session)
     }
 }
 

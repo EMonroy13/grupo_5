@@ -110,5 +110,14 @@
   "password": "$2a$10$c1yLGq2kqKYxkHA4jPiMAuauE4wuRkEjWhkRUDfZWhaFQ2Zfm0vWu",
   "category": "admin",
   "imageProfile": "defaultImageProfile.png"
+ },
+ {
+  "id": 14,
+  "firstName": "luciano",
+  "lastName": "verchelli",
+  "email": "luciano123@gmail.com",
+  "password": "$2a$10$QS6mhYEauDgSdcGZtPveyOMPQuFliNkOMRhpjEGnSNyl4sGix7eQq",
+  "category": "admin",
+  "imageProfile": "defaultImageProfile.png"
  }
 ]

@@ -1,5 +1,6 @@
 const path = require ("path");
 const fs = require ("fs")
+const User = require("../models/user.js")
 const usersFilePath = path.join(__dirname, "../database/users.json");
 
 const bcrypt = require("bcryptjs"); 
@@ -11,11 +12,23 @@ const usersController = {
     },
 
     loginProcess: (req, res ) =>{ 
-// usar el middleware para chekear si se dan las comparaciones 
+let userToLogin = User.findByField("email", req.body.email); //busca el usuario por email uno por uno 
+if(userToLogin){
+    let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password) // compara los password
+    if(isOkPassword) {
+        delete userToLogin.password; // borra la contraseña de session por seguridad 
+        req.session.userLogged = userToLogin
+        // res.send("puedes ingresar") 
+        res.redirect("/")   // hay que crear la vista de perfil de usuario 
+    }
+    return res.send("las credenciales son invalidas") // hay que usar express validator para que quede en la vista el error sin que se borre todo 
 
-// res.redirect("/")
+}
 
-
+    },
+    logOut: (req, res) => {
+        req.session.destroy 
+        return res.redirect("/");
     },
     register: (req, res)=>{
         res.render(path.resolve(__dirname, "../views/register"))

@@ -9,6 +9,8 @@ const usersRoute = require ("./routes/usersRoute");
 const productsRoute = require ("./routes/productsRoute"); 
 
 
+// const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware") // para sacar nav si esta logeado o no 
+
 //middlewares
 app.use(express.static(path.resolve(__dirname, "../public"))); /* arreglando static */
 app.set("view engine", "ejs");
@@ -22,6 +24,9 @@ app.use(session({ // Para utilizar session
     resave: false,
     saveUninitialized: true,
   }));
+
+// app.use(userLoggedMiddleware);  // oculta parte del nav si esta logeado o no 
+
 
 /* HOME */
 app.use('/',indexRoute);
