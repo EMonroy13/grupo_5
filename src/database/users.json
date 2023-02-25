@@ -119,5 +119,14 @@
   "password": "$2a$10$QS6mhYEauDgSdcGZtPveyOMPQuFliNkOMRhpjEGnSNyl4sGix7eQq",
   "category": "admin",
   "imageProfile": "defaultImageProfile.png"
+ },
+ {
+  "id": 15,
+  "firstName": "Gonzalo",
+  "lastName": "Mravicich",
+  "email": "gonza.1.6@hotmail.com",
+  "password": "$2a$10$WB8PqtiEWsEiXqxfEQTrfunLtZFRwrvP5H.kkPAKJQgDLlV1Eznre",
+  "category": "admin",
+  "imageProfile": "defaultImageProfile.png"
  }
 ]

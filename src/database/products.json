@@ -45,18 +45,6 @@
   "price": 402
  },
  {
-  "id": 5,
-  "productName": "Silla gamer",
-  "description": "",
-  "image": "silla-gamer.jpg",
-  "category": "videojuegos",
-  "isTopSeller": false,
-  "offer": true,
-  "discount": 20,
-  "colors": "",
-  "price": 80000
- },
- {
   "id": 6,
   "productName": "Cama Matrimonial",
   "description": "",

@@ -78,13 +78,13 @@ header{
     padding: 20px;
 }
 .header__nav-inferior ul{
-    width: 320px;
+    width: 340px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .header__nav-inferior ul li{
-    padding: 4px;
+    padding: 2px;
     color: var(--beige-oscuro);
     list-style: none;
 }
