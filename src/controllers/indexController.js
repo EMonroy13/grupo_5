@@ -8,7 +8,8 @@ const productosLeidos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const indexController = {
     index: (req, res)=>{
         const productosLeidos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        
+        const user = req.session.userLogged //ponemos el session para hacer el header
+
         const ultimoAgregado = productosLeidos[productosLeidos.length - 1];
         const ultimosAgregados = productosLeidos.slice(productosLeidos.length -4);
         const loMasVendido = productosLeidos.filter(producto=> producto.isTopSeller == true);
@@ -18,7 +19,8 @@ const indexController = {
             ultimoAgregado:ultimoAgregado,
             ultimosAgregados:ultimosAgregados,
             loMasVendido : loMasVendido,
-            algunasOfertas : algunasOfertas
+            algunasOfertas : algunasOfertas,
+            user : user //ponemos el session para hacer el header
         })
         console.log(req.session)
     }

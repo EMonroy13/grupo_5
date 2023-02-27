@@ -8,15 +8,16 @@ const productsController = {
     
     allProducts: (req, res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+        const user = req.session.userLogged //ponemos el session para hacer el header
 		
-        res.render("allproducts", {productos: products})
+        res.render("allproducts", {productos: products, user:user})
        
     },
     
     productDetail: (req, res)=>{
         
         let id = req.params.id;
+        const user = req.session.userLogged //ponemos el session para hacer el header
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         
 		let productoFiltrado = products.find(producto => {
@@ -29,11 +30,13 @@ const productsController = {
 		})
         res.render("productDetail", {
             producto: productoFiltrado,
-            productoRelacionado : productoRelacionado})
+            productoRelacionado : productoRelacionado,
+            user:user})
     },
     
     create: (req, res)=>{
-        res.render("productCreate");
+        const user = req.session.userLogged //ponemos el session para hacer el header
+        res.render("productCreate",{user});
     },
 
     processCreate:(req,res)=>{
@@ -61,10 +64,11 @@ const productsController = {
     
    
     edit:(req, res)=>{
+        const user = req.session.userLogged //ponemos el session para hacer el header
         let id = req.params.id;
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let productoFiltrado = products.find(producto => producto.id == id)
-		res.render("productEdit",{productToEdit:productoFiltrado});
+		res.render("productEdit",{productToEdit:productoFiltrado, user:user});
         },
     processEdit:(req, res) => {
 		
@@ -120,7 +124,8 @@ destroy : (req, res) => {
 
 
     cart: (req, res)=>{
-            res.render("productCart")
+        const user = req.session.userLogged //ponemos el session para hacer el header
+            res.render("productCart",{user})
         }
 }
 

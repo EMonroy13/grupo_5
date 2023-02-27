@@ -125,7 +125,16 @@
   "firstName": "Gonzalo",
   "lastName": "Mravicich",
   "email": "gonza.1.6@hotmail.com",
-  "password": "$2a$10$WB8PqtiEWsEiXqxfEQTrfunLtZFRwrvP5H.kkPAKJQgDLlV1Eznre",
+  "password": "$2a$10$p/fekFAcoMoAIFSY4Z0DT.Bn0PlyXL4p/2VjXHDyaKybgx1KfxcO.",
+  "category": "admin",
+  "imageProfile": "imagenPerfil-1677518211357.jpg"
+ },
+ {
+  "id": 16,
+  "firstName": "Juan",
+  "lastName": "Ramirez",
+  "email": "juan@gmail.com",
+  "password": "$2a$10$C6DjO8hSLj401aAZOcXEbeJxw4Mw9pQcig.LTsahWAR4kuUYMDPwa",
   "category": "admin",
   "imageProfile": "defaultImageProfile.png"
  }

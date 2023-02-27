@@ -82,6 +82,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 .header__nav-inferior ul li{
     padding: 2px;
@@ -91,6 +92,23 @@ header{
 .header__nav-inferior ul li a{
     color: var(--beige-oscuro);
     text-decoration: none;
+}
+.bar-inferior__der-li{
+    display: flex;
+    align-items: center;
+}
+.contenedor__img-perfil{
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+.contenedor__img-perfil img{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
 }
 /* -------------------------------------MAIN--------------------------------------------------- */
 img{

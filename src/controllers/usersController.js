@@ -6,8 +6,9 @@ const usersFilePath = path.join(__dirname, "../database/users.json");
 const bcrypt = require("bcryptjs"); 
 
 const usersController = {
-    login: (req, res)=>{
-        res.render(path.resolve(__dirname, "../views/login"))
+    login: (req, res)=>{ 
+        const user = req.session.userLogged; //ponemos el session para hacer el header
+        res.render(path.resolve(__dirname, "../views/login"), {user})
 
     },
 
@@ -31,14 +32,15 @@ if(userToLogin){
         return res.redirect("/");
     },
     register: (req, res)=>{
-        res.render(path.resolve(__dirname, "../views/register"))
+        const user = req.session.userLogged; //ponemos el session para hacer el header
+        res.render(path.resolve(__dirname, "../views/register"),{user})
     },
     registerProcess:(req,res)=>{
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
         /* crear validación para products.length si esta vacio */
 
-let hash = bcrypt.hashSync(req.body.password, 10)
+        let hash = bcrypt.hashSync(req.body.password, 10)
         let newUser = {
             id : users[users.length - 1].id + 1,
             firstName: req.body.nombre,
