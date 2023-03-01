@@ -24,4 +24,6 @@ router.post("/register",upload.single('imagenPerfil'), usersController.registerP
 
 router.get("/login",guestMiddleware, usersController.login);
 router.post("/login",usersController.loginProcess);
+
+router.get("/profile",usersController.profile)
 module.exports = router;

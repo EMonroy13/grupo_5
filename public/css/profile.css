@@ -1,0 +1,39 @@
+@import url(/css/index.css);
+
+.section__profile{
+    display: flex;
+    background: linear-gradient(to bottom, black, #524080);
+    width: 90vw;
+    margin: 80px auto;
+    padding: 10px;
+    justify-content: space-between;
+}
+.section_imgProfile{
+    width: 41%;
+}
+.contenedor__imgProfile{
+    width: 250px;
+    height: 250px;
+    margin: 40px auto;
+}
+.contenedor__imgProfile img{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 9px 0px #999;
+}
+.section__dateProfile{
+    width: 50%;
+    padding: 60px 5px;
+}
+.contenedor__dateProfile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.contenedor__dateProfile li{
+    color: var(--beige-oscuro);
+    font-size: 22px;
+    list-style: none;
+    margin: 15px 20px;
+}

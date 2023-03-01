@@ -27,6 +27,10 @@ if(userToLogin){
 }
 
     },
+    profile:(req,res)=>{
+        const user = req.session.userLogged; //ponemos el session para hacer el header
+        res.render(path.resolve(__dirname, "../views/profile"), {user})
+    },
     logOut: (req, res) => {
         req.session.destroy 
         return res.redirect("/");
