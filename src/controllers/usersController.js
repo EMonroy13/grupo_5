@@ -19,8 +19,8 @@ if(userToLogin){
     if(isOkPassword) {
         delete userToLogin.password; // borra la contraseña de session por seguridad 
         req.session.userLogged = userToLogin
-        // res.send("puedes ingresar") 
-        res.redirect("/")   // hay que crear la vista de perfil de usuario 
+        //res.send("puedes ingresar") 
+       res.redirect("/")   // hay que crear la vista de perfil de usuario 
     }
     return res.send("las credenciales son invalidas") // hay que usar express validator para que quede en la vista el error sin que se borre todo 
 

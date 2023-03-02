@@ -13,13 +13,21 @@
                 <img src="/img/users/<%= user.imageProfile%>" alt="">
             </div>
             </div>
-            <div class="section__dateProfile">
-                <ul class="contenedor__dateProfile">
-                    <li> <%=user.firstName%> </li>
-                    <li> <%=user.lastName%> </li>
-                    <li> <%=user.email%> </li>
-                    <li> <%=user.category%> </li>
-                </ul>
+            
+            <div class="section__nameProfile">
+                <p><%=user.firstName%></p>
+                
+            </div>
+        </section>
+        <section class="section__dateProfile">
+            <p>Mis datos: </p>
+            <div class="contenedor__dateProfile">
+            <ul> 
+                    <li>Nombre:<br>   <i><%=user.firstName%></i></li>  
+                    <li>Apellido:<br>   <i><%=user.lastName%></i> </li>
+                    <li>E-mail:<br>   <i><%=user.email%></i> </li>
+                    <li>Tipo de Usuario:<br>   <i><%=user.category%></i> </li>
+            </ul>
             </div>
         </section>
     </main>
