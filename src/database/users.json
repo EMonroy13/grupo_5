@@ -146,5 +146,14 @@
   "password": "$2a$10$J7e4kU/QPSynIw2DIspc7u/cSMh1QNeB3YCQ1ibbgJQP.Ip/up0v.",
   "category": "admin",
   "imageProfile": "defaultImageProfile.png"
+ },
+ {
+  "id": 18,
+  "firstName": "leandro",
+  "lastName": "perez ",
+  "email": "leandro@gmail.com",
+  "password": "$2a$10$RsCYJOo3rUQBgwstq6k6fe9SyDlhGDm5r8EN5CS.EThADCuUapDvu",
+  "category": "admin",
+  "imageProfile": "imagenPerfil-1677880215032.jpg"
  }
 ]

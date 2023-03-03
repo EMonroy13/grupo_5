@@ -8,16 +8,16 @@ const productsController = {
     
     allProducts: (req, res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        const user = req.session.userLogged //ponemos el session para hacer el header
+       
 		
-        res.render("allproducts", {productos: products, user:user})
+        res.render("allproducts", {productos: products})  
        
     },
     
     productDetail: (req, res)=>{
         
         let id = req.params.id;
-        const user = req.session.userLogged //ponemos el session para hacer el header
+      
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         
 		let productoFiltrado = products.find(producto => {
@@ -30,13 +30,12 @@ const productsController = {
 		})
         res.render("productDetail", {
             producto: productoFiltrado,
-            productoRelacionado : productoRelacionado,
-            user:user})
+            productoRelacionado : productoRelacionado})
     },
     
     create: (req, res)=>{
-        const user = req.session.userLogged //ponemos el session para hacer el header
-        res.render("productCreate",{user});
+    
+        res.render("productCreate");
     },
 
     processCreate:(req,res)=>{
@@ -64,11 +63,10 @@ const productsController = {
     
    
     edit:(req, res)=>{
-        const user = req.session.userLogged //ponemos el session para hacer el header
         let id = req.params.id;
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let productoFiltrado = products.find(producto => producto.id == id)
-		res.render("productEdit",{productToEdit:productoFiltrado, user:user});
+		res.render("productEdit",{productToEdit:productoFiltrado });
         },
     processEdit:(req, res) => {
 		
@@ -109,7 +107,7 @@ const productsController = {
 
 // (delete) Delete - Eliminar un producto de la DB
 destroy : (req, res) => {
-    // Do the magic
+  
     let id = req.params.id;
     const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -124,8 +122,8 @@ destroy : (req, res) => {
 
 
     cart: (req, res)=>{
-        const user = req.session.userLogged //ponemos el session para hacer el header
-            res.render("productCart",{user})
+     
+            res.render("productCart")
         }
 }
 

@@ -23,7 +23,7 @@ router.get("/productCreate/", auhtMiddleware, productsController.create);
 router.post("/productCreate/", upload.single('image') ,productsController.processCreate);
 
 // editar productos
-router.get("/productEdit/:id", productsController.edit);
+router.get("/productEdit/:id", auhtMiddleware ,productsController.edit);
 router.put("/productEdit/:id", upload.single('image') ,productsController.processEdit);
 
 //eliminar un producto

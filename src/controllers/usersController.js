@@ -7,8 +7,8 @@ const bcrypt = require("bcryptjs");
 
 const usersController = {
     login: (req, res)=>{ 
-        const user = req.session.userLogged; //ponemos el session para hacer el header
-        res.render(path.resolve(__dirname, "../views/login"), {user})
+      
+        res.render(path.resolve(__dirname, "../views/login"))
 
     },
 
@@ -28,16 +28,16 @@ if(userToLogin){
 
     },
     profile:(req,res)=>{
-        const user = req.session.userLogged; //ponemos el session para hacer el header
-        res.render(path.resolve(__dirname, "../views/profile"), {user})
+        
+        res.render(path.resolve(__dirname, "../views/profile"))
     },
     logOut: (req, res) => {
         req.session.destroy 
         return res.redirect("/");
     },
     register: (req, res)=>{
-        const user = req.session.userLogged; //ponemos el session para hacer el header
-        res.render(path.resolve(__dirname, "../views/register"),{user})
+        
+        res.render(path.resolve(__dirname, "../views/register"))
     },
     registerProcess:(req,res)=>{
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
