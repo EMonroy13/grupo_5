@@ -137,5 +137,14 @@
   "password": "$2a$10$C6DjO8hSLj401aAZOcXEbeJxw4Mw9pQcig.LTsahWAR4kuUYMDPwa",
   "category": "admin",
   "imageProfile": "defaultImageProfile.png"
+ },
+ {
+  "id": 17,
+  "firstName": "Pepito",
+  "lastName": "Caranta",
+  "email": "pepon@gmail.com",
+  "password": "$2a$10$J7e4kU/QPSynIw2DIspc7u/cSMh1QNeB3YCQ1ibbgJQP.Ip/up0v.",
+  "category": "admin",
+  "imageProfile": "defaultImageProfile.png"
  }
 ]

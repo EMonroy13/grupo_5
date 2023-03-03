@@ -1,24 +1,27 @@
 [
  {
   "id": 1,
-  "productName": "Escritorio test ",
+  "productName": "Escritorio clasico",
   "description": " ",
-  "image": "oficina/escritorio_basico.jpg",
+  "image": "image-1677867276249.jpg",
   "category": "oficina",
+  "isTopSeller": true,
+  "offer": "true",
+  "discount": "5",
   "colors": "#000000",
-  "price": "50000"
+  "price": "160.000"
  },
  {
   "id": 2,
-  "productName": "Sillon",
-  "description": "",
-  "image": "living/sofa-tripe.jpeg",
-  "category": "sala",
+  "productName": "Sillon esquinero",
+  "description": " ",
+  "image": "image-1677867221722.jpg",
+  "category": "living",
   "isTopSeller": true,
-  "offer": false,
-  "discount": 0,
-  "colors": "",
-  "price": 402
+  "offer": "true",
+  "discount": "15",
+  "colors": "#8d7b62",
+  "price": "402.000"
  },
  {
   "id": 3,
@@ -26,7 +29,7 @@
   "description": "",
   "image": "alacena.jpg",
   "category": "cocina",
-  "isTopSeller": false,
+  "isTopSeller": true,
   "offer": true,
   "discount": 20,
   "colors": "",
@@ -62,7 +65,7 @@
   "description": " ",
   "image": "image-1674612184083.jpg",
   "category": "dormitorios",
-  "isTopSeller": false,
+  "isTopSeller": true,
   "offer": "true",
   "discount": "20",
   "colors": "#000000",
@@ -79,5 +82,41 @@
   "discount": "20",
   "colors": "#62340e",
   "price": "220000"
+ },
+ {
+  "id": 14,
+  "productName": "Juego de comodas",
+  "description": " ",
+  "image": "image-1677865806523.jpg",
+  "category": "dormitorios",
+  "isTopSeller": false,
+  "offer": "true",
+  "discount": "20",
+  "colors": "#000000",
+  "price": "200.000"
+ },
+ {
+  "id": 15,
+  "productName": "Soporte de pared para cocina",
+  "description": " ",
+  "image": "image-1677866960792.jpg",
+  "category": "cocina",
+  "isTopSeller": false,
+  "offer": "false",
+  "discount": "",
+  "colors": "#ffffff",
+  "price": "20.000"
+ },
+ {
+  "id": 16,
+  "productName": "Escritorio moderno con silla Ergonomica",
+  "description": " ",
+  "image": "image-1677867132942.jpg",
+  "category": "oficina",
+  "isTopSeller": false,
+  "offer": "true",
+  "discount": "10",
+  "colors": "#000000",
+  "price": "120.000"
  }
 ]

@@ -71,14 +71,19 @@
         <section class="productos-relacionados">
             <h4>Productos relacionados</h4> 
             <div class="contenedor__producto-relacionado">
-            <% productoRelacionado.forEach(producto=>{ %>
+            <% productoRelacionado.forEach(product=>{ %>
+                <% if (product != producto) { %>
                 <article class="producto-relacionado">
-                <p><%= producto.productName %></p>
+                <div class="producto-relacionado__contenedor">
+                <p><%= product.productName %></p>  
+                <p class="precio-relacionados"> $<%= product.price %> <b>-<%= product.discount %>%</b> </p>
+                </div>
                 <div class="contenedor__imagen-relacionados">
-                    <img src="/img/<%= producto.image %>" alt="imagen2"> <!-- solucionar -->
+                    <img src="/img/<%= product.image %>" alt="imagen2"> <!-- solucionar -->
                 </div>
                 </article>
-                   <% }) %>
+                <%}%>
+            <% }) %>
             </div>
         </section>
     </main>
