@@ -18,7 +18,7 @@ app.use(session({ // Para utilizar session
   resave: false,
   saveUninitialized: true,
 }));
-app.use(userLoggedMiddleware);
+  app.use(userLoggedMiddleware);
 
 app.use(express.static(path.resolve(__dirname, "../public"))); /* arreglando static */
 app.set("view engine", "ejs");
@@ -29,7 +29,7 @@ app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
 
 
 
-// app.use(userLoggedMiddleware);  // oculta parte del nav si esta logeado o no 
+
 
 
 /* HOME */

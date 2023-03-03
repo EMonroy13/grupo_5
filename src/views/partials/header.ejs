@@ -20,10 +20,10 @@
         </ul>
         <ul class="bar-inferior__der">
             <li><a href="">Mis compras </a><i class="fas fa-shopping-basket"></i></li>
-             <% if (locals.userLogged) { %>
+             <% if (locals.isLogged) { %>
                 <li class="bar-inferior__der-li">
-                    <div class="contenedor__img-perfil"><img src="/img/users/<%= session.userLogged.imageProfile %>" alt=""></div>
-                    <a href="/user/profile"><%= session.userLogged.FirstName %></a>
+                    <div class="contenedor__img-perfil"><img src="/img/users/<%= locals.User.imageProfile %>" alt=""></div>
+                    <a href="/user/profile"><%= locals.User.firstName %></a>
                 </li>
             
             <% } else { %> 

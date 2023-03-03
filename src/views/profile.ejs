@@ -10,12 +10,12 @@
         <section class="section__profile">
             <div class="section_imgProfile">
             <div class="contenedor__imgProfile">
-                <img src="/img/users/<%= user.imageProfile%>" alt="">
+                <img src="/img/users/<%= locals.User.imageProfile%>" alt="">
             </div>
             </div>
             
             <div class="section__nameProfile">
-                <p><%=user.firstName%></p>
+                <p><%=locals.User.firstName%></p>
                 
             </div>
         </section>
@@ -23,13 +23,16 @@
             <p>Mis datos: </p>
             <div class="contenedor__dateProfile">
             <ul> 
-                    <li>Nombre:<br>   <i><%=user.firstName%></i></li>  
-                    <li>Apellido:<br>   <i><%=user.lastName%></i> </li>
-                    <li>E-mail:<br>   <i><%=user.email%></i> </li>
-                    <li>Tipo de Usuario:<br>   <i><%=user.category%></i> </li>
+                    <li>Nombre:<br>   <i><%=locals.User.firstName%></i></li>  
+                    <li>Apellido:<br>   <i><%=locals.User.lastName%></i> </li>
+                    <li>E-mail:<br>   <i><%=locals.User.email%></i> </li>
+                    <li>Tipo de Usuario:<br>   <i><%=locals.User.category%></i> </li>
             </ul>
             </div>
         </section>
+        <form class="cierre-sesion" action="/user/logOut" method="POST">
+            <button type="submit">Cerrar sesion</button>
+        </form>
     </main>
     <%- include("./partials/footer") %>
 </body>

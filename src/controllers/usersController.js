@@ -18,21 +18,20 @@ if(userToLogin){
     let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password) // compara los password
     if(isOkPassword) {
         delete userToLogin.password; // borra la contraseña de session por seguridad 
-        req.session.userLogged = userToLogin
-        //res.send("puedes ingresar") 
-       res.redirect("/")   // hay que crear la vista de perfil de usuario 
-    }
+        req.session.userLogged = userToLogin; 
+        res.redirect("/")   // hay que crear la vista de perfil de usuario 
+    }else{
     return res.send("las credenciales son invalidas") // hay que usar express validator para que quede en la vista el error sin que se borre todo 
-
+    } 
 }
 
-    },
+},
     profile:(req,res)=>{
         
         res.render(path.resolve(__dirname, "../views/profile"))
     },
     logOut: (req, res) => {
-        req.session.destroy 
+        req.session.destroy();
         return res.redirect("/");
     },
     register: (req, res)=>{
