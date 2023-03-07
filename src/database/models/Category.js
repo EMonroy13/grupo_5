@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
         } ,
         categoria_desc:{
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         },
     },{
         tableName:"product_categories",

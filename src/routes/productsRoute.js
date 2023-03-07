@@ -19,7 +19,7 @@ const upload = multer ({storage: storage});
 router.get("/allProducts", productsController.allProducts);
 
 // crear productos
-router.get("/productCreate/", auhtMiddleware, productsController.create);
+router.get("/productCreate/", /* auhtMiddleware, */ productsController.create);
 router.post("/productCreate/", upload.single('image') ,productsController.processCreate);
 
 // editar productos

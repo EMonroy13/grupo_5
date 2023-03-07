@@ -2,27 +2,29 @@ const path = require ("path");
 const fs = require ("fs");
 const { prependListener } = require("process");
 const session = require("express-session");
-
-const productsFilePath = path.join(__dirname, '../database/products.json');
-const productosLeidos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
 
 const indexController = {
     index: (req, res)=>{
-        const productosLeidos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        const productosLeidos = db.Product.findAll().then(num=>{
+           
+           //IMPORTANTE
+            //agregar el include para poder hacer las relaciones en el ejs y manejar toda la dinamica de filtros en el ejs
+         
+         
+           /*    const ultimoAgregado =num[productosLeidos.length - 1];
+            console.log(ultimoAgregado)
+            const ultimosAgregados = num.slice(productosLeidos.length -4);
+            const loMasVendido = num.filter(producto=> producto.isTopSeller == 1);
+            const algunasOfertas = num.filter(producto=> producto.offer == 1 || producto.offer == "1" ); */
+            res.render("index", {
+                productos:num,   
+            })
+         }).catch((error)=>{
+                res.send(error);
+            })
 
-        const ultimoAgregado = productosLeidos[productosLeidos.length - 1];
-        const ultimosAgregados = productosLeidos.slice(productosLeidos.length -4);
-        const loMasVendido = productosLeidos.filter(producto=> producto.isTopSeller == true);
-        const algunasOfertas = productosLeidos.filter(producto=> producto.offer == true || producto.offer == "true" );
-        
-        res.render("index", {
-            ultimoAgregado:ultimoAgregado,
-            ultimosAgregados:ultimosAgregados,
-            loMasVendido : loMasVendido,
-            algunasOfertas : algunasOfertas,
-            
-        })
-    }
+        }      
     
 }
 

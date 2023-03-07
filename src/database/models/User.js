@@ -6,19 +6,19 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
         } ,
         firstName:{
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         },
         lastName:{
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         } ,
         email:{
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         } ,
         password: {
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         },
         imageProfile:{
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         },
         id_categoria:{
             type: DataTypes.INTEGER,

@@ -6,22 +6,22 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
         } ,
         name:{
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         },
         description:{
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         } ,
         image:{
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         } ,
         price: {
             type: DataTypes.DOUBLE
         },
         top_seller:{
-            type: DataTypes.BINARY
+            type: DataTypes.DOUBLE
         },
         offer: {
-            type: DataTypes.BINARY
+            type: DataTypes.DOUBLE
         },
         discount:{
             type: DataTypes.DOUBLE

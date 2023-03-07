@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
         } ,
        categorie_desc:{
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         }
       
      },{
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
     UserCategorie.associate = function(models){
-        UserCategorie.BelongsTo(models.User,{
+        UserCategorie.belongsTo(models.User,{
             as: "User",
             foreignKey: "id_categoria"
             })

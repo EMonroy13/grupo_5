@@ -1,11 +1,10 @@
 const path = require ("path");
 const fs = require ("fs")
-const db = require('../database/models');
+const db = require('../database/models/index');
 const sequelize = db.sequelize;
 
 
 // constante para leer el json
-const productsFilePath = path.join(__dirname, "../database/products.json")
 // const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8")) 
 
 
@@ -44,25 +43,21 @@ const productsController = {
     },
 
     processCreate:(req,res)=>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
         /* crear validación para products.length si esta vacio */
-
-        let newProduct = {
-            id : products[products.length - 1].id + 1,
-            productName : req.body.productName,
+        db.Product.create ({
+            name : req.body.productName,
             description : req.body.description,
             image : req.file ? req.file.filename : 'default-placeholder.png' ,
-            category : req.body.category,
-            isTopSeller : false,
+            price : req.body.price,
+            top_seller : 1,
             offer : req.body.offer,
             discount : req.body.discount,
-            colors : req.body.colors,
-            price : req.body.price
-        };
+            id_product_categoria : req.body.category,
+            id_product_color : req.body.colors,
+            
+        });
         /* Necesitamos pushear el nuevo producto */
-        products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
         res.redirect('/');
     },
     

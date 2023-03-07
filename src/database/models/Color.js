@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
         } ,
         product_color_desc:{
-            type: DataTypes.VARCHAR(255)
+            type: DataTypes.STRING
         },
     },{
         tableName:"product_colors",

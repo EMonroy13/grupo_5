@@ -22,24 +22,28 @@
         <p>
         <label class="form_categorias" for="selectUpdate">Ingrese la categoria:</label>
         <select  class="form__select-cat" name="category">
-            <option value="oficina">Oficina</option>
-            <option value="living">Living</option>
-            <option value="cocina">Cocina</option>
-            <option value="mueblesTV">Muebles TV</option>
-            <option value="gaming">Gaming</option>
-            <option value="dormitorios">Dormitorios</option>
+            <option value="1">Oficina</option>
+            <option value="2">Living</option>
+            <option value="3">Cocina</option>
+            <option value="4">Muebles TV</option>
+            <option value="5">Gaming</option>
+            <option value="6">Dormitorios</option>
         </select>
         </p>
         <p>
         <label class="form_color" for="colorProducto">Color:</label>
-        <input class="form__color-producto" type="color" name="colors" required>
+        <select  class="form__color-producto" name="colors" required>
+            <option value="1">Negro</option>
+            <option value="2">Blanco</option>
+            <option value="3">Madera</option>
+        </select>
         </p>
         <p>
         <input type="number" class="form__precio-producto" placeholder="Indique el precio en ars $" name="price" required> 
         <div class="form__offer-contenedor">
             <select   name="offer">
-                <option value="true" >Si</option>
-                <option value="false" >No</option>
+                <option value="1" >Si</option>
+                <option value="0" >No</option>
             </p>
             <p>
                 <input type="number" name="discount" placeholder="Indique el descuento "> 
