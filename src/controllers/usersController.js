@@ -18,7 +18,8 @@ if(userToLogin){
     let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password) // compara los password
     if(isOkPassword) {
         delete userToLogin.password; // borra la contraseña de session por seguridad 
-        req.session.userLogged = userToLogin; 
+        req.session.userLogged = userToLogin;
+        //mantener session
         res.redirect("/")   // hay que crear la vista de perfil de usuario 
     }else{
     return res.send("las credenciales son invalidas") // hay que usar express validator para que quede en la vista el error sin que se borre todo 

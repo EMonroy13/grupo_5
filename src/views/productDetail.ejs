@@ -10,7 +10,7 @@
     <main>
         <section>
             <div class="titulo-puntuacion__contenedor">
-            <h2> <%= producto.productName %></h2>
+            <h2> <%= producto.name %></h2>
             <a href="">
                 <i class="fa-sharp fa-solid fa-star"></i>
                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -75,17 +75,18 @@
                 <% if (product != producto) { %>
                 <article class="producto-relacionado">
                 <div class="producto-relacionado__contenedor">
-                <p><%= product.productName %></p>  
+                <p><%= product.name %></p>  
                 <p class="precio-relacionados"> $<%= product.price %> <b>-<%= product.discount %>%</b> </p>
                 </div>
                 <div class="contenedor__imagen-relacionados">
-                    <img src="/img/<%= product.image %>" alt="imagen2"> <!-- solucionar -->
+                    <img src="/img/<%= product.image %>" alt="imagen2"> 
                 </div>
                 </article>
                 <%}%>
             <% }) %>
             </div>
-        </section>
+            </section>
+      
     </main>
     <%- include("./partials/footer") %>
 </body>

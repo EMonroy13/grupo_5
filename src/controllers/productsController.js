@@ -1,6 +1,7 @@
 const path = require ("path");
 const fs = require ("fs")
 const db = require('../database/models/index');
+const { Console } = require("console");
 const sequelize = db.sequelize;
 
 
@@ -11,30 +12,40 @@ const sequelize = db.sequelize;
 const productsController = {
     
     allProducts: (req, res)=>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
+        db.Product.findAll().then(num=>{
        
-		
-        res.render("allproducts", {productos: products})  
-       
+		res.render("allproducts", {productos : num})  
+        }).catch((error)=>{
+            res.send(error);
+        })
     },
     
     productDetail: (req, res)=>{
         
-        let id = req.params.id;
-      
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        db.Product.findOne({where:{id:req.params.id}}).then(producto=>{
+            return producto
+         }).then(producto=>{
+            let cat = producto.id_product_categoria
+             db.Product.findAll({were:{id_product_categoria : cat}}).then(relacionado=>{ //Anidando then para los productos relacionados
+                return relacionado
+                }).then(relacionados=>{
+                    res.render("productDetail", {producto: producto,productoRelacionado:relacionados})
+                }).catch((error)=>{
+            res.send(error);
+            }) 
+        })
+     
+        // PRODUCTOS RELACIONADOS  PROMISEALL--------------------------------------------
+		/* let productoDetalle =  db.Product.findOne({where:{id:req.params.id}})
+
+         let productoRelacionado = db.Product.findAll()
+        Promise.all([ productoDetalle, productoRelacionado]).then(( productoDetalle, productoRelacionado)=>{
+            console.log(productoRelacionado)
+            res.render("productDetail", {producto: productoDetalle,
+                productoRelacionado:productoRelacionado})
+        })      */
         
-		let productoFiltrado = products.find(producto => {
-			return producto.id == id
-		})
-        let productoRelacionado = products.filter(producto => {
-            
-         return producto.category == productoFiltrado.category
-            
-		})
-        res.render("productDetail", {
-            producto: productoFiltrado,
-            productoRelacionado : productoRelacionado})
     },
     
     create: (req, res)=>{
