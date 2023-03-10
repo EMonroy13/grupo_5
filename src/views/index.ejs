@@ -24,12 +24,13 @@
         </section>
         <h4>Agregado recientemente</h4>
         <section class="main__ultimo-ingresado">
+            <% const ultimoAgregado =productos[productos.length - 1]; %>
             <article class="ultimo-ingresado__articulo">
                 <a href="/products/productDetail/<%=ultimoAgregado.id%>">
                 <img src="/img/<%= ultimoAgregado.image %>" alt="articulo">
                 <div class="ultimo-ingresado__precio">
                 <p><%= ultimoAgregado.price %></p>
-                <h5><%= ultimoAgregado.productName %></h5>
+                <h5><%= ultimoAgregado.name %></h5>
                 </div>
                 </a>
             </article>
@@ -37,12 +38,13 @@
         <h4>Últimos productos agregados</h4>
         <section class="main__ultimos-ingresos">
             <div class="ultimos-ingresos__contenedor">
+                <% const ultimosAgregados = productos.slice(productos.length -4); %>
                 <% ultimosAgregados.forEach((producto)=>{ %>
                 <article class="ultimos-ingresos__articulo">
                 <a href="/products/productDetail/<%=producto.id%>"><div class="ultimos-ingresos-img"><img src="/img/<%= producto.image %>" alt="articulo1"></div></a>
                 <div class="ultimos-ingresos__precio">
                 <p>$ <%= producto.price %></p>
-                <h5><%= producto.productName %></h5>
+                <h5><%= producto.name %></h5>
                 </div>
             </article>
             <% }) %>
@@ -54,6 +56,7 @@
         <h4>Lo mas vendido</h4>
         <section class="main__mas-vendido">
             <div class="mas-vendido__contenedor">
+                <% const loMasVendido = productos.filter(producto=> producto.top_seller == 1 || producto.top_seller == "1") %>
                 <% loMasVendido.forEach((producto)=>{ %>
                 <article>
                     <a href="/products/productDetail/<%=producto.id%>">
@@ -63,7 +66,7 @@
                     </a>
                     <div class="mas-vendido__precio">
                     <p>$ <%= producto.price %></p>
-                    <h5><%= producto.productName %></h5>
+                    <h5><%= producto.name %></h5>
                     </div>
                 </article>
                 <% }) %>
@@ -74,6 +77,7 @@
          </section>
          <h4>Algunas de nuestras ofertas</h4>
          <section class="main__ofertas">
+            <% const algunasOfertas = productos.filter(producto=> producto.offer == 1 || producto.offer == "1" ); %>
             <% algunasOfertas.forEach((producto)=>{ %>
             <article>
                 <a href="/products/productDetail/<%=producto.id%>">
@@ -82,7 +86,7 @@
                 </div>
                 </a>
                 <div class="ofertas__precio">
-                    <h5><%= producto.productName %></h5>
+                    <h5><%= producto.name %></h5>
                     <p class="precio__efectivo">$ <%= producto.price %></p><p class="precio__descuento">20% off</p>
                 </div>
             </article>
