@@ -10,7 +10,7 @@
         <form class="form__upDate" action="/products/productEdit/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
             <h2>Edicion de productos</h2>
             <p>
-            <input class="form__nombre-producto" value="<%= productToEdit.productName%>" type="text" placeholder="Nuevo nombre del producto" name="name" required>
+            <input class="form__nombre-producto" value="<%= productToEdit.name%>" type="text" placeholder="Nuevo nombre del producto" name="name" required>
             </p>
             <p class="form__img">
             <label for="image">Imagenes: </label>
@@ -22,24 +22,28 @@
             <p>
             <label class="form_categorias" for="selectUpdate">Ingrese la categoria:</label>
             <select  class="form__select-cat" name="category">
-                <option value="oficina">Oficina</option>
-                <option value="living">Living</option>
-                <option value="cocina">Cocina</option>
-                <option value="mueblesTV">Muebles TV</option>
-                <option value="gaming">Gaming</option>
-                <option value="dormitorios">Dormitorios</option>
+                <option value="1">Oficina</option>
+                <option value="2">Living</option>
+                <option value="3">Cocina</option>
+                <option value="4">Muebles TV</option>
+                <option value="5">Gaming</option>
+                <option value="6">Dormitorios</option>
             </select>
             <p>
-            <label class="form_color" for="colorProducto" value="<%= productToEdit.colors%>">Color:</label>
-            <input class="form__color-producto" type="color" name="color" required>
-            </p>
+                <label class="form_color" for="colorProducto">Color:</label>
+                <select  class="form__color-producto" name="colors" required>
+                    <option value="1">Negro</option>
+                    <option value="2">Blanco</option>
+                    <option value="3">Madera</option>
+                </select>
+                </p>
             <p>
             <input type="number" name="price" class="form__precio-producto" value="<%= productToEdit.price%>" placeholder="Indique el precio en ars $" required> 
             </p>
             <div class="form__offer-contenedor">
             <select   name="offer">
-                <option value="true" >Si</option>
-                <option value="false" >No</option>
+                <option value="1" >Si</option>
+                <option value="2" >No</option>
             </p>
             <p>
                 <input type="number" name="discount" value="<%= productToEdit.discount%>" placeholder="Indique el descuento "> 

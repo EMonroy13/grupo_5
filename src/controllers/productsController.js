@@ -69,66 +69,42 @@ const productsController = {
             
         });
         /* Necesitamos pushear el nuevo producto */
-        res.redirect('/');
+        res.redirect("/products/allProducts");
     },
     
    
     edit:(req, res)=>{
-        let id = req.params.id;
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let productoFiltrado = products.find(producto => producto.id == id)
-		res.render("productEdit",{productToEdit:productoFiltrado });
-        },
+        db.Product.findOne({where:{id:req.params.id}}).then(producto=>{
+		res.render("productEdit",{productToEdit:producto });
+        })
+    },
     processEdit:(req, res) => {
 		
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-		let id = req.params.id;
-		let productoAnterior = products.find(producto => {
-			return producto.id == id
-		})
-
-		let productoEditado = {
-			/* dejar el id anterior */
-			id: productoAnterior.id,
-			productName: req.body.name,
-            description: req.body.description,
-            image:req.file ? req.file.filename : productoAnterior.image,
-            category: req.body.category,
-            isTopSeller : false, 
-            offer : req.body.offer, 
+	    db.Product.update({
+            name : req.body.name,
+            description : req.body.description,
+            image : req.file ? req.file.filename : 'default-placeholder.png' ,
+            price : req.body.price,
+            top_seller : "1",
+            offer : req.body.offer,
             discount : req.body.discount,
-            colors:req.body.color,
-			price: req.body.price,			
-		}
-     
-		/* Modificar el array en la posición correspondiente */
+            id_product_categoria : req.body.category,
+            id_product_color : req.body.colors,
+            },{where:{
+            id: req.params.id
+           }});
 		
-		let indice = products.findIndex(product => {
-			return product.id == id
-		})
-
-		products[indice] = productoEditado;
-
-		/* Convertir a JSON */
-		/* Escribir sobre el archivo json */
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 		res.redirect("/products/allProducts");
 	},
 
 // (delete) Delete - Eliminar un producto de la DB
 destroy : (req, res) => {
-  
-    let id = req.params.id;
-    const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-    let productosFiltrados = products.filter(producto => {
-        return producto.id != id
+    db.Product.destroy({
+        where:{
+            id:req.params.id
+        }
     })
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(productosFiltrados, null, " "));
-
-    res.redirect("/products/allProducts");
+    res.redirect("/products/allProducts")
 },
 
 

@@ -23,11 +23,11 @@ router.get("/productCreate/", /* auhtMiddleware, */ productsController.create);
 router.post("/productCreate/", upload.single('image') ,productsController.processCreate);
 
 // editar productos
-router.get("/productEdit/:id", auhtMiddleware ,productsController.edit);
+router.get("/productEdit/:id",/*  auhtMiddleware , */productsController.edit);
 router.put("/productEdit/:id", upload.single('image') ,productsController.processEdit);
 
 //eliminar un producto
-router.delete('/delete/:id',auhtMiddleware , productsController.destroy);
+router.delete('/delete/:id',/* auhtMiddleware , */ productsController.destroy);
 
 //devolver el detalle del producto
 router.get("/productDetail/:id", productsController.productDetail);
