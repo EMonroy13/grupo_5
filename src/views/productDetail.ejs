@@ -72,7 +72,7 @@
             <h4>Productos relacionados</h4> 
             <div class="contenedor__producto-relacionado">
             <% productoRelacionado.forEach(product=>{ %>
-                <% if (product != producto) { %>
+                <% if (product.id != producto.id) { %>
                 <article class="producto-relacionado">
                 <div class="producto-relacionado__contenedor">
                 <p><%= product.name %></p>  

@@ -20,6 +20,15 @@ const productsController = {
             res.send(error);
         })
     },
+    category: (req,res)=>{
+
+        db.Product.findAll({where:{id_product_categoria : req.params.id}}).then(num=>{
+       
+            res.render("productCategory", {productos : num})  
+            }).catch((error)=>{
+                res.send(error);
+            })
+    },
     
     productDetail: (req, res)=>{
         
@@ -27,7 +36,7 @@ const productsController = {
             return producto
          }).then(producto=>{
             let cat = producto.id_product_categoria
-             db.Product.findAll({were:{id_product_categoria : cat}}).then(relacionado=>{ //Anidando then para los productos relacionados
+             db.Product.findAll({where:{id_product_categoria : cat}}).then(relacionado=>{ //Anidando then para los productos relacionados
                 return relacionado
                 }).then(relacionados=>{
                     res.render("productDetail", {producto: producto,productoRelacionado:relacionados})

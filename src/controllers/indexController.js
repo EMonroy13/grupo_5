@@ -7,10 +7,7 @@ const db = require('../database/models');
 const indexController = {
     index: (req, res)=>{
         db.Product.findAll().then(num=>{
-           
-           //IMPORTANTE
-            //agregar el include para poder hacer las relaciones en el ejs y manejar toda la dinamica de filtros en el ejs
-          
+        
             res.render("index", {
                 productos:num,   
             })
