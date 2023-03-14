@@ -15,8 +15,10 @@ body{
 header{
     background-color: rgb(0 0 0);
     width: 100vw;
-    margin-bottom: 20px;
     box-shadow: 0px 4px 7px 0px black;
+}
+main{
+    overflow: hidden;
 }
 .contenedor__logo img{
     width: 200px;
@@ -124,47 +126,46 @@ img{
     justify-content: flex-start;
     height: 100%;
     background: linear-gradient(to bottom, black, var(--violeta-oscuro));
-    padding-bottom: 30px;
-    margin-bottom: 15px;
+    padding: 11px 0 30px;
+    margin: 0 auto 15px;
     box-shadow: 0px 4px 7px 0px var(--violeta-oscuro);
     width: 100vw;
 }
-.banner__descuento{
-    color: #524080;
-    font-size: 40px;
-    margin:9px 16px;
-    
-}
 .banner__descripcion{
     color: white;
-    font-size: 18px;
-    margin-left:16px;
+    font-size: 24px;
+    margin:10px 16px;
+
 }
 .banner__boton{
     color: white;
-    background-color: black;
+    background-color: transparent;
     padding: 12px;
-    border: solid white 2px;
+    border: solid white 3px;
     width: 50%;
     margin: 20px auto;
     border-radius: 25px;
     transition: all 0.2s;
 }
 .banner__boton:hover{
-    border: solid #524080 2px;
-    color: #524080;
+    border: solid #000 2.5px;
+    color: #000;
 }
 .banner__img{
-    width: 97%;
-    height: 200px;
+    width: 95%;
+    height: 290px;
     box-shadow: 0px 3px 20px black;
-    margin: auto;
+    margin: 10px auto;
+    background-image: url(/img/muebles-ej.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; 
 }
-.banner-ofertas img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 .main__categorias{
     margin-bottom: 20px;
     display: flex;
@@ -623,14 +624,19 @@ footer{
         width: 98%;
         height: 600px;
         align-content: flex-start;
-        overflow: auto;
         flex-wrap: wrap;
         flex-direction: column;
+        transition: all 2s;
+    }
+    .ultimos-ingresos__contenedor:hover{
+        transform:translateX(-85%)  ;
     }
     .ultimos-ingresos__articulo {
         width: 43%;
         height: 80%;
         margin: 20px;
+        background-color: var(--blanco);
+        box-shadow: 5px 5px 13px 1px grey;
     }
     .main__mas-vendido article{
         height: 350px;

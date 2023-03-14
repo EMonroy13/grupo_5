@@ -12,6 +12,7 @@
   flex-wrap: wrap;
   font-size: 1.5rem;
   justify-content: flex-end;
+  margin-top: 15px;
 }
 .filtro-productos {
   margin-right: 20px;

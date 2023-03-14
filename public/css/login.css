@@ -11,7 +11,7 @@ main {
 }
 
 .login-box {
-  margin: auto;
+  margin: 15px auto;
   border: solid #fff 1px;
   display: flex;
   width: 95%;
