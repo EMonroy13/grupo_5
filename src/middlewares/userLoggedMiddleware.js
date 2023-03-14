@@ -1,9 +1,10 @@
 function userLoggedMiddleware (req, res, next) {
-
+   
 res.locals.isLogged = false; 
-if(req.session && req.session.userLogged ){
+
+if(req.session && req.session.usuario ){
     res.locals.isLogged = true; 
-    res.locals.User = req.session.userLogged
+    res.locals.User = req.session.usuario
 
 }
 

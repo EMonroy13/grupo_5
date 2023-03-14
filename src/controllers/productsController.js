@@ -2,8 +2,9 @@ const path = require ("path");
 const fs = require ("fs")
 const db = require('../database/models/index');
 const { Console } = require("console");
+const { Sequelize } = require("../database/models/index");
 const sequelize = db.sequelize;
-
+const Op = Sequelize.Op
 
 // constante para leer el json
 // const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8")) 
@@ -115,9 +116,15 @@ destroy : (req, res) => {
     })
     res.redirect("/products/allProducts")
 },
+search:(req,res)=>{
+    console.log(req.query.buscador);
+    db.Product.findAll({where:{name:{[Op.like]: "%" + req.query.buscador + "%"}}}).then(buscados=>{
+        res.render("productsSearch",{productos : buscados})
+    })
 
+},
 
-    cart: (req, res)=>{
+cart: (req, res)=>{
      
             res.render("productCart")
         }

@@ -20,11 +20,13 @@ const usersController = {
         usuarioLogueado = usuario.filter(function(user){    // filtro con esos campos 
             return user.email==req.body.email               // retorno ese usuario de la db 
         });
-       }else if (bcrypt.compareSync(req.body.password,usuarioLogueado[0].password)===false){  
+       }
+       if (bcrypt.compareSync(req.body.password,usuarioLogueado[0].password)===false){  
         usuarioLogueado = [];                                    
-       } else if(usuarioLogueado.length === 0){
+       }
+       if(usuarioLogueado.length === 0){
         return res.send("las credenciales son invalidas") // error de back para que no traten de mandar los campos vacios 
-       }else {
+       }else{
         req.session.usuario = usuarioLogueado[0];
        }
          return res.redirect("/")

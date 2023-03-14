@@ -19,18 +19,20 @@ const upload = multer ({storage: storage});
 router.get("/allProducts", productsController.allProducts);
 router.get("/productCategory/:id", productsController.category)
 // crear productos
-router.get("/productCreate/", /* auhtMiddleware, */ productsController.create);
+router.get("/productCreate/", auhtMiddleware, productsController.create);
 router.post("/productCreate/", upload.single('image') ,productsController.processCreate);
 
 // editar productos
-router.get("/productEdit/:id",/*  auhtMiddleware , */productsController.edit);
+router.get("/productEdit/:id", auhtMiddleware ,productsController.edit);
 router.put("/productEdit/:id", upload.single('image') ,productsController.processEdit);
 
 //eliminar un producto
-router.delete('/delete/:id',/* auhtMiddleware , */ productsController.destroy);
+router.delete('/delete/:id',auhtMiddleware , productsController.destroy);
 
 //devolver el detalle del producto
 router.get("/productDetail/:id", productsController.productDetail);
+
+router.get("/productSearch/", productsController.search)
 
 
 // devolver carrito de compras

@@ -6,6 +6,9 @@
 -- Tiempo de generación: 11-03-2023 a las 20:03:45
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
+CREATE DATABASE IF NOT EXISTS grupo_5;
+
+USE grupo_5;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;

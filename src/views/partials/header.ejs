@@ -7,8 +7,12 @@
         <a href="products/productCart"><i class="fa-sharp fa-solid fa-cart-plus carrito"></i></a>  
     </nav>
     <div class="contenedor__buscador">
+        <form action="/products/productSearch" method="GET">
         <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Estoy buscando..">
+        <input type="text" placeholder="Estoy buscando.." name="buscador">
+        <button type="submit"></button>
+        </form>
+
     </div>
     <nav class="header__nav-inferior">
         <ul class="bar-inferior__izq">
