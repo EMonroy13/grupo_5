@@ -3,7 +3,7 @@ const router = express.Router();
 const usersController = require("../controllers/usersController");
 const multer = require ("multer");
 const path = require('path');
-
+const registerValidation = require ("../middlewares/registerValidation")
 // const auhtMiddleware = require("../middlewares/auhtMiddleware") para que no pueda entrar en profile si no esta logeado 
 const guestMiddleware = require("../middlewares/guestMiddleware")
 
@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
 const upload = multer ({storage: storage});
 // rutas de usuarios
 router.get("/register",guestMiddleware, usersController.register);
-router.post("/register",upload.single('imagenPerfil'), usersController.registerProcess);
+router.post("/register",upload.single('imagenPerfil'), registerValidation, usersController.registerProcess);
 
 
 router.get("/login",guestMiddleware, usersController.login);

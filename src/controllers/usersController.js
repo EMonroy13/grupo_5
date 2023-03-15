@@ -1,7 +1,7 @@
 const path = require ("path");
 const fs = require ("fs")
 const db = require("../database/models/index")
-
+const {validationResult} = require("express-validator")
 const bcrypt = require("bcryptjs"); 
 
 const usersController = {
@@ -65,10 +65,13 @@ const usersController = {
         res.render(path.resolve(__dirname, "../views/register"))
     },
     registerProcess:(req,res)=>{
-        
-
-        /* crear validación para products.length si esta vacio */
-
+        const resultValidation = validationResult(req);
+		if (resultValidation.errors.length > 0){
+			res.render(path.resolve(__dirname, "../views/register"), { 
+				errors : resultValidation.mapped(),
+				oldData : req.body
+			})
+		}else{
         let hash = bcrypt.hashSync(req.body.password, 10)
         db.User.create({
             firstName: req.body.nombre,
@@ -78,8 +81,10 @@ const usersController = {
             id_categoria: 3, // cambiarlo manualmente para decidir si es adm o vendedor.
             imageProfile: req.file ? req.file.filename : 'defaultImageProfile.png' ,
             });
+            res.redirect("/user/login");
+        }
         /* Necesitamos pushear el nuevo usuario*/
-        res.redirect("/user/login");
+       
     }
 }
 

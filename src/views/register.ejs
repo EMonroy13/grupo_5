@@ -19,26 +19,30 @@
                     <li>Preventas exlusivas</li>
                     <li>Envíos sin costo</li>
                 </ul>
+                <% if (locals.errors) {
+					for (let error in errors){ %>
+						<p><%= errors[error].msg %></p> 
+						<% } } %>
             </div>
             <form action="/user/register" method="POST" class="datos-cliente" enctype="multipart/form-data">
                 <!-- Nombre (s) de cliente -->
                 <label for="nombre"> Nombre (s) </label>
-                <input name="nombre" type="text" placeholder=" Ingresa tu nombre (s) " required>
+                <input name="nombre" type="text" placeholder=" Ingresa tu nombre (s) " >
                 <!-- Apellidos del cliente -->
                 <label for="apellidos"> Apellidos </label>
-                <input name="apellido" type="text" placeholder=" Ingresa tus apellidos " required>
+                <input name="apellido" type="text" placeholder=" Ingresa tus apellidos " >
                 <!-- -- foto de perfil -- -->
                 <label for="imagenPerfil">Agrega una foto de perfil</label>
                 <input type="file" name="imagenPerfil" id="imagenPerfil">
                 <!-- Correo del cliente -->
                 <label for="correo"> Correo </label>
-                <input name="correo" class="correo" type="email" placeholder=" Ingresa tu correo " required>
+                <input name="correo" class="correo" type="email" placeholder=" Ingresa tu correo " >
                 <!-- Contraseña del cliente -->
                 <label for="password"> Contraseña </label>
-                <input name="password" type="password" placeholder="Ingresa tu contraseña" required>
+                <input name="password" type="password" placeholder="Ingresa tu contraseña" >
                 <!-- Reingresa contraseña -->
-                <label for="password"> Confirmar Contraseña </label>
-                <input  type="password" placeholder="Confirma tu contraseña" required>
+                <label for="repassword"> Confirmar Contraseña </label>
+                <input name="repassword" type="password" placeholder="Confirma tu contraseña" >
                 <!-- Botón crear cuenta -->
                 <div class="buttons">
                     <button class="create-button" type="submit">Crear cuenta</button>
