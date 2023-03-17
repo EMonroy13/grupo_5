@@ -1,6 +1,7 @@
-const {check} = require("express-validator");
+const { check, validationResult, body} = require('express-validator');
+
 const path = require ("path");
-const db = require ("../database/models/index")
+
 //seguir completando el middleware
 
 module.exports = [
@@ -25,24 +26,14 @@ module.exports = [
     }),
     check("correo")
     .notEmpty().withMessage("Tienes que escribir un email").bail()
-    .isEmail().withMessage("Email incorrecto").bail()
-    .custom((value, {req})=>{
-         db.User.findOne({where:{email : req.body.correo}}).then(user=>{
-            if (usuario != null) {  
-                throw new Error("El email ya existe")        
-            }else{
-                return true
-            }
-            })
-           
-    }),
-    check("password")
+    .isEmail().withMessage("Email incorrecto"),
+     check("password")
         .notEmpty().withMessage("Tienes que escribir una contraseña").bail()
         .isLength({min:8}).withMessage("La contraseña debe contener al menos 8 caracteres"),
     check("repassword")
         .notEmpty().withMessage("Tienes repetir la contraseña").bail()
         .custom((value, {req})=>{
-            if (req.body.password != req.body.repassword){
+            if (req.body.password != value){
                 throw new Error("El campo debe contener la misma contraseña")
             }else{
                 return true
