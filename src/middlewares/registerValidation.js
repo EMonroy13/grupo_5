@@ -6,15 +6,15 @@ const db = require ("../database/models/index")
 module.exports = [
     check("nombre")
     .notEmpty().withMessage("El campo de nombre no puede estar vacio.").bail()
-    .isLength({min:4}).withMessage("El nombre debe tener minimo 4 caracteres."),
+    .isLength({min:2}).withMessage("El nombre debe tener minimo 4 caracteres."),
     check("apellido")
     .notEmpty().withMessage("El campo de apellido no puede estar vacio.").bail()
-    .isLength({min:4}).withMessage("El apellido debe tener minimo 4 caracteres."),
+    .isLength({min:3}).withMessage("El apellido debe tener minimo 4 caracteres."),
     check("imagenPerfil").custom((value, {req})=>{
         let file = req.file;
-        let aceptExt = [".jpg",".png"];
+        let aceptExt = [".jpg",".png",".png", ".gif"];
         if (!file){
-            throw new Error("Debes subir una imagen")
+            return true
         }else{
             let fileExt = path.extname(file.originalname);
             if(!aceptExt.includes(fileExt)){
@@ -27,12 +27,14 @@ module.exports = [
     .notEmpty().withMessage("Tienes que escribir un email").bail()
     .isEmail().withMessage("Email incorrecto").bail()
     .custom((value, {req})=>{
-        db.findOne({where:{email : req.body.correo}}).then(email=>{
-            console.log(email)
-            /*    if (email) {       // verificar que respondo la db cuando no se encuentra el email
-
-            } */
-        })
+         db.User.findOne({where:{email : req.body.correo}}).then(user=>{
+            if (usuario != null) {  
+                throw new Error("El email ya existe")        
+            }else{
+                return true
+            }
+            })
+           
     }),
     check("password")
         .notEmpty().withMessage("Tienes que escribir una contraseña").bail()
@@ -40,9 +42,7 @@ module.exports = [
     check("repassword")
         .notEmpty().withMessage("Tienes repetir la contraseña").bail()
         .custom((value, {req})=>{
-            let contra = req.body.password;
-            let recontra = req.body.repassword;
-            if (contra != recontra){
+            if (req.body.password != req.body.repassword){
                 throw new Error("El campo debe contener la misma contraseña")
             }else{
                 return true
