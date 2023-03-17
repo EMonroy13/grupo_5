@@ -1,6 +1,6 @@
 const {check} = require("express-validator");
 const path = require ("path");
-
+const db = require ("../database/models/index")
 //seguir completando el middleware
 
 module.exports = [
@@ -25,7 +25,15 @@ module.exports = [
     }),
     check("correo")
     .notEmpty().withMessage("Tienes que escribir un email").bail()
-    .isEmail().withMessage("Email incorrecto"),
+    .isEmail().withMessage("Email incorrecto").bail()
+    .custom((value, {req})=>{
+        db.findOne({where:{email : req.body.correo}}).then(email=>{
+            console.log(email)
+            /*    if (email) {
+
+            } */
+        })
+    }),
     check("password")
         .notEmpty().withMessage("Tienes que escribir una contraseña").bail()
         .isLength({min:8}).withMessage("La contraseña debe contener al menos 8 caracteres"),
