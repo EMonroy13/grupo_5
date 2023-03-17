@@ -29,7 +29,7 @@ module.exports = [
     .custom((value, {req})=>{
         db.findOne({where:{email : req.body.correo}}).then(email=>{
             console.log(email)
-            /*    if (email) {
+            /*    if (email) {       // verificar que respondo la db cuando no se encuentra el email
 
             } */
         })
