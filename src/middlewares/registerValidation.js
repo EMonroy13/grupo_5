@@ -7,10 +7,10 @@ const path = require ("path");
 module.exports = [
     check("nombre")
     .notEmpty().withMessage("El campo de nombre no puede estar vacio.").bail()
-    .isLength({min:2}).withMessage("El nombre debe tener minimo 4 caracteres."),
+    .isLength({min:2}).withMessage("El nombre debe tener minimo 2 caracteres."),
     check("apellido")
     .notEmpty().withMessage("El campo de apellido no puede estar vacio.").bail()
-    .isLength({min:3}).withMessage("El apellido debe tener minimo 4 caracteres."),
+    .isLength({min:3}).withMessage("El apellido debe tener minimo 3 caracteres."),
     check("imagenPerfil").custom((value, {req})=>{
         let file = req.file;
         let aceptExt = [".jpg",".png",".png", ".gif"];

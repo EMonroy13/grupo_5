@@ -40,7 +40,7 @@ db.User.findAll() // Utilizamos una promesa antes de la ruta para poder validar 
                 } else {
                     return true;  
                 }
-                }).withMessage('Usuario ya se encuentra registrado'),
+                }).withMessage('El usuario ya se encuentra registrado'),
         ] , usersController.registerProcess);
 })
 .catch((errors) => {
