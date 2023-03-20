@@ -19,26 +19,61 @@
                     <li>Preventas exlusivas</li>
                     <li>Envíos sin costo</li>
                 </ul>
+                <!-- <% if (locals.errors) {
+					for (let error in errors){ %>     
+						<p><%= errors[error].msg %></p> 
+						<% } } %> -->
             </div>
             <form action="/user/register" method="POST" class="datos-cliente" enctype="multipart/form-data">
+                
                 <!-- Nombre (s) de cliente -->
-                <label for="nombre"> Nombre (s) </label>
-                <input name="nombre" type="text" placeholder=" Ingresa tu nombre (s) " required>
+                <label for="nombre"> Nombre (s) 
+                    <% if (locals.errors && errors.nombre) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.nombre.msg %></span>
+                    <% } %> 
+                </label>
+                <input name="nombre" type="text" placeholder=" Ingresa tu nombre (s) " >
+                
                 <!-- Apellidos del cliente -->
-                <label for="apellidos"> Apellidos </label>
-                <input name="apellido" type="text" placeholder=" Ingresa tus apellidos " required>
+                <label for="apellidos"> Apellidos 
+                    <% if (locals.errors && errors.apellido) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.apellido.msg %></span>
+                    <% } %> 
+                </label>
+                <input name="apellido" type="text" placeholder=" Ingresa tus apellidos " >
+                
                 <!-- -- foto de perfil -- -->
-                <label for="imagenPerfil">Agrega una foto de perfil</label>
+                <label for="imagenPerfil">Agrega una foto de perfil 
+                    <% if (locals.errors && errors.imagenPerfil) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.imagenPerfil.msg %></span>
+                    <% } %> 
+                </label>
                 <input type="file" name="imagenPerfil" id="imagenPerfil">
+                
                 <!-- Correo del cliente -->
-                <label for="correo"> Correo </label>
-                <input name="correo" class="correo" type="email" placeholder=" Ingresa tu correo " required>
+                <label for="correo"> Correo 
+                    <% if (locals.errors && errors.correo) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.correo.msg %></span>
+                    <% } %> 
+                </label>
+                <input name="correo" class="correo" placeholder=" Ingresa tu correo " >
+                
                 <!-- Contraseña del cliente -->
-                <label for="password"> Contraseña </label>
-                <input name="password" type="password" placeholder="Ingresa tu contraseña" required>
+                <label for="password"> Contraseña 
+                    <% if (locals.errors && errors.password) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.password.msg %></span>
+                    <% } %> 
+                </label>
+                <input name="password" type="password" placeholder="Ingresa tu contraseña" >
+               
                 <!-- Reingresa contraseña -->
-                <label for="password"> Confirmar Contraseña </label>
-                <input  type="password" placeholder="Confirma tu contraseña" required>
+                <label for="repassword"> Confirmar Contraseña 
+                    <% if (locals.errors && errors.repassword) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.repassword.msg %></span>
+                    <% } %> 
+                </label>
+                <input name="repassword" type="password" placeholder="Confirma tu contraseña" >
+                
                 <!-- Botón crear cuenta -->
                 <div class="buttons">
                     <button class="create-button" type="submit">Crear cuenta</button>
