@@ -15,7 +15,9 @@ Referencias:
 ## ---- Integrantes ----
 - **Edgar Josafat Monroy Ruiz**, 26 años, Ing Sistemas Computacionales, Actualmente laboro en una consultora de Sfw --> grupo 5
 - **Luciano Gabriel Verchelli** 22 años, actualmente manejo un emprendimiento de hamburguesas, y trabajo en un local familiar de Helados Artesanales. --> grupo 5
-- **Martin Schweiger**, 23 años, Estudiante de diseño Industrial --> grupo 5
 - **Gonzalo Mravicich**, 29 años, Tecnico electronico y Analista de sistemas. Actualmente dueño de una microempresa de distribuciones. --> grupo 5
 - **Ivo Sebastián, Benitez** 18 años --> grupo 5 estudiante de digital house y estoy en estudiando en la utn.
 ``` 
+
+
+hola que tal
