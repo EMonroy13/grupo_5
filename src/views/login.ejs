@@ -8,10 +8,14 @@
     <%- include("./partials/header") %>
 <main>
    <div class="login-box"> 
+    <% if (locals.errors) {
+        for (let error in errors){ %>     
+            <p><%= errors[error].msg %></p> 
+            <% } } %>
 
 <form method="POST" action="/user/login"> 
     <!-- <------Nombre de usuario------> 
-<label for="email">e-mail</label>
+<label for="email">e-mail</label> 
 <input class="email" name="email"  placeholder="email" >
 
    <!-- <------contraseña ------> 

@@ -5,7 +5,7 @@ const { Console } = require("console");
 const { Sequelize } = require("../database/models/index");
 const sequelize = db.sequelize;
 const Op = Sequelize.Op
-
+const {validationResult} = require("express-validator")
 // constante para leer el json
 // const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8")) 
 
@@ -64,8 +64,13 @@ const productsController = {
     },
 
     processCreate:(req,res)=>{
-
-        /* crear validación para products.length si esta vacio */
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0){
+               res.render(path.resolve(__dirname, "../views/productCreate"), { 
+                   errors : resultValidation.mapped(),
+               })
+            } else{
+        
         db.Product.create ({
             name : req.body.productName,
             description : req.body.description,
@@ -78,8 +83,8 @@ const productsController = {
             id_product_color : req.body.colors,
             
         });
-        /* Necesitamos pushear el nuevo producto */
         res.redirect("/products/allProducts");
+    }
     },
     
    

@@ -10,7 +10,7 @@
     <form class="form__upDate" method="POST" enctype="multipart/form-data" action="/products/productCreate/">
         <h2>Alta de productos</h2>
         <p>
-        <input class="form__nombre-producto" type="text" placeholder="Nombre del producto" name="productName" required>
+        <input class="form__nombre-producto" type="text" placeholder="Nombre del producto" name="productName" >
         </p>
         <p class="form__img">
         <label>Imagenes: </label>
@@ -22,6 +22,7 @@
         <p>
         <label class="form_categorias" for="selectUpdate">Ingrese la categoria:</label>
         <select  class="form__select-cat" name="category">
+            <option value="0">      </option>
             <option value="1">Oficina</option>
             <option value="2">Living</option>
             <option value="3">Cocina</option>
@@ -32,16 +33,18 @@
         </p>
         <p>
         <label class="form_color" for="colorProducto">Color:</label>
-        <select  class="form__color-producto" name="colors" required>
+        <select  class="form__color-producto" name="colors" >
+            <option value="0">      </option>
             <option value="1">Negro</option>
             <option value="2">Blanco</option>
             <option value="3">Madera</option>
         </select>
         </p>
         <p>
-        <input type="number" class="form__precio-producto" placeholder="Indique el precio en ars $" name="price" required> 
+        <input type="number" class="form__precio-producto" placeholder="Indique el precio en ars $" name="price" > 
         <div class="form__offer-contenedor">
             <select   name="offer">
+                <option value="" >  </option>
                 <option value="1" >Si</option>
                 <option value="0" >No</option>
             </p>
@@ -49,6 +52,10 @@
                 <input type="number" name="discount" placeholder="Indique el descuento "> 
             </p>
             </div>
+            <% if (locals.errors) {
+                for (let error in errors){ %>     
+                    <p><%= errors[error].msg %></p> 
+                    <% } } %>
         </p>
         <p class="form__buttom">
         <button type="submit" class="form__enviar">Guardar</button>

@@ -12,11 +12,15 @@ const usersController = {
     },
 
     loginProcess: (req, res ) =>{ 
-
+    const resultValidation = validationResult(req);
+    if (resultValidation.errors.length > 0){
+           res.render(path.resolve(__dirname, "../views/login"), { 
+               errors : resultValidation.mapped(),
+           })
+        } else{
     db.User.findAll().then(usuario => {
        let usuarioLogueado = [];
-
-       if(req.body.email != "" && req.body.password != ""){  // pregunto si no llegan vacios los campos 
+        if(req.body.email != "" && req.body.password != ""){  // pregunto si no llegan vacios los campos 
         usuarioLogueado = usuario.filter(function(user){    // filtro con esos campos 
             return user.email==req.body.email               // retorno ese usuario de la db 
         });
@@ -30,28 +34,11 @@ const usersController = {
         req.session.usuario = usuarioLogueado[0];
        }
          return res.redirect("/")
-        });
-
-       
-
-
-
-
-
-
-// if(usuario){
-//     let isOkPassword = bcrypt.compareSync(req.body.password, usuario.password) // compara los password
-//     if(isOkPassword) {
-//         delete usuario.password; // borra la contraseña de session por seguridad 
-//         
-//         //mantener session
-//         res.redirect("/")   // hay que crear la vista de perfil de usuario 
-//     }else{
-//     return res.send("las credenciales son invalidas") // hay que usar express validator para que quede en la vista el error sin que se borre todo 
-//     } 
-// }
-
-},
+    
+        }); 
+    }
+        
+    },
     profile:(req,res)=>{
         
         res.render(path.resolve(__dirname, "../views/profile"))
