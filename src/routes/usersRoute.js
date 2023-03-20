@@ -4,6 +4,7 @@ const usersController = require("../controllers/usersController");
 const multer = require ("multer");
 const path = require('path');
 const registerValidation = require ("../middlewares/registerValidation")
+const loginValidation = require("../middlewares/loginValidation");
 // const auhtMiddleware = require("../middlewares/auhtMiddleware") para que no pueda entrar en profile si no esta logeado 
 const guestMiddleware = require("../middlewares/guestMiddleware")
 const { check, validationResult, body} = require('express-validator');
@@ -48,7 +49,7 @@ db.User.findAll() // Utilizamos una promesa antes de la ruta para poder validar 
 })
 
 router.get("/login",guestMiddleware, usersController.login);
-router.post("/login",usersController.loginProcess);
+router.post("/login", loginValidation,usersController.loginProcess);
 router.post("/logOut",usersController.logOut);
 
 router.get("/profile",usersController.profile)
