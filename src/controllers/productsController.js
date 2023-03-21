@@ -66,7 +66,7 @@ const productsController = {
     processCreate:(req,res)=>{
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0){
-               res.render(path.resolve(__dirname, "../views/productCreate"), { 
+               res.render(("productCreate"), { 
                    errors : resultValidation.mapped(),
                })
             } else{

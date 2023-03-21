@@ -7,14 +7,14 @@ const bcrypt = require("bcryptjs");
 const usersController = {
     login: (req, res)=>{ 
       
-        res.render(path.resolve(__dirname, "../views/login"))
+        res.render("login")
 
     },
 
     loginProcess: (req, res ) =>{ 
     const resultValidation = validationResult(req);
     if (resultValidation.errors.length > 0){
-           res.render(path.resolve(__dirname, "../views/login"), { 
+           res.render(("login"), { 
                errors : resultValidation.mapped(),
            })
         } else{
@@ -25,15 +25,18 @@ const usersController = {
             return user.email==req.body.email               // retorno ese usuario de la db 
         });
        }
-       if (bcrypt.compareSync(req.body.password,usuarioLogueado[0].password)===false){  
-        usuarioLogueado = [];                                    
-       }
-       if(usuarioLogueado.length === 0){
-        return res.send("las credenciales son invalidas") // error de back para que no traten de mandar los campos vacios 
-       }else{
+       if (usuarioLogueado.length== 0){
+            return res.render(("login"), {errors: {email: {msg:'Las credenciales no son validas'} }})
+        }
+        else if (bcrypt.compareSync(req.body.password,usuarioLogueado[0].password)===false){  
+        usuarioLogueado = []; 
+        return res.render(("login"), {errors: {email: {msg:'Las credenciales no son validas'} }})                                   
+        }
+        else{
         req.session.usuario = usuarioLogueado[0];
-       }
-         return res.redirect("/")
+        return res.redirect("/")
+        }
+         
     
         }); 
     }
@@ -41,7 +44,7 @@ const usersController = {
     },
     profile:(req,res)=>{
         
-        res.render(path.resolve(__dirname, "../views/profile"))
+        res.render("profile")
     },
     logOut: (req, res) => {
         req.session.destroy();
@@ -49,12 +52,12 @@ const usersController = {
     },
     register: (req, res)=>{
         
-        res.render(path.resolve(__dirname, "../views/register"))
+        res.render("register")
     },
     registerProcess:(req,res)=>{
         const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0){
-			res.render(path.resolve(__dirname, "../views/register"), { 
+			res.render(("register"), { 
 				errors : resultValidation.mapped(),
 				oldData : req.body
 			})

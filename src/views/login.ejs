@@ -10,7 +10,7 @@
    <div class="login-box"> 
     <% if (locals.errors) {
         for (let error in errors){ %>     
-            <p><%= errors[error].msg %></p> 
+            <p style="color: #900"><%= errors[error].msg %></p> 
             <% } } %>
 
 <form method="POST" action="/user/login"> 
