@@ -29,7 +29,10 @@
                 <a href="/products/productDetail/<%=ultimoAgregado.id%>">
                 <img src="/img/<%= ultimoAgregado.image %>" alt="articulo">
                 <div class="ultimo-ingresado__precio">
-                <p><%= ultimoAgregado.price %></p>
+                <p><%= ultimoAgregado.price %> 
+                    <% if (ultimoAgregado.discount > 0) { %> 
+                    <span class="descuento__contenedor"><%= ultimoAgregado.discount %>% off</span>
+                    <% } %></p>
                 <h5><%= ultimoAgregado.name %></h5>
                 </div>
                 </a>
@@ -43,7 +46,11 @@
                 <article class="ultimos-ingresos__articulo">
                 <a href="/products/productDetail/<%=producto.id%>"><div class="ultimos-ingresos-img"><img src="/img/<%= producto.image %>" alt="articulo1"></div></a>
                 <div class="ultimos-ingresos__precio">
-                <p>$ <%= producto.price %></p>
+                <p>$ <%= producto.price %> 
+                    <% if (producto.discount > 0) { %> 
+                    <span class="descuento__contenedor"><%= producto.discount %>% off</span>
+                    <% } %>
+                </p>
                 <h5><%= producto.name %></h5>
                 </div>
             </article>
@@ -65,7 +72,11 @@
                     </div>
                     </a>
                     <div class="mas-vendido__precio">
-                    <p>$ <%= producto.price %></p>
+                    <p>$ <%= producto.price %>
+                        <% if (producto.discount > 0) { %> 
+                        <span class="descuento__contenedor"><%= producto.discount %>% off</span>
+                        <% } %>
+                    </p>
                     <h5><%= producto.name %></h5>
                     </div>
                 </article>
@@ -87,7 +98,10 @@
                 </a>
                 <div class="ofertas__precio">
                     <h5><%= producto.name %></h5>
-                    <p class="precio__efectivo">$ <%= producto.price %></p><p class="precio__descuento">20% off</p>
+                    <p class="precio__efectivo">$ <%= producto.price %>
+                        <% if (producto.discount > 0) { %> 
+                        <span class="descuento__contenedor"><%= producto.discount %>% off</span>
+                        <% } %></p>
                 </div>
             </article>
             <% }) %>

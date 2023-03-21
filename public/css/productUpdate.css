@@ -35,8 +35,9 @@
 }
 .form__img input{
     margin: 10px auto;
-    width: 90%;
+    width: 50%;
     color: #fff;
+    
 }
 .form__img input:focus{
     outline:solid 2px var(--violeta-oscuro);
@@ -86,6 +87,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 10px 46px;
+ }
+ .form__offer-contenedor p {
+    display: flex;
+    justify-content: space-between;
  }
  .form__offer-contenedor select{
     padding: 5px;

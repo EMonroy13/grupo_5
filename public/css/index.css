@@ -42,6 +42,7 @@ main{
     font-size: 30px;
     padding: 10px;
 }
+
 .contenedor__buscador{
     position: relative;
     padding: 8px;
@@ -256,6 +257,10 @@ img{
     color: var(--beige-oscuro);
     font-weight: 600;
 }
+.descuento__contenedor{
+    color: var(--violeta-oscuro);
+    font-size: 15px;
+}
 .ultimo-ingresado__precio h5{
     font-size: 18px;
     color: grey;
@@ -384,6 +389,8 @@ font-size: 20px;
 .main__mas-vendido img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .mas-vendido__ver-mas{
     padding: 10px;
@@ -419,7 +426,7 @@ font-size: 20px;
 .ofertas__imagen{
     padding: 10px 20px;
     width: 100%;
-    border-right: solid grey 0.5px;
+    border-right: solid #bebebe 1px
 }
 .ofertas__imagen img{
     object-fit: cover;
@@ -433,6 +440,7 @@ font-size: 20px;
     justify-content: flex-start;
     flex-direction: column;
     padding: 15px;
+    width: 50%;
 }
 .ofertas__precio h5{
     font-size: 22px;
@@ -495,8 +503,18 @@ footer{
 }
 /* #######################################tablet################################################ */
  @media (min-width: 685px) {
-    .header__nav-inferior{
+    .header__nav-inferior ul {
+        width: 340px;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .header__nav-inferior {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
     }
     .section__contato{
         flex-direction: row;
@@ -583,20 +601,23 @@ footer{
         height: 250px;
         display: flex;
         margin: 5px auto;
-        border: solid 0.5px grey;
+        border: none;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        box-shadow: 2px 2px 9px grey;
     }
     .mas-vendido__imagen {
         border-right: none;
+        height: 180px;
        }
        .main__ofertas{
         border-radius: 15px 0 15px 0;
        }
     .main__ofertas article {
         width: 43%;
-        border: solid 0.5px grey;
+        border: none;
+        box-shadow: 2px 2px 9px grey;
     }
  }
 
@@ -642,4 +663,8 @@ footer{
     .main__mas-vendido article{
         height: 350px;
     }
+    .mas-vendido__imagen {
+        border-right: none;
+        height: 230px;
+       }
 }
