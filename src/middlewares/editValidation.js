@@ -5,7 +5,7 @@ const path = require ("path");
 //seguir completando el middleware
 
 module.exports = [
-    check("productName")
+    check("name")
     .notEmpty().withMessage("El campo no puede estar vacio").bail()
     .isLength({min:5}).withMessage("El nombre  del producto debe tener minimo 5 caracteres."),
     check("image").custom((value, {req})=>{
@@ -30,7 +30,7 @@ module.exports = [
             return true
         }
     }),
-    check("color").custom((value, {req})=>{
+    check("colors").custom((value, {req})=>{
         if (value == 0) {
             throw new Error ("Debe seleccionar un color")
         }else{

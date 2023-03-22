@@ -10,18 +10,30 @@
         <form class="form__upDate" action="/products/productEdit/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
             <h2>Edicion de productos</h2>
             <p>
-            <input class="form__nombre-producto" value="<%= productToEdit.name%>" type="text" placeholder="Nuevo nombre del producto" name="name" required>
+            <% if (locals.errors && errors.name) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.name.msg %></span>
+                <% } %> 
+            <input class="form__nombre-producto" value="<%= productToEdit.name%>" type="text" placeholder="Nuevo nombre del producto" name="name" >
             </p>
             <p class="form__img">
-            <label for="image">Imagenes: </label>
+            <label for="image">Imagenes: 
+                <% if (locals.errors && errors.image) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.image.msg %></span>
+                <% } %> 
+            </label>
             <input type="file" name="image" accept="image/*">
             </p>
             <p class="form_descripcion">
-            <label  for="descripcionProducto">Descripción del producto:</label>
+            <label  for="description">Descripción del producto:
+                <% if (locals.errors && errors.description) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.description.msg %></span>
+                <% } %> 
+            </label>
             <textarea id="descripcion" value="<%= productToEdit.description%>"  name="description" rows="7" cols="40"> </textarea>
             <p>
             <label class="form_categorias" for="selectUpdate">Ingrese la categoria:</label>
             <select  class="form__select-cat" name="category">
+                <option value="0">       </option>
                 <option value="1">Oficina</option>
                 <option value="2">Living</option>
                 <option value="3">Cocina</option>
@@ -29,16 +41,26 @@
                 <option value="5">Gaming</option>
                 <option value="6">Dormitorios</option>
             </select>
+            <% if (locals.errors && errors.category) { %>
+                <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.category.msg %></span>
+            <% } %> 
             <p>
                 <label class="form_color" for="colorProducto">Color:</label>
-                <select  class="form__color-producto" name="colors" required>
+                <select  class="form__color-producto" name="colors" >
+                    <option value="0">     </option>
                     <option value="1">Negro</option>
                     <option value="2">Blanco</option>
                     <option value="3">Madera</option>
                 </select>
+                <% if (locals.errors && errors.colors) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.colors.msg %></span>
+                <% } %> 
                 </p>
             <p>
-            <input type="number" name="price" class="form__precio-producto" value="<%= productToEdit.price%>" placeholder="Indique el precio en ars $" required> 
+                <% if (locals.errors && errors.price) { %>
+                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.price.msg %></span>
+                <% } %> 
+            <input type="number" name="price" class="form__precio-producto" value="<%= productToEdit.price%>" placeholder="Indique el precio en ars $" > 
             </p>
             <div class="form__offer-contenedor">
             <select   name="offer">

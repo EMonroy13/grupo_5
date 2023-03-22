@@ -94,6 +94,15 @@ const productsController = {
         })
     },
     processEdit:(req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0){
+            db.Product.findOne({where:{id:req.params.id}}).then(producto=>{
+               res.render(("productEdit"), { 
+                   errors : resultValidation.mapped(),
+                   productToEdit:producto 
+               })
+            })
+        } else{
 		
 	    db.Product.update({
             name : req.body.name,
@@ -109,7 +118,8 @@ const productsController = {
             id: req.params.id
            }});
 		
-		res.redirect("/products/allProducts");
+		    res.redirect("/products/allProducts");
+        }
 	},
 
 // (delete) Delete - Eliminar un producto de la DB
