@@ -117,4 +117,12 @@
     .create-button {
         font-size: 1.125rem;
       }
+      .is-invalid{
+        background-color: var(--beige-claro);
+        border: solid 0.5px #f00;
+      }
+      .is-valid{
+        background-color: #fff;
+        border: 1px solid #0f0;
+      }
 }

@@ -13,16 +13,16 @@
                     <i class="fa-solid fa-id-card-clip"></i>
             </a>
             <div class="desc-cuenta">
-                <h2>Disfruta de los beneficios de la cuenta.</h2>
-                <ul>
+                <!-- <h2>Disfruta de los beneficios de la cuenta.</h2> -->
+               <!--  <ul>
                     <li>Ofertas especiales</li>
                     <li>Preventas exlusivas</li>
                     <li>Envíos sin costo</li>
+                </ul> -->
+
+                <ul class="ul__errores">
+
                 </ul>
-                <!-- <% if (locals.errors) {
-					for (let error in errors){ %>     
-						<p><%= errors[error].msg %></p> 
-						<% } } %> -->
             </div>
             <form action="/user/register" method="POST" class="datos-cliente" enctype="multipart/form-data">
                 
@@ -35,7 +35,7 @@
                 <input name="nombre" type="text" placeholder=" Ingresa tu nombre (s) " >
                 
                 <!-- Apellidos del cliente -->
-                <label for="apellidos"> Apellidos 
+                <label for="apellido"> Apellidos 
                     <% if (locals.errors && errors.apellido) { %>
                     <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.apellido.msg %></span>
                     <% } %> 
