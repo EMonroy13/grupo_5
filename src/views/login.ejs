@@ -8,12 +8,13 @@
     <%- include("./partials/header") %>
 <main>
    <div class="login-box"> 
+    <ul class="ul_errors"></ul>
     <% if (locals.errors) {
         for (let error in errors){ %>     
             <p style="color: #900"><%= errors[error].msg %></p> 
             <% } } %>
 
-<form method="POST" action="/user/login"> 
+<form  class="datos-login" method="POST" action="/user/login"> 
     <!-- <------Nombre de usuario------> 
 <label for="email">e-mail</label> 
 <input class="email" name="email"  placeholder="email" >
