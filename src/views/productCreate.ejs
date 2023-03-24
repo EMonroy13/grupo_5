@@ -7,7 +7,6 @@
 <body>
     <%- include("./partials/header") %>
 <main>
-    <ul class=" ul_errores"></ul>
     <form class="form__upDate" method="POST" enctype="multipart/form-data" action="/products/productCreate/">
         <h2>Alta de productos</h2>
         <p>
@@ -15,7 +14,7 @@
         <% if (locals.errors && errors.productName) { %>
             <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.productName.msg %></span>
             <% } %> 
-        </label>
+            <span class="error-front__name"></span>
         </p>
         <p class="form__img">
         <label>Imagenes: </label>
@@ -80,6 +79,9 @@
                 <input type="number" name="discount" placeholder="Indique el descuento "> 
             </p>
             </div>
+            <ul class=" ul_errores">
+        
+            </ul>
         </p>
         <p class="form__buttom">
         <button type="submit" class="form__enviar">Guardar</button>

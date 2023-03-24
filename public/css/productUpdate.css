@@ -143,3 +143,10 @@
     background-color: #fff;
     border: 1px solid #0f0;
   }
+  .ul_errores{
+    text-align: center;
+    margin: 10px auto;
+    list-style: none;
+    font-size: 18px;
+    text-shadow: 2px 2px 10px #000;
+  }
