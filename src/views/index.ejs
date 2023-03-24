@@ -22,40 +22,42 @@
             <a href="/products/productCategory/5"><div class="categorias__5"><p>Gaming</p></div></a>
             <a href="/products/productCategory/6"><div class="categorias__6"><p>Dormitorios</p></div></a>
         </section>
-        <h4>Agregado recientemente</h4>
+        <h4>Último producto agregado</h4>
         <section class="main__ultimo-ingresado">
             <% const ultimoAgregado =productos[productos.length - 1]; %>
             <article class="ultimo-ingresado__articulo">
                 <a href="/products/productDetail/<%=ultimoAgregado.id%>">
-                <img src="/img/<%= ultimoAgregado.image %>" alt="articulo">
-                <div class="ultimo-ingresado__precio">
-                <p><%= ultimoAgregado.price %> 
-                    <% if (ultimoAgregado.discount > 0) { %> 
-                    <span class="descuento__contenedor"><%= ultimoAgregado.discount %>% off</span>
-                    <% } %></p>
-                <h5><%= ultimoAgregado.name %></h5>
-                </div>
+                    <div class="ultimo-ingresado-img"><img src="/img/<%= ultimoAgregado.image %>" alt="articulo"></div>
+                    <div class="ultimo-ingresado__precio">
+                        <p><%= ultimoAgregado.price %> 
+                        <% if (ultimoAgregado.discount > 0) { %> 
+                            <span class="descuento__contenedor"><%= ultimoAgregado.discount %>% off</span>
+                        <% } %></p>
+                        <h5><%= ultimoAgregado.name %></h5>
+                    </div>
                 </a>
             </article>
         </section>
-        <h4>Últimos productos agregados</h4>
+        <h4>Agregados recientemente</h4>
         <section class="main__ultimos-ingresos">
+            <button class="boton-carrusel-UA boton-izq-UA"><i class="fas fa-angle-left"></i></button>
             <div class="ultimos-ingresos__contenedor">
                 <% const ultimosAgregados = productos.slice(productos.length -4); %>
                 <% ultimosAgregados.forEach((producto)=>{ %>
                 <article class="ultimos-ingresos__articulo">
-                <a href="/products/productDetail/<%=producto.id%>"><div class="ultimos-ingresos-img"><img src="/img/<%= producto.image %>" alt="articulo1"></div></a>
-                <div class="ultimos-ingresos__precio">
-                <p>$ <%= producto.price %> 
-                    <% if (producto.discount > 0) { %> 
-                    <span class="descuento__contenedor"><%= producto.discount %>% off</span>
-                    <% } %>
-                </p>
-                <h5><%= producto.name %></h5>
-                </div>
-            </article>
-            <% }) %>
+                    <a href="/products/productDetail/<%=producto.id%>"><div class="ultimos-ingresos-img"><img src="/img/<%= producto.image %>" alt="articulo1"></div></a>
+                    <div class="ultimos-ingresos__precio">
+                        <p>$ <%= producto.price %> 
+                            <% if (producto.discount > 0) { %> 
+                            <span class="descuento__contenedor"><%= producto.discount %>% off</span>
+                            <% } %>
+                        </p>
+                        <h5><%= producto.name %></h5>
+                    </div>
+                </article>
+                <% }) %>
             </div>
+            <button class="boton-carrusel-UA boton-der-UA"><i class="fas fa-angle-right"></i></button>
             <div class="ultimos-ingresos__ver-mas">
                 <a href=""><p>Ver mas</p ><p> > </p> </a>
             </div>
@@ -108,5 +110,6 @@
         </section>
     </main>
     <%- include("./partials/footer") %>
+    <script src="/js/index.js"></script>
 </body>
 </html>

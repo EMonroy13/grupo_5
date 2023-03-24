@@ -233,7 +233,7 @@ img{
     padding: 26px 0;
 }
 .ultimo-ingresado__articulo{
-    width: 90%;
+    width: 80%;
     margin: auto;
     padding: 10px;
     box-shadow: 2px 2px 9px 0 #999;
@@ -241,11 +241,18 @@ img{
 .ultimo-ingresado__articulo a{
     text-decoration: none;
 }
+.ultimo-ingresado-img{
+    height: 70vw;
+    width: 90%;
+    margin: 25px auto;
+}
 .ultimo-ingresado__articulo img{
     width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .ultimo-ingresado__precio {
-    margin: 5px 0;
+    margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -272,6 +279,7 @@ img{
     box-shadow: 2px 2px 11px 1px #666;
     margin: 10px auto;
     border-radius: 0 0 15px 0;
+    position: relative;
 }
 .ultimos-ingresos__articulo {
     margin: 10px 10px;
@@ -640,6 +648,30 @@ footer{
         padding-right: 8px;
         font-size: 24px;
     }
+    .boton-carrusel-UA{
+        font-size: 35px;
+        color: var(--violeta-oscuro);
+        background-color: #fff;
+        border-radius: 50%;
+        border-width: 0;
+        box-shadow: 0 2px 4px 0 var(--violeta-oscuro);
+        cursor: pointer;
+        height: 64px;
+        outline: 0;
+        position: absolute;
+        top: 260px;
+        width: 64px;
+        z-index: 2;
+    }
+    .boton-carrusel-UA:hover{
+        box-shadow: 0px 2px 10px 1px var(--violeta-oscuro);
+    }
+    .boton-izq-UA{
+        display: none;
+    }
+    .boton-der-UA{
+        right: 0;
+    }
     .ultimos-ingresos__contenedor {
         display: flex;
         justify-content: center;
@@ -650,13 +682,13 @@ footer{
         flex-direction: column;
         transition: all 2s;
     }
-    .ultimos-ingresos__contenedor:hover{
-        transform:translateX(-85%)  ;
+    .ultimos-ingresos__carrusel{
+        transform:translateX(-102%)  ;
     }
     .ultimos-ingresos__articulo {
         width: 43%;
         height: 80%;
-        margin: 20px;
+        margin: 0px 4%;
         background-color: var(--blanco);
         box-shadow: 5px 5px 13px 1px grey;
     }
