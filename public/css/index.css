@@ -113,7 +113,7 @@ main{
 #id-Perfil{
     margin-left: 10px;
     border: none;
-    font-size: 32px;
+    font-size: 22px;
 }
 .header__nav-inferior ul li a{
     color: var(--beige-oscuro);
@@ -245,7 +245,7 @@ img{
 .main__ultimo-ingresado{
     display: flex;
     margin: 10px auto;
-    width: 95vw;
+    width: 75vw;
     background-color: var(--blanco);
     box-shadow: 2px 2px 11px 1px #666;
     border-radius: 0 0 15px 0;
