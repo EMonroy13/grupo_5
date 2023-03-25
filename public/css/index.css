@@ -245,7 +245,7 @@ img{
 .main__ultimo-ingresado{
     display: flex;
     margin: 10px auto;
-    width: 75vw;
+    width: 95vw;
     background-color: var(--blanco);
     box-shadow: 2px 2px 11px 1px #666;
     border-radius: 0 0 15px 0;
