@@ -81,21 +81,35 @@ main{
 }
 .header__nav-inferior{
     display: none;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
 }
-.header__nav-inferior ul{
-    width: 340px;
+.nav-inferior-show{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    padding: 20px;
+    flex-direction: column-reverse;
+}
+.header__nav-inferior ul{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: center;
+    justify-content: flex-end;
     align-items: center;
+    font-size: 20px;
+    margin: auto;
 }
 .header__nav-inferior ul li{
-    padding: 2px;
+    padding: 16px 0;
     color: var(--beige-oscuro);
     list-style: none;
+    border-top: solid 1px var(--beige-oscuro);
+    width: 85%;
+    text-align: center;
+}
+#id-Perfil{
+    border: none;
 }
 .header__nav-inferior ul li a{
     color: var(--beige-oscuro);
@@ -104,6 +118,7 @@ main{
 .bar-inferior__der-li{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .contenedor__img-perfil{
     display: flex;
@@ -280,6 +295,9 @@ img{
     margin: 10px auto;
     border-radius: 0 0 15px 0;
     position: relative;
+}
+.boton-carrusel-UA{
+    display: none;
 }
 .ultimos-ingresos__articulo {
     margin: 10px 10px;
@@ -514,15 +532,26 @@ footer{
     .header__nav-inferior ul {
         width: 340px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 18px;
         align-items: center;
+        flex-wrap: nowrap;
+        margin: 0 5px ;
     }
+
     .header__nav-inferior {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 20px;
+        padding: 15px;
+        flex-direction: row;
+    }
+    .header__nav-inferior ul li {
+        padding: 2px;
+        color: var(--beige-oscuro);
+        list-style: none;
+        border-top: none;
     }
     .section__contato{
         flex-direction: row;
@@ -632,6 +661,10 @@ footer{
 
 /* #######################################desktop################################################ */
 @media (min-width: 920px) {
+    .header__nav-inferior ul {
+        width: 430px;
+        font-size: 20px;
+    }
     .main__categorias a{
         width: 15%;
         height: 300px;
@@ -649,6 +682,7 @@ footer{
         font-size: 24px;
     }
     .boton-carrusel-UA{
+        display: block;
         font-size: 35px;
         color: var(--violeta-oscuro);
         background-color: #fff;

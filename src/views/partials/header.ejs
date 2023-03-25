@@ -1,6 +1,6 @@
 <header>
     <nav class="header__nav-superior">
-        <i class="fa-sharp fa-solid fa-bars menu-burger"></i>
+       <i class="fa-sharp fa-solid fa-bars menu-burger"></i>
         <div class="contenedor__logo">
             <a href="/"><img src="/img/Logo.png" alt="logo ejemplo"></a>
         </div>
@@ -23,16 +23,16 @@
             <li><a href="/products/productCreate">Crear</a></li>
         </ul>
         <ul class="bar-inferior__der">
-            <li><a href="">Mis compras </a><i class="fas fa-shopping-basket"></i></li>
+            <li><a href="">Mis compras </a></li>
              <% if (locals.isLogged) { %>
-                <li class="bar-inferior__der-li">
+                <li id="id-Perfil" class="bar-inferior__der-li">
                     <div class="contenedor__img-perfil"><img src="/img/users/<%= locals.User.imageProfile %>" alt=""></div>
                     <a href="/user/profile"><%= locals.User.firstName %></a>
                 </li>
             
             <% } else { %> 
                 <li><a href="/user/register">Registrate </a><i class="fas fa-address-card"></i></li>
-                <li><a href="/user/login">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
+                <li id="id-Perfil"><a href="/user/login">Ingresá </a><i class="fas fa-sign-in-alt"></i></li>
                <% } %> 
         </ul>
     </nav>
