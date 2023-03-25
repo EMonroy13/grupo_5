@@ -52,14 +52,15 @@ main{
 }
 .contenedor__buscador input{
     padding: 12px;
-    border-radius: 20px;
     border: none;
     width: 95%;
     line-height: 0;
-    padding-left: 46px;
+    padding-left: 58px;
 }
 .contenedor__buscador button{
-    margin-left: -40px;
+    position: absolute;
+    left: 47px;
+    top: 24px;
 }
 .contenedor__buscador input::placeholder{
     padding-left: 29px;
@@ -75,9 +76,10 @@ main{
     font-size: 17px;
     font-weight: bold;
     padding: 9px;
-    border-radius: 20px;
     position: absolute;
     top: 12px;
+    border-right: 1px solid grey;
+    padding-right: 15px;
 }
 .header__nav-inferior{
     display: none;
@@ -109,7 +111,9 @@ main{
     text-align: center;
 }
 #id-Perfil{
+    margin-left: 10px;
     border: none;
+    font-size: 32px;
 }
 .header__nav-inferior ul li a{
     color: var(--beige-oscuro);
@@ -123,8 +127,8 @@ main{
 .contenedor__img-perfil{
     display: flex;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     margin-right: 9px;
     border-radius: 50%;
 }
@@ -655,6 +659,9 @@ footer{
         width: 43%;
         border: none;
         box-shadow: 2px 2px 9px grey;
+    }
+    .menu-burger{
+        display: none;
     }
  }
 
