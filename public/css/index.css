@@ -113,7 +113,7 @@ main{
 #id-Perfil{
     margin-left: 10px;
     border: none;
-    font-size: 22px;
+    font-size: 25px;
 }
 .header__nav-inferior ul li a{
     color: var(--beige-oscuro);
@@ -538,7 +538,7 @@ footer{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        font-size: 18px;
+        font-size: 15px;
         align-items: center;
         flex-wrap: nowrap;
         margin: 0 5px ;
@@ -604,7 +604,16 @@ footer{
     font-size: 19px;
     }
     .main__ultimo-ingresado{
-        border-radius: 15px 0 15px 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .ultimo-ingresado__articulo {
+        background-color: var(--blanco);
+        width: 75%;
+    }
+    .ultimo-ingresado-img {
+        height: 50vw;
+        width: 70%;
     }
     .main__ultimos-ingresos {
         height: 100%;
