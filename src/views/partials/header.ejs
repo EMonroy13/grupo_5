@@ -25,10 +25,16 @@
             <li><a href="">Mis compras </a></li>
              <% if (locals.isLogged) { %>
                 <li><a href="/products/productCreate">Crear</a></li>
-                <li id="id-Perfil" class="bar-inferior__der-li">
-                    <div class="contenedor__img-perfil"><img src="/img/users/<%= locals.User.imageProfile %>" alt=""></div>
-                    <a href="/user/profile"><%= locals.User.firstName %></a>
-                </li>
+                <div class="perfil-contenedor">
+                    <li id="id-Perfil" class="bar-inferior__der-li">
+                        <div class="contenedor__img-perfil"><img src="/img/users/<%= locals.User.imageProfile %>" alt=""></div>
+                        <a class="boton-perfil"><%= locals.User.firstName %></a>    
+                    </li>
+                        <form class="datos-contenedor" action="/user/logOut" method="POST">
+                            <a href="/user/profile">Perfil</a>
+                            <button type="submit">Cerrar sesion</button>
+                        </form>
+                </div>
             
             <% } else { %> 
                 <li><a href="/user/register">Registrate </a><i class="fas fa-address-card"></i></li>

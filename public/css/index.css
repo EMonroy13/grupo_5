@@ -113,11 +113,49 @@ main{
 #id-Perfil{
     margin-left: 10px;
     border: none;
+    position: relative;
     font-size: 25px;
+    z-index: 1;
+    background-color: #000;
+    width: 100%;
 }
+.perfil-contenedor{
+    position: relative;
+}
+.datos-contenedor{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0px;
+    right: 0px;
+    color: var(--beige-claro);
+    background: #000;
+    padding: 10px;
+    transition: all 1s;
+    font-size: 16px;
+}
+.show__perfil-contenedor{
+    top:76px;
+}
+.datos-contenedor a{
+    text-decoration: none;
+    color: var(--beige-claro);
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+    border-bottom: solid 1px;
+    width: 100%;
+}
+.datos-contenedor button{
+    background: transparent;
+    color: var(--beige-claro);
+    border: none;
+}
+
 .header__nav-inferior ul li a{
     color: var(--beige-oscuro);
     text-decoration: none;
+    cursor: pointer;
 }
 .bar-inferior__der-li{
     display: flex;
@@ -556,6 +594,9 @@ footer{
         color: var(--beige-oscuro);
         list-style: none;
         border-top: none;
+    }
+    .show__perfil-contenedor{
+        top: 50px;;
     }
     .section__contato{
         flex-direction: row;
