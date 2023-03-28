@@ -12,7 +12,7 @@ formulario.addEventListener("submit", (event)=>{
         errors.push("El campo de nombre es obligatorio")
         formulario.productName.classList.add("is-invalid")
     }
-    else if (formulario.productName.value < 5){
+    else if (formulario.productName.value.length < 5){
 errors.push("El nombre debe contener almenos 5 caracteres")
 formulario.productName.classList.add("is-invalid")
     } else {
@@ -31,7 +31,7 @@ if(formulario.description.value == ""){
     errors.push("El campo de descripcion es obligatorio")
     formulario.description.style.border = "1px solid #f00;"
 }
-else if (formulario.description.value < 20){
+else if (formulario.description.value.length < 20){
 errors.push("La descripcion debe contener almenos 20 caracteres");
 formulario.description.style.border = "1px solid #f00;"
 } else {
@@ -41,10 +41,10 @@ formulario.description.style.border = "1px solid #f00;"
 //-----------------categoria---------------
 if(formulario.category.value == "0"){
     errors.push("Debe seleccionar una categoria")
-    formulario.productName.classList.add("is-invalid")
+    formulario.category.classList.add("is-invalid")
 }else {
-    formulario.productName.classList.remove("is-invalid")
-    formulario.productName.classList.add("is-valid")
+    formulario.category.classList.remove("is-invalid")
+    formulario.category.classList.add("is-valid")
 }
 
 // ------------- precio -------------
@@ -52,7 +52,7 @@ if(formulario.price.value == ""){
     errors.push("Debe escribir el precio del producto")
     formulario.price.classList.add("is-invalid")
 }
-else if (formulario.price.value < 1){
+else if (formulario.price.value.length < 1){
 errors.push("El precio debe contener almenos 1 cifra")
 formulario.price.classList.add("is-invalid")
 } else {

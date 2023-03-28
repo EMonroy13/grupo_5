@@ -92,7 +92,6 @@ main{
     flex-direction: column-reverse;
 }
 .header__nav-inferior ul{
-    width: 90%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
@@ -101,6 +100,12 @@ main{
     align-items: center;
     font-size: 20px;
     margin: auto;
+}
+.bar-inferior__izq{
+    width: 90%;
+}
+.bar-inferior__der{
+    width: 90%;
 }
 .header__nav-inferior ul li{
     padding: 16px 0;
@@ -132,7 +137,7 @@ main{
     color: var(--beige-claro);
     background: #000;
     padding: 10px;
-    transition: all 1s;
+    transition: all 0.5s;
     font-size: 16px;
 }
 .show__perfil-contenedor{
@@ -190,32 +195,12 @@ img{
     box-shadow: 0px 4px 7px 0px var(--violeta-oscuro);
     width: 100vw;
 }
-.banner__descripcion{
-    color: white;
-    font-size: 24px;
-    margin:10px 16px;
-
-}
-.banner__boton{
-    color: white;
-    background-color: transparent;
-    padding: 12px;
-    border: solid white 3px;
-    width: 50%;
-    margin: 20px auto;
-    border-radius: 25px;
-    transition: all 0.2s;
-}
-.banner__boton:hover{
-    border: solid #000 2.5px;
-    color: #000;
-}
 .banner__img{
-    width: 97%;
-    height: 365px;
+    width: 96%;
+    height: 211px;
     box-shadow: 0px 3px 20px black;
     margin: 10px auto;
-    background-image: url(/img/muebles-ej.jpg);
+    background-image: url(/img/banner-glems.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -572,7 +557,6 @@ footer{
 /* #######################################tablet################################################ */
  @media (min-width: 685px) {
     .header__nav-inferior ul {
-        width: 340px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -597,6 +581,16 @@ footer{
     }
     .show__perfil-contenedor{
         top: 50px;;
+    }
+    .bar-inferior__izq{
+        width: 240px;
+    }
+    .bar-inferior__der{
+        width: 380px;
+    }
+    .banner__img {
+        width: 96%;
+        height: 350px;
     }
     .section__contato{
         flex-direction: row;
@@ -762,6 +756,10 @@ footer{
     }
     .boton-der-UA{
         right: 0;
+    }
+    .banner__img {
+        width: 96%;
+        height: 530px;
     }
     .ultimos-ingresos__contenedor {
         display: flex;
