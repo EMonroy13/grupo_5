@@ -1,15 +1,10 @@
 module.exports = {
   "development": {
-    /* "username": "sql9608124",
-    "password": "EsQ9UivaSK",
-    "database": "sql9608124",
-    "host": "sql9.freesqldatabase.com",
-    "port": 3306,
-    "dialect": "mysql" */ 
-    "username": "root",
-    "password": null,
+    "username": "admin",
+    "password": "digitalhouse2021",
     "database": "grupo_5",
-    "host": "127.0.0.1",
+    "host": "database-grupo-5-dh.cg5eyfemjoo5.us-east-1.rds.amazonaws.com",
+    "port": 3005,
     "dialect": "mysql"
   },
   "test": {
