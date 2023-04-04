@@ -42,9 +42,8 @@ main {
 .login-box input {
   width: 80vw;
   margin-bottom: 30px;
-  border-radius: 5px;
   outline: none;
-  height: 40px;
+  height: 45px;
   font-size: 16px;
 }
 
@@ -67,7 +66,6 @@ main {
   background: transparent;
   color: #fff;
   font-size: 18px;
-  border-radius: 20px;
   border: solid 1px #fff;
 }
 .login-box a {

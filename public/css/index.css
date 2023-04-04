@@ -10,7 +10,7 @@
 /* -------------------------------------HEADER--------------------------------------------------- */
 body{
     font-family: 'Noto Sans', sans-serif; 
-    background-color: var(--beige-claro);
+    background-color: #ffe;
 }
 header{
     background-color: rgb(0 0 0);
@@ -533,6 +533,9 @@ footer{
     padding: 5px;
     color: var(--violeta-oscuro);
 }
+.section__contato a:hover{
+    color: var(--beige-oscuro);
+}
 .section__redes{
     display: flex;
     justify-content: flex-end;
@@ -546,6 +549,9 @@ footer{
     color: var(--violeta-oscuro);
     padding: 7px 8px;
     margin: 7px 8px;
+}
+.section__redes a:hover{
+    color: var(--beige-oscuro);
 }
 .footer__copiright{
     font-size: 12px;

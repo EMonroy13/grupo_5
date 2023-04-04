@@ -30,6 +30,15 @@ const productsController = {
                 res.send(error);
             })
     },
+    offert: (req, res)=>{
+        
+        db.Product.findAll({where:{offer : "1" }}).then(num=>{
+       
+            res.render("oferts", {productos : num})  
+            }).catch((error)=>{
+                res.send(error);
+            })
+    },
     
     productDetail: (req, res)=>{
         
@@ -77,7 +86,7 @@ const productsController = {
             image : req.file ? req.file.filename : 'default-placeholder.png' ,
             price : req.body.price,
             top_seller : 1,
-            offer : req.body.offer,
+            offer : parseInt(req.body.offer),
             discount : req.body.discount,
             id_product_categoria : req.body.category,
             id_product_color : req.body.colors,
