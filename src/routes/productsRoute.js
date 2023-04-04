@@ -19,6 +19,7 @@ const upload = multer ({storage: storage});
 // devolver todos los productos
 router.get("/allProducts", productsController.allProducts);
 router.get("/productCategory/:id", productsController.category)
+router.get("/offerts", productsController.offert);
 // crear productos
 router.get("/productCreate/", auhtMiddleware, productsController.create);
 router.post("/productCreate/", upload.single('image') , createValidation, productsController.processCreate);

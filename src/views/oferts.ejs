@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("./partials/head") %>
+    <title>Allproducts</title>
+    <link rel="stylesheet" href="/css/allProducts.css" />
+  </head>
+  <%- include ("./partials/header") %>
+ 
+  <body>
+    <section class="main__ofertas">
+      <% productos.forEach((product)=>{ %>
+         <article> 
+          <a href="/products/productDetail/<%= product.id %>">
+          <div class="ofertas__imagen">
+            <img src="/img/<%= product.image %>" alt="articulo5" />
+          </div>
+          </a>
+          <div class="ofertas__precio">
+            <h5> <%= product.name %></h5>
+            <p class="precio__efectivo">$<%= product.price %></p>
+            <p class="precio__descuento">% <%= product.discount %></p>
+          </div>
+          
+        </article>
+      <% }) %> 
+    </section>
+    
+    <ul class="bar-nav-productos">
+      <% for (let i = 1; i < 9; i++){ %>
+      <li><a href=""><%=i%></a></li>
+      <% }%>
+  </ul>
+  </body>
+  <%- include("./partials/footer") %>
+</html>

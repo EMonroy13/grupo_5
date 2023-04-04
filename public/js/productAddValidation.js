@@ -21,7 +21,7 @@ formulario.productName.classList.add("is-invalid")
     }
 //------------imagen -----------------
 
- if(!(formulario.image.file)){
+ if(formulario.image.value == null){
         errors.push("Debe agregar una imagen")
         formulario.image.classList.add("is-invalid")
 }
