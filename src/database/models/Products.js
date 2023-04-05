@@ -18,10 +18,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DOUBLE
         },
         top_seller:{
-            type: DataTypes.DOUBLE
+            type: DataTypes.INTEGER
         },
         offer: {
-            type: DataTypes.DOUBLE
+            type: DataTypes.INTEGER
         },
         discount:{
             type: DataTypes.DOUBLE
