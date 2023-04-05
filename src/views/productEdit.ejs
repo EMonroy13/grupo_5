@@ -55,25 +55,40 @@
                 <% if (locals.errors && errors.colors) { %>
                     <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.colors.msg %></span>
                 <% } %> 
-                </p>
+            </p>
             <p>
                 <% if (locals.errors && errors.price) { %>
                     <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.price.msg %></span>
                 <% } %> 
             <input type="number" name="price" class="form__precio-producto" value="<%= productToEdit.price%>" placeholder="Indique el precio en ars $" > 
             </p>
+            
             <div class="form__offer-contenedor">
-            <select   name="offer">
-                <option value="1" >Si</option>
-                <option value="2" >No</option>
-            </p>
-            <p>
-                <input type="number" name="discount" value="<%= productToEdit.discount%>" placeholder="Indique el descuento "> 
-            </p>
+                <p> 
+                <label for="topSeller">En oferta</label>
+                <select   name="offer">
+                    <option value="
+                    " >  </option>
+                    <option value="1" >Si</option>
+                    <option value="0" >No</option>
+                </select>
+                </p>
+                <p>
+                    <input type="number" name="discount" placeholder="Indique el descuento "> 
+                </p>
             </div>
-            <ul class=" ul_errores">
+            <div class="top-seller__contenedor">
+                <p>
+                <label for="topSeller">Producto destacado</label>
+                <select  name="topSeller">
+                    <option value="1" >Si</option>
+                    <option value="2" >No</option>
+                </select>
+                </p>
+            </div>
+                <ul class=" ul_errores">
         
-            </ul>
+                </ul>
             <p class="form__buttom">
             <button type="submit" class="form__enviar">Confirmar</button>
             <button type="reset" class="form__borrar">Borrar</button>

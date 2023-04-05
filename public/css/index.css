@@ -465,6 +465,7 @@ font-size: 20px;
     flex-wrap: wrap;
     margin-bottom: 40px;
     border-radius: 0 0 15px 0;
+    padding: 20px 0;
 }
 .main__ofertas article{
     width: 100%;
