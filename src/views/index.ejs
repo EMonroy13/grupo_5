@@ -26,10 +26,15 @@
                 <a href="/products/productDetail/<%=ultimoAgregado.id%>">
                     <div class="ultimo-ingresado-img"><img src="/img/<%= ultimoAgregado.image %>" alt="articulo"></div>
                     <div class="ultimo-ingresado__precio">
-                        <p><%= ultimoAgregado.price %> 
+                        
                         <% if (ultimoAgregado.discount > 0) { %> 
-                            <span class="descuento__contenedor"><%= ultimoAgregado.discount %>% off</span>
-                        <% } %></p>
+                            <i class="precio-anterior">$ <%= ultimoAgregado.price %></i>
+                            <p>$ <%= ultimoAgregado.price - (ultimoAgregado.price * ultimoAgregado.discount /100 ) %> 
+                                <span class="descuento__contenedor"><%= ultimoAgregado.discount %>% off</span>
+                            </p>
+                        <%  }else{ %>
+                            <p>$ <%= ultimoAgregado.price %> </p>
+                            <% } %>
                         <h5><%= ultimoAgregado.name %></h5>
                     </div>
                 </a>
@@ -97,10 +102,14 @@
                 </a>
                 <div class="ofertas__precio">
                     <h5><%= producto.name %></h5>
-                    <p class="precio__efectivo">$ <%= producto.price %>
-                        <% if (producto.discount > 0) { %> 
-                        <span class="descuento__contenedor"><%= producto.discount %>% off</span>
-                        <% } %></p>
+                    <% if (producto.discount > 0) { %> 
+                        <i class="precio-anterior">$ <%= producto.price %></i>
+                        <p class="precio__efectivo">$ <%= producto.price - (producto.price * producto.discount /100 ) %> 
+                            <span class="descuento__contenedor"><%= producto.discount %>% off</span>
+                        </p>
+                    <%}else{ %>
+                        <p>$ <%= producto.price %> </p>
+                        <% } %>
                 </div>
             </article>
             <% }) %>

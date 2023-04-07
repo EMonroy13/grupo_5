@@ -306,12 +306,20 @@ img{
     color: var(--beige-oscuro);
     font-weight: 600;
 }
+.precio-anterior {
+    font-size: 0.8rem;
+    font-style: unset;
+    text-decoration: line-through;
+    color: #9a93ad;
+    font-weight: 600;
+    padding-left: 5px;
+}
 .descuento__contenedor{
     color: var(--violeta-oscuro);
-    font-size: 15px;
+    font-size: 0.8rem;
 }
 .ultimo-ingresado__precio h5{
-    font-size: 18px;
+    font-size: 1.5rem;
     color: grey;
 }
 .main__ultimos-ingresos {
@@ -368,12 +376,12 @@ img{
     flex-direction: column;
 }
 .ultimos-ingresos__precio p{
-    font-size: 20px;
+    font-size: 1rem;
     color: var(--beige-oscuro);
     font-weight: 600;
 }
 .ultimos-ingresos__precio h5{
-    font-size: 18px;
+    font-size: 1rem;
     color: grey;
 }
 .ultimos-ingresos__contenedor {
@@ -419,12 +427,12 @@ img{
     width: 80%;
 }
 .mas-vendido__precio p {
-font-size: 20px;
+font-size: 1rem;
     color: var(--beige-oscuro);
     font-weight: 600;
 }
 .mas-vendido__precio h5{
-    font-size: 18px;
+    font-size: 1rem;
     color: grey;
 }
 .main__mas-vendido article{
@@ -475,7 +483,7 @@ font-size: 20px;
     border-bottom: solid 0.5px grey;
 }
 .main__ofertas a{
-    width: 40%;
+    width: 50%;
 }
 .ofertas__imagen{
     padding: 10px 20px;
@@ -494,11 +502,12 @@ font-size: 20px;
     justify-content: flex-start;
     flex-direction: column;
     padding: 15px;
-    width: 50%;
+    width: 45%;
 }
 .ofertas__precio h5{
-    font-size: 22px;
+    font-size: 1.2rem;
     color: grey;
+    padding: 0 0 25px 0;
 }
 .precio__efectivo{
     font-size: 24px;
@@ -675,6 +684,11 @@ footer{
     .ultimos-ingresos__contenedor{
         flex-direction: row;
     }
+    .ultimos-ingresos__precio p{
+        font-size: 1.6rem;
+        color: var(--beige-oscuro);
+        font-weight: 600;
+    }
     .main__mas-vendido{
         border-radius: 15px 0 15px 0;
     }
@@ -713,6 +727,14 @@ footer{
     }
     .menu-burger{
         display: none;
+    }
+    .ultimos-ingresos__precio h5{
+        font-size: 1.5rem;
+        color: grey;
+    }
+    .descuento__contenedor{
+        color: var(--violeta-oscuro);
+        font-size: 1rem;
     }
  }
 
@@ -795,4 +817,13 @@ footer{
         border-right: none;
         height: 230px;
        }
+       .mas-vendido__precio p {
+        font-size: 1.3rem;
+            color: var(--beige-oscuro);
+            font-weight: 600;
+        }
+        .mas-vendido__precio h5{
+            font-size: 1.3rem;
+            color: grey;
+        }
 }
