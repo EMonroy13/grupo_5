@@ -24,7 +24,6 @@ const productsController = {
     category: (req,res)=>{
 
         db.Product.findAll({where:{id_product_categoria : req.params.id}}).then(num=>{
-       
             res.render("productCategory", {productos : num})  
             }).catch((error)=>{
                 res.send(error);

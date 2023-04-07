@@ -8,6 +8,34 @@
   <%- include ("./partials/header") %>
  
   <body>
+    <%if (productos[0]) {
+        switch (productos[0].id_product_categoria) {
+          case 1: %>
+              <h2>Oficina</h2>
+              <%break;
+          case 1: %>
+            <h2>Oficina</h2>
+            <%break;
+          case 2: %>
+            <h2>Living</h2>
+            <%break;
+          case 3: %>
+            <h2>Cocina</h2>
+            <%break;
+          case 4: %>
+            <h2>Muebles TV</h2>
+            <%break;
+          case 5: %>
+            <h2>Gaming</h2>
+            <%break;
+          case 6: %>
+            <h2>Dormitorios</h2>
+            <%break;
+          default:%>
+            <h2>Categorias </h2>
+              <%break;
+  } } %>
+    
     <section class="main__ofertas">
       <% productos.forEach((product)=>{ %>
          <article> 
