@@ -5,8 +5,8 @@ window.addEventListener("load" ,()=> {
     const inputs = document.querySelectorAll("#formulario input")
 
 const expresiones = {
-    nombre: /^[a-zA-ZÁ-ÿ\s]{5,20}$/, // el nombre debe contener Letras, tambien pueden llevar acentos y espacios 5 a 20 caracteres
-    apellido: /^[a-zA-ZÁ-ÿ\s]{5,20}$/, // Letras y espacios, tambien pueden llevar acentos 5 a 40 caracteres
+    nombre: /^[a-zA-ZÁ-ÿ\s]{3,20}$/, // el nombre debe contener Letras, tambien pueden llevar acentos y espacios 5 a 20 caracteres
+    apellido: /^[a-zA-ZÁ-ÿ\s]{3,20}$/, // Letras y espacios, tambien pueden llevar acentos 5 a 40 caracteres
     correo: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/, // email valido
     password: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/ ,  //"El password debe contener almenos una mayuscula, un numero,y debe tener de 8 a 16 caracteres."
     password2: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/ // de 8 a 16 digitos 
@@ -19,8 +19,8 @@ const campos = {
 }
 
  const mensajeError = {
-    nombre: "El nombre no puede contener caracteres especiales o numeros,y debe tener de 5 a 20 letras.",
-    apellido: "El apellido no puede contener caracteres especiales o numeros,y debe tener de 5 a 20 letras.",
+    nombre: "El nombre no puede contener caracteres especiales o numeros,y debe tener de 3 a 20 letras.",
+    apellido: "El apellido no puede contener caracteres especiales o numeros,y debe tener de 3 a 20 letras.",
     correo: "Debe ingresar un email válido.",
     password: "El password debe contener almenos una mayuscula, un numero,y debe tener de 8 a 16 caracteres.",
     repassword: "Debe repetir la contraseña."
