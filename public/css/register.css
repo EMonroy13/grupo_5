@@ -58,6 +58,7 @@
 }
 
 .datos-cliente label {
+    margin: 20px 0 8px 0;
     font-weight: bold;
     display: block;
 }
@@ -67,15 +68,34 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    margin-bottom: 30px;
     outline: none;
     height: 5%;
     font-size: 16px;
     padding: 10px;
     border-radius: 5Px;
 }
+.input-contenedor{
+    position: relative;
+}
+.simbolo-error{
+    display: none;
+    color: #f00;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 12px;
+    right: 13px;
+}
+.simbolo-ok{
+    display: none;
+    color: #0f0;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 12px;
+    right: 13px;
+}
 
 .buttons {
+    margin-top: 55px;
     display: flex;
     justify-content: center;
     border-radius: 10%;

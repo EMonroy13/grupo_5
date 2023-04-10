@@ -31,34 +31,36 @@ const validarFormulario = (event) => {
 
 switch(event.target.name){
     case "nombre": 
-    validarCampo(expresiones.nombre, event.target, "nombre", "error1", mensajeError.nombre)
+    validarCampo(expresiones.nombre, event.target, "nombre", "error1", mensajeError.nombre,"nombre")
     break;
     case "apellido": 
-    validarCampo(expresiones.apellido, event.target, "apellido", "error2", mensajeError.apellido)
+    validarCampo(expresiones.apellido, event.target, "apellido", "error2", mensajeError.apellido, "apellido")
     case "imagenPerfil": 
     
     
     break;
     case "correo": 
-    validarCampo(expresiones.correo, event.target, "correo", "error4", mensajeError.correo)
+    validarCampo(expresiones.correo, event.target, "correo", "error4", mensajeError.correo, "correo")
 
     break;
     case "password": 
-    validarCampo(expresiones.password, event.target, "password", "error5", mensajeError.password)
+    validarCampo(expresiones.password, event.target, "password", "error5", mensajeError.password, "password")
     validarPassword2();
     break;
     case "password2": 
-    validarCampo(expresiones.password2, event.target, "password2", "error6", mensajeError.repassword)
+    validarCampo(expresiones.password2, event.target, "password2", "error6", mensajeError.repassword, "repassword")
     validarPassword2();
     break; 
 }
 }
 // validacion de campos 
-const validarCampo = (expresion, input, campo, error, mensajeError) =>{
+const validarCampo = (expresion, input, campo, error, mensajeError,simboloCheck) =>{
     if (expresion.test(input.value)){ 
         document.getElementById(`grupo__${campo}`).classList.remove('is-invalid')
         document.getElementById(`grupo__${campo}`).classList.add('is-valid')
         document.querySelector(`.formulario__input-${error}`).style.display = "none"
+        document.querySelector(`.check-error_${simboloCheck}`).style.display = "none"
+        document.querySelector(`.check-ok_${simboloCheck}`).style.display = "block"
         campos[`${campo}`] = true;  
     }
     else {
@@ -66,6 +68,8 @@ const validarCampo = (expresion, input, campo, error, mensajeError) =>{
         document.getElementById(`grupo__${campo}`).classList.remove('is-valid')
         document.querySelector(`.formulario__input-${error}`).style.display = "block"
         document.querySelector(`.formulario__input-${error}`).innerHTML = mensajeError
+        document.querySelector(`.check-error_${simboloCheck}`).style.display = "block"
+        document.querySelector(`.check-ok_${simboloCheck}`).style.display = "none"
         campos[`${campo}`] = false; 
     }
 }
@@ -83,11 +87,15 @@ const validarPassword2 = () => {
         document.getElementById(`grupo__password2`).classList.remove('is-valid')
         document.querySelector(`.formulario__input-${error}`).style.display = "block"
         document.querySelector(`.formulario__input-${error}`).innerHTML = mensajeError
+        document.querySelector(`.check-error_${simboloCheck}`).style.display = "none"
+        document.querySelector(`.check-ok_${simboloCheck}`).style.display = "block"
         campos.password = false; 
     } else {
         document.getElementById(`grupo__password2`).classList.remove('is-invalid')
         document.getElementById(`grupo__password2`).classList.add('is-valid')
         document.querySelector(`.formulario__input-${error}`).style.display = "none"
+        document.querySelector(`.check-error_${simboloCheck}`).style.display = "none"
+        document.querySelector(`.check-ok_${simboloCheck}`).style.display = "block"
         campos.password = true; 
     }
 }
