@@ -400,6 +400,10 @@ img{
     justify-content: space-between;
     padding: 10px;
 }
+.main__mas-vendido article:hover{
+    z-index: 2;
+    transform: scale(105%);
+}
 .main__mas-vendido {
     width: 95%;
     height: 100%;
@@ -436,6 +440,7 @@ font-size: 1rem;
     color: grey;
 }
 .main__mas-vendido article{
+    background-color: #fff;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -476,11 +481,15 @@ font-size: 1rem;
     padding: 20px 0;
 }
 .main__ofertas article{
+    background-color: #fff;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     margin: 5px auto;
     border-bottom: solid 0.5px grey;
+}
+.main__ofertas article:hover{
+    transform: scale(105%);
 }
 .main__ofertas a{
     width: 50%;
@@ -674,6 +683,9 @@ footer{
         width: 45%;
         height: 400px;
         margin: 19px 7px;
+    }
+    .ultimos-ingresos__articulo:hover{
+        transform: translateY(-10px);
     }
     .ultimos-ingresos__articulo a{
         height: 50%;
