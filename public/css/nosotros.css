@@ -28,6 +28,7 @@
 .card-info{
     position: relative;
     width: 300px ;
+    border: 1px solid beige;
     height: 400px;
     background: #fff;
     border-radius: 5px;
