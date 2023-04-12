@@ -42,7 +42,7 @@ app.use("/user", usersRoute);
 /* Carrito de compras  */
 app.use('/products', productsRoute);
 /*apis*/
-app.use("/api", apiRoute)
+app.use("/api", apiRoute);
 
 
 

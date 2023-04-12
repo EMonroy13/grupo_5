@@ -39,11 +39,11 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
     Product.associate = function(models){
-        Product.hasMany(models.Category,{
+        Product.belongsTo(models.Category,{
             as: "Category",
             foreignKey: "id_product_categoria"
             }),
-            Product.hasMany(models.Color,{
+            Product.belongsTo(models.Color,{
                 as: "Color",
                 foreignKey: "id_product_color"
                 })
