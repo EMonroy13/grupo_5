@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
     UserCategorie.associate = function(models){
-        UserCategorie.belongsTo(models.User,{
+        UserCategorie.hasMany(models.User,{
             as: "User",
             foreignKey: "id_categoria"
             })
