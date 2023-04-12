@@ -8,6 +8,7 @@ const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
 const indexRoute = require ("./routes/indexRoute");
 const usersRoute = require ("./routes/usersRoute");
 const productsRoute = require ("./routes/productsRoute"); 
+const apiRoute = require("./routes/apiRoutes/apiRoute");
 
 
 // const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware") // para sacar nav si esta logeado o no 
@@ -40,6 +41,9 @@ app.use('/',indexRoute);
 app.use("/user", usersRoute);
 /* Carrito de compras  */
 app.use('/products', productsRoute);
+/*apis*/
+app.use("/api", apiRoute)
+
 
 
 /* Necesitamos agregar app.listen method para probar en local */
