@@ -5,6 +5,7 @@ const userApiController = require ("../../controllers/apiController/usersApiCont
 
 router.get("/product/allProducts", productApiController.allProducts)
 router.get("/product/:id", productApiController.productDetail)
+// 
 router.get("/user/allUsers", userApiController.allUsers)
 router.get("/user/:id", userApiController.userDetail)
 
