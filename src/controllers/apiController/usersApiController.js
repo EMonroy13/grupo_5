@@ -10,7 +10,7 @@ const usersApiController = {
           firstName: users.firstName,
           lastName: users.lastName,
           email: users.email,
-          imageProfile: users.imageProfile,
+          imageProfile: "http://localhost:3000/img/users/" + users.imageProfile,
         };
         return usuario2;
       });

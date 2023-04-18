@@ -222,7 +222,7 @@ img{
     height: 150px;
     width: 100%;
     border-radius: 15px 0;
-    box-shadow: 4px 2px 9px 0px black;
+    box-shadow: 1px 1px 6px 0px black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;   
@@ -233,8 +233,8 @@ img{
     padding-right: 15px;
     font-size: 23px;
     font-weight: 550;
-    text-shadow: 3px 2px 4px black;
-    color: silver;
+    text-shadow: 1px 1px 4px #000;
+    color: #ffffffff;
 }
 .main__categorias a{
     text-decoration: none;
