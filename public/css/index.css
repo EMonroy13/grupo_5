@@ -14,11 +14,11 @@ body{
 }
 header{
     background-color: rgb(0 0 0);
-    width: 100vw;
+    width: 100%;
     box-shadow: 0px 4px 7px 0px black;
 }
 main{
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 .contenedor__logo img{
@@ -52,6 +52,7 @@ main{
 }
 .contenedor__buscador input{
     padding: 12px;
+    border-radius: 5px;
     border: none;
     width: 95%;
     line-height: 0;
@@ -63,7 +64,7 @@ main{
     top: 24px;
 }
 .contenedor__buscador input::placeholder{
-    padding-left: 29px;
+   opacity: 0.6;
     font-size: 17px;
     color: rgb(94, 94, 94);
 }
@@ -193,7 +194,7 @@ img{
     padding: 11px 0 30px;
     margin: 0 auto 15px;
     box-shadow: 0px 4px 7px 0px var(--violeta-oscuro);
-    width: 100vw;
+    width: 100%;
 }
 .banner__img{
     width: 96%;
@@ -221,7 +222,7 @@ img{
     height: 150px;
     width: 100%;
     border-radius: 15px 0;
-    box-shadow: 4px 2px 9px 0px black;
+    box-shadow: 1px 1px 6px 0px black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;   
@@ -232,8 +233,8 @@ img{
     padding-right: 15px;
     font-size: 23px;
     font-weight: 550;
-    text-shadow: 3px 2px 4px black;
-    color: silver;
+    text-shadow: 1px 1px 4px #000;
+    color: #ffffffff;
 }
 .main__categorias a{
     text-decoration: none;
@@ -306,12 +307,20 @@ img{
     color: var(--beige-oscuro);
     font-weight: 600;
 }
+.precio-anterior {
+    font-size: 0.8rem;
+    font-style: unset;
+    text-decoration: line-through;
+    color: #9a93ad;
+    font-weight: 600;
+    padding-left: 5px;
+}
 .descuento__contenedor{
     color: var(--violeta-oscuro);
-    font-size: 15px;
+    font-size: 0.8rem;
 }
 .ultimo-ingresado__precio h5{
-    font-size: 18px;
+    font-size: 1.5rem;
     color: grey;
 }
 .main__ultimos-ingresos {
@@ -368,12 +377,12 @@ img{
     flex-direction: column;
 }
 .ultimos-ingresos__precio p{
-    font-size: 20px;
+    font-size: 1rem;
     color: var(--beige-oscuro);
     font-weight: 600;
 }
 .ultimos-ingresos__precio h5{
-    font-size: 18px;
+    font-size: 1rem;
     color: grey;
 }
 .ultimos-ingresos__contenedor {
@@ -391,6 +400,10 @@ img{
     display: flex;
     justify-content: space-between;
     padding: 10px;
+}
+.main__mas-vendido article:hover{
+    z-index: 2;
+    transform: scale(105%);
 }
 .main__mas-vendido {
     width: 95%;
@@ -419,15 +432,16 @@ img{
     width: 80%;
 }
 .mas-vendido__precio p {
-font-size: 20px;
+font-size: 1rem;
     color: var(--beige-oscuro);
     font-weight: 600;
 }
 .mas-vendido__precio h5{
-    font-size: 18px;
+    font-size: 1rem;
     color: grey;
 }
 .main__mas-vendido article{
+    background-color: #fff;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -465,16 +479,21 @@ font-size: 20px;
     flex-wrap: wrap;
     margin-bottom: 40px;
     border-radius: 0 0 15px 0;
+    padding: 20px 0;
 }
 .main__ofertas article{
+    background-color: #fff;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     margin: 5px auto;
     border-bottom: solid 0.5px grey;
 }
+.main__ofertas article:hover{
+    transform: scale(105%);
+}
 .main__ofertas a{
-    width: 40%;
+    width: 50%;
 }
 .ofertas__imagen{
     padding: 10px 20px;
@@ -493,11 +512,12 @@ font-size: 20px;
     justify-content: flex-start;
     flex-direction: column;
     padding: 15px;
-    width: 50%;
+    width: 45%;
 }
 .ofertas__precio h5{
-    font-size: 22px;
+    font-size: 1.2rem;
     color: grey;
+    padding: 0 0 25px 0;
 }
 .precio__efectivo{
     font-size: 24px;
@@ -512,7 +532,7 @@ font-size: 20px;
 /* ------------------------------------------FOOTER--------------------------------------------------- */
 footer{
     background-color: #000;
-    width: 100vw;   
+    width: 100%;   
     padding: 15px; 
     height: 100%;
 }
@@ -665,6 +685,9 @@ footer{
         height: 400px;
         margin: 19px 7px;
     }
+    .ultimos-ingresos__articulo:hover{
+        transform: translateY(-10px);
+    }
     .ultimos-ingresos__articulo a{
         height: 50%;
     }
@@ -673,6 +696,11 @@ footer{
     }
     .ultimos-ingresos__contenedor{
         flex-direction: row;
+    }
+    .ultimos-ingresos__precio p{
+        font-size: 1.6rem;
+        color: var(--beige-oscuro);
+        font-weight: 600;
     }
     .main__mas-vendido{
         border-radius: 15px 0 15px 0;
@@ -713,6 +741,14 @@ footer{
     .menu-burger{
         display: none;
     }
+    .ultimos-ingresos__precio h5{
+        font-size: 1.5rem;
+        color: grey;
+    }
+    .descuento__contenedor{
+        color: var(--violeta-oscuro);
+        font-size: 1rem;
+    }
  }
 
 
@@ -741,8 +777,8 @@ footer{
     .boton-carrusel-UA{
         display: block;
         font-size: 35px;
-        color: var(--violeta-oscuro);
-        background-color: #fff;
+        color: #ffffff82;
+        background-color: #5240808a;
         border-radius: 50%;
         border-width: 0;
         box-shadow: 0 2px 4px 0 var(--violeta-oscuro);
@@ -794,4 +830,13 @@ footer{
         border-right: none;
         height: 230px;
        }
+       .mas-vendido__precio p {
+        font-size: 1.3rem;
+            color: var(--beige-oscuro);
+            font-weight: 600;
+        }
+        .mas-vendido__precio h5{
+            font-size: 1.3rem;
+            color: grey;
+        }
 }

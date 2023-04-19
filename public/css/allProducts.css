@@ -7,6 +7,12 @@
   --violeta-claro: #dad3ed;
   --blanco: #fffffc;
 }
+h2{
+  color: var(--violeta-oscuro);
+    padding: 10px;
+    margin: 10px 10px;
+    font-size: 1.9rem;
+}
 .Filtro-allProducts {
   display: flex;
   flex-wrap: wrap;

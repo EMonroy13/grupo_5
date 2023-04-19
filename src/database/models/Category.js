@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
     Category.associate = function(models){
-        Category.belongsTo(models.Product,{
+        Category.hasMany(models.Product,{
             as: "Product",
             foreignKey: "id_product_categoria"
             })

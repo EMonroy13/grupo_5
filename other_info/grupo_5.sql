@@ -36,8 +36,8 @@ CREATE TABLE `products` (
   `description` varchar(255) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `price` double NOT NULL,
-  `top_seller` binary(1) NOT NULL,
-  `offer` binary(1) NOT NULL,
+  `top_seller` TINYINT NOT NULL,
+  `offer` TINYINT NOT NULL,
   `discount` double NOT NULL,
   `id_product_categoria` int(11) NOT NULL,
   `id_product_color` int(11) NOT NULL

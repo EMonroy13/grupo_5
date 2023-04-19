@@ -24,7 +24,6 @@ const productsController = {
     category: (req,res)=>{
 
         db.Product.findAll({where:{id_product_categoria : req.params.id}}).then(num=>{
-       
             res.render("productCategory", {productos : num})  
             }).catch((error)=>{
                 res.send(error);
@@ -85,7 +84,7 @@ const productsController = {
             description : req.body.description,
             image : req.file ? req.file.filename : 'default-placeholder.png' ,
             price : req.body.price,
-            top_seller : 1,
+            top_seller : req.body.topSeller,
             offer : parseInt(req.body.offer),
             discount : req.body.discount,
             id_product_categoria : req.body.category,
@@ -118,7 +117,7 @@ const productsController = {
             description : req.body.description,
             image : req.file ? req.file.filename : 'default-placeholder.png' ,
             price : req.body.price,
-            top_seller : "1",
+            top_seller : req.body.topSeller,
             offer : req.body.offer,
             discount : req.body.discount,
             id_product_categoria : req.body.category,

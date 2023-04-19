@@ -30,8 +30,8 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
     User.associate = function(models){
-        User.hasMany(models.UserCategorie,{
-            as: "UserCategorie",
+        User.belongsTo(models.UserCategorie,{
+            as: "UserCategory",
             foreignKey: "id_categoria"
             })
             

@@ -21,11 +21,11 @@ window.addEventListener("load", ()=>{
         }
     //------------imagen -----------------
     
-     if(!(formulario.image.file)){
-            errors.push("Debe agregar una imagen")
-            formulario.image.classList.add("is-invalid")
-            formulario.image.style.backgroundColor = "transparent"
-    }
+     
+ if(formulario.image.value == null){
+    errors.push("Debe agregar una imagen")
+    formulario.image.classList.add("is-invalid")
+}
     
     //------------ descripcion -----------------
     if(formulario.description.value == ""){

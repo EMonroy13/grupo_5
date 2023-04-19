@@ -12,69 +12,91 @@
             <a href="#">
                     <i class="fa-solid fa-id-card-clip"></i>
             </a>
-            <div class="desc-cuenta">
-                <!-- <h2>Disfruta de los beneficios de la cuenta.</h2> -->
-               <!--  <ul>
-                    <li>Ofertas especiales</li>
-                    <li>Preventas exlusivas</li>
-                    <li>Envíos sin costo</li>
-                </ul> -->
-
-                <ul class="ul__errores">
-
-                </ul>
-            </div>
-            <form action="/user/register" method="POST" class="datos-cliente" enctype="multipart/form-data">
+            
+            <form action="/user/register" method="POST"  id="formulario" class="datos-cliente" enctype="multipart/form-data">
                 
                 <!-- Nombre (s) de cliente -->
-                <label for="nombre"> Nombre (s) 
-                    <% if (locals.errors && errors.nombre) { %>
-                    <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.nombre.msg %></span>
-                    <% } %> 
-                </label>
-                <input name="nombre" type="text" placeholder=" Ingresa tu nombre (s) " >
                 
+                <label for="nombre"> Nombre  
+                    <% if (locals.errors && errors.nombre) { %>
+                        <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.nombre.msg %></span>
+                        <% } %> 
+                </label>
+                <div class="input-contenedor">
+                    <input name="nombre"   id="grupo__nombre" type="text" placeholder=" Ingresa tu nombre (s) " >
+                        <i class="far fa-times-circle simbolo-error check-error_nombre"></i>
+                        <i class="far fa-check-circle simbolo-ok check-ok_nombre"></i>
+                </div>    
+                <p class="formulario__input-error1" style="color: #900; font-weight: 200;"></p>
                 <!-- Apellidos del cliente -->
-                <label for="apellido"> Apellidos 
+
+                
+                <label for="apellido" > Apellidos 
                     <% if (locals.errors && errors.apellido) { %>
                     <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.apellido.msg %></span>
                     <% } %> 
                 </label>
-                <input name="apellido" type="text" placeholder=" Ingresa tus apellidos " >
+                <div class="input-contenedor">
+                <input name="apellido" type="text" id="grupo__apellido" placeholder=" Ingresa tus apellidos " >
+                    <i class="far fa-times-circle simbolo-error check-error_apellido"></i>
+                    <i class="far fa-check-circle simbolo-ok check-ok_apellido"></i>
+                </div>
+                <p class="formulario__input-error2" style="color: #900; font-weight: 200;"></p>
                 
                 <!-- -- foto de perfil -- -->
+                
                 <label for="imagenPerfil">Agrega una foto de perfil 
                     <% if (locals.errors && errors.imagenPerfil) { %>
                     <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.imagenPerfil.msg %></span>
                     <% } %> 
                 </label>
-                <input type="file" name="imagenPerfil" id="imagenPerfil">
-                
+                <input type="file" name="imagenPerfil"  id="imagenPerfil">
+                <p class="formulario__input-error3" style="color: #900; font-weight: 200;"></p>
+               
                 <!-- Correo del cliente -->
+                
                 <label for="correo"> Correo 
                     <% if (locals.errors && errors.correo) { %>
                     <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.correo.msg %></span>
                     <% } %> 
                 </label>
-                <input name="correo" class="correo" placeholder=" Ingresa tu correo " >
+                <div class="input-contenedor">
+                <input name="correo" class="correo" id="grupo__correo" placeholder=" Ingresa tu correo " >
+                    <i class="far fa-times-circle simbolo-error check-error_correo"></i>
+                    <i class="far fa-check-circle simbolo-ok check-ok_correo"></i>
+                </div>
+                <p class="formulario__input-error4" style="color: #900; font-weight: 200;"></p>
                 
                 <!-- Contraseña del cliente -->
+                
                 <label for="password"> Contraseña 
                     <% if (locals.errors && errors.password) { %>
                     <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.password.msg %></span>
                     <% } %> 
                 </label>
-                <input name="password" type="password" placeholder="Ingresa tu contraseña" >
-               
+                <div class="input-contenedor">
+                <input name="password" type="password"  id="grupo__password" placeholder="Ingresa tu contraseña" >
+                    <i class="far fa-times-circle simbolo-error check-error_password"></i>
+                    <i class="far fa-check-circle simbolo-ok check-ok_password"></i>
+                </div>
+                <p class="formulario__input-error5" style="color: #900; font-weight: 200;"></p>
+                
                 <!-- Reingresa contraseña -->
-                <label for="repassword"> Confirmar Contraseña 
+                
+                <label for="rePassword"> Confirmar Contraseña 
                     <% if (locals.errors && errors.repassword) { %>
                     <span class="text-danger" style="color: #900; font-weight: 200;"><%= errors.repassword.msg %></span>
                     <% } %> 
                 </label>
-                <input name="repassword" type="password" placeholder="Confirma tu contraseña" >
+                <div class="input-contenedor">
+                <input name="password2" type="password"  id="grupo__password2" placeholder="Confirma tu contraseña" >
+                    <i class="far fa-times-circle simbolo-error check-error_repassword"></i>
+                    <i class="far fa-check-circle simbolo-ok check-ok_repassword"></i>
+                </div>
+                <p class="formulario__input-error6" style="color: #900; font-weight: 200;"></p>
                 
                 <!-- Botón crear cuenta -->
+               
                 <div class="buttons">
                     <button class="create-button" type="submit">Crear cuenta</button>
                 </div>

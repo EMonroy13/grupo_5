@@ -30,7 +30,7 @@ module.exports = [
      check("password")
         .notEmpty().withMessage("Tienes que escribir una contraseña").bail()
         .isLength({min:8}).withMessage("La contraseña debe contener al menos 8 caracteres"),
-    check("repassword")
+    check("password")
         .notEmpty().withMessage("Tienes repetir la contraseña").bail()
         .custom((value, {req})=>{
             if (req.body.password != value){

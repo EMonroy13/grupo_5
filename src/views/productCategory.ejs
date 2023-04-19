@@ -7,17 +7,35 @@
   </head>
   <%- include ("./partials/header") %>
  
-  <div class="Filtro-allProducts">
-    <form action="">
-      <select class="filtro-productos" name="color">
-        <option>Todos</option>
-        <option>Menor a mayor</option>
-        <option>Mayor a menor</option>
-        <option>Mas Vendidos</option>
-      </select>
-    </form>
-  </div>
   <body>
+    <%if (productos[0]) {
+        switch (productos[0].id_product_categoria) {
+          case 1: %>
+              <h2>Oficina</h2>
+              <%break;
+          case 1: %>
+            <h2>Oficina</h2>
+            <%break;
+          case 2: %>
+            <h2>Living</h2>
+            <%break;
+          case 3: %>
+            <h2>Cocina</h2>
+            <%break;
+          case 4: %>
+            <h2>Muebles TV</h2>
+            <%break;
+          case 5: %>
+            <h2>Gaming</h2>
+            <%break;
+          case 6: %>
+            <h2>Dormitorios</h2>
+            <%break;
+          default:%>
+            <h2>Categorias </h2>
+              <%break;
+  } } %>
+    
     <section class="main__ofertas">
       <% productos.forEach((product)=>{ %>
          <article> 
