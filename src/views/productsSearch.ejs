@@ -5,20 +5,12 @@
     <link rel="stylesheet" href="/css/allProducts.css" />
   </head>
   <%- include ("./partials/header") %>
- 
-  <div class="Filtro-allProducts">
-    <form action="">
-      <select class="filtro-productos" name="color">
-        <option>Todos</option>
-        <option>Menor a mayor</option>
-        <option>Mayor a menor</option>
-        <option>Mas Vendidos</option>
-      </select>
-    </form>
-  </div>
   <body>
     <section class="main__ofertas">
-      <% productos.forEach((product)=>{ %>
+      <%if (productos.length==0){ %> 
+        <h2 style="margin: 100px auto;">Producto no encontrado</h2>
+      <% }else{ %>
+        <%productos.forEach((product)=>{ %>
          <article> 
           <a href="/products/productDetail/<%= product.id %>">
           <div class="ofertas__imagen">
@@ -33,12 +25,10 @@
           
         </article>
       <% }) %> 
+        
+        <%}%>
     </section>
     
-    <ul class="bar-nav-productos">
-      <% for (let i = 1; i < 9; i++){ %>
-      <li><a href=""><%=i%></a></li>
-      <% }%>
   </ul>
   </body>
   <%- include("./partials/footer") %>

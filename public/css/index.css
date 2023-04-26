@@ -685,9 +685,7 @@ footer{
         height: 400px;
         margin: 19px 7px;
     }
-    .ultimos-ingresos__articulo:hover{
-        transform: translateY(-10px);
-    }
+   
     .ultimos-ingresos__articulo a{
         height: 50%;
     }

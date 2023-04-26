@@ -140,8 +140,7 @@ destroy : (req, res) => {
     res.redirect("/products/allProducts")
 },
 search:(req,res)=>{
-    console.log(req.query.buscador);
-    db.Product.findAll({where:{name:{[Op.like]: "%" + req.query.buscador + "%"}}}).then(buscados=>{
+    db.Product.findAll({where:{name:{[Op.like]: "%" + req.query.buscador.toLowerCase() + "%"}}}).then(buscados=>{
         res.render("productsSearch",{productos : buscados})
     })
 
