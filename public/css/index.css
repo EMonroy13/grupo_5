@@ -809,7 +809,7 @@ footer{
         align-content: flex-start;
         flex-wrap: wrap;
         flex-direction: column;
-        transition: all 2s;
+        transition: all 1s;
     }
     .ultimos-ingresos__carrusel{
         transform:translateX(-102%)  ;
